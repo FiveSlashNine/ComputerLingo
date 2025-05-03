@@ -1,0 +1,40 @@
+import { Button } from "@/components/ui/button";
+import { BookOpen } from "lucide-react";
+
+function CourseCard({
+  title,
+  description,
+  level,
+  lessons,
+  color,
+}: {
+  title: string;
+  description: string;
+  level: string;
+  lessons: number;
+  color: string;
+}) {
+  return (
+    <div className="group relative overflow-hidden rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow-md">
+      <div className={`absolute top-0 left-0 h-1 w-full ${color}`} />
+      <h3 className="text-xl font-bold">{title}</h3>
+      <p className="mt-2 text-muted-foreground">{description}</p>
+      <div className="mt-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-medium uppercase text-muted-foreground">
+            {level}
+          </span>
+        </div>
+        <div className="flex items-center gap-1">
+          <BookOpen className="h-4 w-4 text-muted-foreground" />
+          <span className="text-sm text-muted-foreground">
+            {lessons} lessons
+          </span>
+        </div>
+      </div>
+      <Button className="mt-4 w-full">Start Learning</Button>
+    </div>
+  );
+}
+
+export default CourseCard;

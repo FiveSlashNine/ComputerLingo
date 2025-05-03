@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Monitor body -->
+  <rect x="75" y="75" width="350" height="250" rx="20" ry="20" fill="#D3D3D3" stroke="#1A1A1A" stroke-width="16"/>
+  <!-- Screen -->
+  <rect x="115" y="115" width="270" height="190" rx="10" ry="10" fill="#00B39F" stroke="#1A1A1A" stroke-width="12"/>
+  <!-- Eyes -->
+  <circle cx="200" cy="200" r="28" fill="#FFFFFF"/>
+  <circle cx="200" cy="200" r="14" fill="#1A1A1A"/>
+  <circle cx="300" cy="200" r="28" fill="#FFFFFF"/>
+  <circle cx="300" cy="200" r="14" fill="#1A1A1A"/>
+  <!-- Smiling mouth -->
+  <path d="M225,260 Q250,285 275,260" stroke="#1A1A1A" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <!-- Bottom stand -->
+  <rect x="175" y="325" width="150" height="25" fill="#4D4D4D" stroke="#1A1A1A" stroke-width="12"/>
+  <!-- Keyboard base -->
+  <rect x="75" y="360" width="350" height="100" rx="10" ry="10" fill="#D3D3D3" stroke="#1A1A1A" stroke-width="16"/>
+  <!-- Keyboard keys -->
+  <g fill="#1A1A1A">
+    <rect x="100" y="385" width="40" height="25" rx="4" ry="4"/>
+    <rect x="150" y="385" width="40" height="25" rx="4" ry="4"/>
+    <rect x="200" y="385" width="40" height="25" rx="4" ry="4"/>
+    <rect x="250" y="385" width="40" height="25" rx="4" ry="4"/>
+    <rect x="300" y="385" width="40" height="25" rx="4" ry="4"/>
+    <rect x="350" y="385" width="40" height="25" rx="4" ry="4"/>
+    <!-- Space bar -->
+    <rect x="175" y="425" width="150" height="20" rx="4" ry="4"/>
+  </g>
+  <!-- Left arm -->
+  <path d="M75,200 C20,200 20,280 75,280" stroke="#007ACC" stroke-width="24" fill="none" stroke-linecap="round"/>
+  <path d="M75,280 l-10,30 l40,0 l-10,-30 Z" fill="#007ACC" stroke="#1A1A1A" stroke-width="8"/>
+  <!-- Right arm -->
+  <path d="M425,200 C480,200 480,280 425,280" stroke="#007ACC" stroke-width="24" fill="none" stroke-linecap="round"/>
+  <path d="M425,280 l10,30 l-40,0 l10,-30 Z" fill="#007ACC" stroke="#1A1A1A" stroke-width="8"/>
+</svg>
+
