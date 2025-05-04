@@ -87,7 +87,7 @@ export default function Register() {
             <SubmitButton className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600">
               Get Started
             </SubmitButton>
-            <p className="text-center text-sm text-gray-600">
+            <p className="text-center text-sm mx-5 text-gray-600">
               {"Already have an account? "}
               <Link
                 href="/login"
