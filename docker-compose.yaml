@@ -3,11 +3,11 @@ version: "3.8"
 services:
   postgres:
     image: postgres:latest
-    container_name: codelingo_postgres
+    container_name: computerlingo_postgres
     environment:
       POSTGRES_USER: username
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: codelingo
+      POSTGRES_DB: computerlingo
     ports:
       - "5432:5432"
     volumes:
