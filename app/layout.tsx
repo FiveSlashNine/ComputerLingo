@@ -1,6 +1,12 @@
 import "./globals.css";
 
-import { GeistSans } from "geist/font/sans";
+import { Nunito } from "next/font/google";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  display: "swap",
+});
 
 let title = "ComputerLingo Landing page";
 let description =
@@ -24,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.variable}>{children}</body>
+      <body className={nunito.className}>{children}</body>
     </html>
   );
 }

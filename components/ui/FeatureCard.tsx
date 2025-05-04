@@ -10,7 +10,7 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="flex flex-col items-center text-center p-6 space-y-4 rounded-lg border bg-background shadow-sm">
+    <div className="flex flex-col items-center text-center p-6 space-y-4 rounded-lg border bg-gradient-to-b from-white to-slate-100 shadow-sm">
       <div className="rounded-full bg-green-100 p-3 dark:bg-green-900/20">
         <Icon className="h-6 w-6 text-green-500" />
       </div>
