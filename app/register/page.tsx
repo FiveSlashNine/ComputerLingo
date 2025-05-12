@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Form } from "@/app/form";
+import { Form } from "@/components/forms/form";
 import { redirect } from "next/navigation";
 import { createUser, getUser } from "@/app/db";
-import { SubmitButton } from "@/app/submit-button";
+import { SubmitButton } from "@/components/buttons/submit-button";
 import { BookOpen, Trophy, Users } from "lucide-react";
 
 export default function Register() {

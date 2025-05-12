@@ -8,7 +8,7 @@ const nunito = Nunito({
   display: "swap",
 });
 
-let title = "ComputerLingo Landing page";
+let title = "ComputerLingo - Learn Computer Science with Fun and Games";
 let description =
   "ComputerLingo is a gamified platform for learning computer science through quick lessons, interactive quizzes, and daily challenges. Master coding, algorithms, and tech concepts in a fun, bite-sized way.";
 
