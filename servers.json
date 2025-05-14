@@ -1,0 +1,14 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "ComputerLingoDB",
+            "Group": "Servers",
+            "Host": "computerlingo_postgres",
+            "Port": 5432,
+            "MaintenanceDB": "computerlingo",
+            "Username": "username",
+            "SSLMode": "prefer",
+            "PassFile": "/pgpass/pgpass"
+        }
+    }
+}

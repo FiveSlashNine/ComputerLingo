@@ -1,11 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "dev": "docker-compose down && docker-compose up -d --build && next dev --turbo",
+    "dev": "docker-compose down -v && docker-compose -f .\\docker-compose.yaml up -d --build && next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "clean-install": "rm -rf node_modules package-lock.json && npm install"
+    "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.6",

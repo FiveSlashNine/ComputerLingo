@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -9,12 +9,13 @@ import { Progress } from "@/components/ui/progress";
 import {
   ArrowLeft,
   ArrowRight,
-  Code2,
   Heart,
-  ListChecks,
+  Code2,
   SlidersHorizontal,
   Terminal,
+  ListChecks,
 } from "lucide-react";
+import { useSession } from "next-auth/react";
 
 import { MultipleChoiceExercise } from "@/components/levels/MultipleChoiceExercise";
 import { TrueFalseExercise } from "@/components/levels/TrueFalseExercise";
@@ -22,84 +23,95 @@ import { FillBlanksExercise } from "@/components/levels/FillBlanksExercise";
 import { DragDropExercise } from "@/components/levels/DragDropExercise";
 import { FeedbackMessage } from "@/components/levels/FeedbackMessage";
 
-// Mock data
-const levelData: Record<string, Level> = {
-  "1": {
-    id: 1,
-    title: "Introduction to Variables",
-    type: "multiple-choice",
-    question:
-      "Which of the following correctly declares a variable in JavaScript?",
-    options: [
-      { id: "a", text: "variable x = 10;" },
-      { id: "b", text: "var x = 10;" },
-      { id: "c", text: "x := 10;" },
-      { id: "d", text: "x == 10;" },
-    ],
-    correctAnswer: "b",
-    icon: Code2,
-  },
-  "2": {
-    id: 2,
-    title: "Control Flow Basics",
-    type: "true-false",
-    question:
-      "In JavaScript, the condition in an if statement must be enclosed in curly braces {}.",
-    correctAnswer: false,
-    icon: SlidersHorizontal,
-  },
-  "3": {
-    id: 3,
-    title: "Function Fundamentals",
-    type: "fill-blanks",
-    question: "Complete the function to calculate the area of a rectangle:",
-    codeTemplate:
-      "function calculateArea(length, width) {\n  return ____ * ____;\n}",
-    blanks: ["length", "width"],
-    icon: Terminal,
-  },
-  "4": {
-    id: 4,
-    title: "Array Operations",
-    type: "drag-drop",
-    question:
-      "Arrange the following steps to sort an array in ascending order using bubble sort:",
-    items: [
-      { id: "1", text: "Compare adjacent elements" },
-      {
-        id: "2",
-        text: "Swap if the element found is greater than the next element",
-      },
-      { id: "3", text: "Repeat until no more swaps are needed" },
-      { id: "4", text: "Start from the first element" },
-    ],
-    correctOrder: ["4", "1", "2", "3"],
-    icon: ListChecks,
-  },
-};
+function getTypeIcon(type: string) {
+  switch (type) {
+    case "multiple-choice":
+      return Code2;
+    case "true-false":
+      return SlidersHorizontal;
+    case "fill-blanks":
+      return Terminal;
+    case "drag-drop":
+      return ListChecks;
+    default:
+      return Code2;
+  }
+}
 
 export default function LevelPage() {
   const params = useParams();
   const router = useRouter();
   const levelId = params?.id?.toString() ?? "1";
-  const level = levelData[levelId as keyof typeof levelData];
+  const categoryId = params?.categoryId?.toString() ?? "1";
+
+  const [questions, setQuestions] = useState<Level[]>([]);
+  const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
+  const [level, setLevel] = useState<Level | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [booleanAnswer, setBooleanAnswer] = useState<boolean | null>(null);
-  const [blanks, setBlanks] = useState<string[]>(
-    Array(level?.type === "fill-blanks" ? level.blanks.length : 0).fill("")
-  );
-  const [dragItems, setDragItems] = useState(
-    level?.type === "drag-drop" ? [...level.items] : []
-  );
+  const [blanks, setBlanks] = useState<string[]>([]);
+  const [dragItems, setDragItems] = useState<any[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [lives, setLives] = useState(3);
+  const [showRestartAlert, setShowRestartAlert] = useState(false);
 
-  if (!levelId || !level) {
+  useEffect(() => {
+    setLoading(true);
+    setError(null);
+    setLevel(null);
+    setQuestions([]);
+    setCurrentQuestionIdx(0);
+    fetch(`/api/questions?categoryId=${categoryId}&levelId=${levelId}`)
+      .then(async (res) => {
+        if (!res.ok) throw new Error("Failed to fetch level data");
+        const data = await res.json();
+        if (data.questions && data.questions.length > 0) {
+          setQuestions(data.questions);
+          setLevel({ ...data.questions });
+        } else {
+          setError("Level not found");
+        }
+      })
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, [categoryId, levelId]);
+
+  useEffect(() => {
+    if (!questions.length) return;
+    setLevel({ ...questions[currentQuestionIdx] });
+  }, [questions, currentQuestionIdx]);
+
+  useEffect(() => {
+    if (!level) return;
+    if (level.type === "fill-blanks") {
+      setBlanks(Array(level.blanks.length).fill(""));
+    } else {
+      setBlanks([]);
+    }
+    if (level.type === "drag-drop") {
+      setDragItems([...level.items]);
+    } else {
+      setDragItems([]);
+    }
+    setSelectedAnswer("");
+    setBooleanAnswer(null);
+    setIsSubmitted(false);
+    setIsCorrect(false);
+  }, [level]);
+
+  if (loading) {
+    return (
+      <div className="container mx-auto py-8 px-4 text-center">Loading...</div>
+    );
+  }
+  if (error || !level) {
     return (
       <div className="container mx-auto py-8 px-4 text-center">
-        Level not found
+        {error || "Level not found"}
       </div>
     );
   }
@@ -132,28 +144,56 @@ export default function LevelPage() {
     setIsSubmitted(true);
 
     if (!correct) {
-      setLives((prev) => Math.max(0, prev - 1));
+      setLives((prev) => {
+        if (prev <= 1) {
+          setShowRestartAlert(true);
+          return 0;
+        }
+        return prev - 1;
+      });
     }
   };
 
-  const handleNext = () => {
-    const nextId = Number.parseInt(levelId) + 1;
-    const nextLevel = levelData[String(nextId)];
+  const handleRestartLevel = () => {
+    setLives(3);
+    setCurrentQuestionIdx(0);
+    setLevel(questions[0] ? { ...questions[0] } : null);
+    setSelectedAnswer("");
+    setBooleanAnswer(null);
+    setBlanks(
+      questions[0]?.type === "fill-blanks"
+        ? Array(questions[0].blanks.length).fill("")
+        : []
+    );
+    setDragItems(
+      questions[0]?.type === "drag-drop" ? [...questions[0].items] : []
+    );
+    setIsSubmitted(false);
+    setIsCorrect(false);
+    setShowRestartAlert(false);
+  };
 
-    if (nextLevel) {
-      router.push(`/level/${nextId}`);
-      setIsSubmitted(false);
-      setIsCorrect(false);
-      setSelectedAnswer("");
-      setBooleanAnswer(null);
-      setBlanks(
-        Array(
-          nextLevel.type === "fill-blanks" ? nextLevel.blanks.length : 0
-        ).fill("")
-      );
-      setDragItems(nextLevel.type === "drag-drop" ? [...nextLevel.items] : []);
+  const handleNext = async () => {
+    if (currentQuestionIdx < questions.length - 1) {
+      setCurrentQuestionIdx((idx) => idx + 1);
     } else {
-      router.push("/");
+      // take user Id from db using next auth
+
+      try {
+        await fetch(`/api/levels?categoryId=${categoryId}&levelId=${levelId}`, {
+          method: "POST",
+        });
+      } catch (e) {
+        // Optionally handle error (e.g., show a toast)
+      }
+      const nextId = Number.parseInt(levelId) + 1;
+      router.push(`/protected/${categoryId}/${nextId}`);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentQuestionIdx > 0) {
+      setCurrentQuestionIdx((idx) => idx - 1);
     }
   };
 
@@ -245,10 +285,34 @@ export default function LevelPage() {
 
       {/* Main content with padding to account for fixed header */}
       <div className="max-w-3xl mx-auto pt-16">
+        {/* Show alert if user lost all lives */}
+        {showRestartAlert && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+            <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full text-center">
+              <h2 className="text-xl font-bold mb-4 text-red-600">
+                Out of Lives!
+              </h2>
+              <p className="mb-6">
+                You lost all your lives. Press the button below to try the level
+                again.
+              </p>
+              <Button
+                onClick={handleRestartLevel}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              >
+                Restart Level
+              </Button>
+            </div>
+          </div>
+        )}
+
         <header className="mb-6 text-center">
           <div className="flex items-center justify-center mb-2">
             <div className={`p-2 rounded-lg mr-3 ${getTypeColor(level.type)}`}>
-              <level.icon className="h-5 w-5" />
+              {(() => {
+                const Icon = getTypeIcon(level.type);
+                return <Icon className="h-5 w-5" />;
+              })()}
             </div>
             <h1 className="text-2xl font-bold">{level.title}</h1>
           </div>
@@ -263,11 +327,16 @@ export default function LevelPage() {
             {renderExercise()}
 
             <div className="mt-8 flex justify-between">
+              {currentQuestionIdx > 0 && (
+                <Button onClick={handlePrev} className="mr-2 w-1/2">
+                  Previous
+                </Button>
+              )}
               {!isSubmitted ? (
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitDisabled()}
-                  className="w-full"
+                  className={currentQuestionIdx > 0 ? "w-1/2" : "w-full"}
                 >
                   Check Answer
                 </Button>
@@ -280,7 +349,13 @@ export default function LevelPage() {
                       : "bg-blue-500 hover:bg-blue-600"
                   }`}
                 >
-                  {isCorrect ? "Correct! Continue" : "Continue"}
+                  {isCorrect
+                    ? currentQuestionIdx < questions.length - 1
+                      ? "Correct! Next Question"
+                      : "Correct! Continue"
+                    : currentQuestionIdx < questions.length - 1
+                    ? "Next Question"
+                    : "Continue"}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               )}

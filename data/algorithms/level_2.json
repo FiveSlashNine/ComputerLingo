@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "title": "Level 1: Algorithms 2",
+      "type": "multiple-choice",
+      "question": "Which of the following correctly declares a variable in JavaScript?",
+      "options": [
+        { "id": "a", "text": "variable x = 10;" },
+        { "id": "b", "text": "var x = 10;" },
+        { "id": "c", "text": "x := 10;" },
+        { "id": "d", "text": "x == 10;" }
+      ],
+      "correctAnswer": "b",
+      "icon": "Code2"
+    },
+    {
+      "id": 2,
+      "title": "Level 2: Conditional Statements",
+      "type": "true-false",
+      "question": "In JavaScript, the condition in an if statement must be enclosed in curly braces {}.",
+      "correctAnswer": false,
+      "icon": "SlidersHorizontal"
+    },
+    {
+      "id": 3,
+      "title": "Function Fundamentals",
+      "type": "fill-blanks",
+      "question": "Complete the function to calculate the area of a rectangle:",
+      "codeTemplate": "function calculateArea(length, width) {\n  return ____ * ____;\n}",
+      "blanks": ["length", "width"],
+      "icon": "Terminal"
+    },
+    {
+      "id": 4,
+      "title": "Array Operations",
+      "type": "drag-drop",
+      "question": "Arrange the following steps to sort an array in ascending order using bubble sort:",
+      "items": [
+        { "id": "1", "text": "Compare adjacent elements" },
+        { "id": "2", "text": "Swap if the element found is greater than the next element" },
+        { "id": "3", "text": "Repeat until no more swaps are needed" },
+        { "id": "4", "text": "Start from the first element" }
+      ],
+      "correctOrder": ["4", "1", "2", "3"],
+      "icon": "ListChecks"
+    }
+]
+  
