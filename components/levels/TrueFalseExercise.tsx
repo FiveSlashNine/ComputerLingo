@@ -26,7 +26,7 @@ export function TrueFalseExercise({
 
   return (
     <div className="space-y-4">
-      <div className="flex justify-center space-x-4">
+      <div className="flex justify-center gap-4">
         <Button
           variant={selectedAnswer === true ? "default" : "outline"}
           className={cn(

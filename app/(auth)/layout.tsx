@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 
 import { Nunito } from "next/font/google";
 

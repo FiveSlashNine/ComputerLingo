@@ -1,28 +1,49 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { Form } from "@/components/forms/form";
-import { redirect } from "next/navigation";
-import { createUser, getUser } from "@/app/db";
-import { SubmitButton } from "@/components/buttons/submit-button";
 import { BookOpen, Trophy, Users } from "lucide-react";
+import { signUp } from "@/lib/auth-client";
+import { Button } from "@/components/ui/button";
 
 export default function Register() {
-  async function register(formData: FormData) {
-    "use server";
-    let email = formData.get("email") as string;
-    let password = formData.get("password") as string;
-    let user = await getUser(email);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const router = useRouter();
 
-    if (user.length > 0) {
-      return "User already exists"; // TODO: Handle errors with useFormStatus
+  async function register(formData: FormData) {
+    setIsLoading(true);
+    setErrorMessage("");
+
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    const { data, error } = await signUp.email(
+      {
+        email,
+        password,
+        callbackURL: "/login",
+        name: "",
+      },
+      {}
+    );
+
+    setIsLoading(false);
+
+    if (error) {
+      setErrorMessage(
+        error.message || "Registration failed. Please try again."
+      );
     } else {
-      await createUser(email, password);
-      redirect("/login");
+      router.push("/login");
     }
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-background">
+    <div className="flex justify-center min-h-screen flex-col bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-background">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-center gap-8 mt-8">
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start space-y-6">
           <Link href="/" className="flex items-center gap-3 mb-6">
@@ -83,10 +104,21 @@ export default function Register() {
               Start your coding journey with Computer Lingo today
             </p>
           </div>
+
+          {errorMessage && (
+            <div className="bg-gray-50 px-6 pt-4 text-sm text-red-600 font-medium text-center">
+              {errorMessage}
+            </div>
+          )}
+
           <Form action={register}>
-            <SubmitButton className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600">
-              Get Started
-            </SubmitButton>
+            <Button
+              className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600"
+              disabled={isLoading}
+            >
+              {isLoading ? "Creating account..." : "Get Started"}
+            </Button>
+
             <p className="text-center text-sm mx-5 text-gray-600">
               {"Already have an account? "}
               <Link

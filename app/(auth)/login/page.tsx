@@ -1,13 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { Form } from "@/components/forms/form";
-import { signIn } from "@/app/auth";
-import { SubmitButton } from "@/components/buttons/submit-button";
+import { signIn } from "@/lib/auth-client";
 import { Code, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Login() {
+  const [errorMessage, setErrorMessage] = useState("");
+
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-background">
+    <div className="flex justify-center min-h-screen flex-col bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-background">
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-center gap-8 mt-8">
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start space-y-6">
           <Link href="/" className="flex items-center gap-3 mb-6">
@@ -73,19 +78,36 @@ export default function Login() {
               Access your learning dashboard and progress
             </p>
           </div>
+
+          {errorMessage && (
+            <div className="bg-gray-50 px-6 pt-4 text-sm text-red-600 font-medium text-center">
+              {errorMessage}
+            </div>
+          )}
+
           <Form
             action={async (formData: FormData) => {
-              "use server";
-              await signIn("credentials", {
-                redirectTo: "/protected",
-                email: formData.get("email") as string,
-                password: formData.get("password") as string,
-              });
+              setErrorMessage("");
+              const { data, error } = await signIn.email(
+                {
+                  email: formData.get("email") as string,
+                  password: formData.get("password") as string,
+                  callbackURL: "/",
+                  rememberMe: false,
+                },
+                {}
+              );
+
+              if (error) {
+                setErrorMessage(
+                  error.message || "Sign in failed. Please try again."
+                );
+              }
             }}
           >
-            <SubmitButton className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600">
+            <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600">
               Sign in
-            </SubmitButton>
+            </Button>
             <p className="text-center text-sm text-gray-600">
               {"Don't have an account? "}
               <Link

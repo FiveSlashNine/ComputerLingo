@@ -177,17 +177,13 @@ export default function LevelPage() {
     if (currentQuestionIdx < questions.length - 1) {
       setCurrentQuestionIdx((idx) => idx + 1);
     } else {
-      // take user Id from db using next auth
-
       try {
         await fetch(`/api/levels?categoryId=${categoryId}&levelId=${levelId}`, {
           method: "POST",
         });
-      } catch (e) {
-        // Optionally handle error (e.g., show a toast)
-      }
+      } catch (e) {}
       const nextId = Number.parseInt(levelId) + 1;
-      router.push(`/protected/${categoryId}/${nextId}`);
+      router.push(`/levels/${categoryId}/${nextId}`);
     }
   };
 
@@ -259,7 +255,7 @@ export default function LevelPage() {
   return (
     <div className="container mx-auto py-8 px-4">
       {/* Fixed navigation header */}
-      <div className="fixed top-0 left-0 right-0 bg-background z-10 border-b">
+      <div className="bg-background z-10 border-b">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/">
             <Button variant="ghost" size="sm">
@@ -320,45 +316,44 @@ export default function LevelPage() {
           <Progress value={33} className="h-1.5 mb-6" />
         </header>
 
-        <Card>
+        <Card className="bg-gray-50">
           <CardContent className="p-6">
             <h2 className="text-lg font-medium mb-6">{level.question}</h2>
 
             {renderExercise()}
 
-            <div className="mt-8 flex justify-between">
-              {currentQuestionIdx > 0 && (
-                <Button onClick={handlePrev} className="mr-2 w-1/2">
-                  Previous
-                </Button>
-              )}
-              {!isSubmitted ? (
-                <Button
-                  onClick={handleSubmit}
-                  disabled={isSubmitDisabled()}
-                  className={currentQuestionIdx > 0 ? "w-1/2" : "w-full"}
-                >
-                  Check Answer
-                </Button>
-              ) : (
-                <Button
-                  onClick={handleNext}
-                  className={`w-full ${
-                    isCorrect
+            <div className="mt-8 flex gap-4">
+              <Button
+                onClick={handlePrev}
+                disabled={currentQuestionIdx === 0}
+                className="w-1/2"
+                variant={currentQuestionIdx === 0 ? "outline" : "default"}
+              >
+                Previous
+              </Button>
+
+              <Button
+                onClick={isSubmitted ? handleNext : handleSubmit}
+                disabled={!isSubmitted && isSubmitDisabled()}
+                className={`w-1/2 ${
+                  isSubmitted
+                    ? isCorrect
                       ? "bg-green-500 hover:bg-green-600"
                       : "bg-blue-500 hover:bg-blue-600"
-                  }`}
-                >
-                  {isCorrect
+                    : ""
+                }`}
+              >
+                {isSubmitted
+                  ? isCorrect
                     ? currentQuestionIdx < questions.length - 1
                       ? "Correct! Next Question"
                       : "Correct! Continue"
                     : currentQuestionIdx < questions.length - 1
                     ? "Next Question"
-                    : "Continue"}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              )}
+                    : "Continue"
+                  : "Check Answer"}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
 
             <FeedbackMessage isCorrect={isCorrect} isSubmitted={isSubmitted} />

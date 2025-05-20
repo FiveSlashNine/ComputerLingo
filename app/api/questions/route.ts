@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { getCategoryNameById } from "@/app/db";
+import { getCategoryNameById } from "@/lib/db";
 
-// Helper to recursively get all question JSON files
 function getQuestionFiles(dir: string, levelId: number): string[] {
   let results: string[] = [];
   const list = fs.readdirSync(dir);
