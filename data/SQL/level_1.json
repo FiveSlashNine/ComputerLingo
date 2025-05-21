@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which SQL keyword is used to retrieve data from a database?",
+    "options": [
+      { "id": "a", "text": "GET" },
+      { "id": "b", "text": "SELECT" },
+      { "id": "c", "text": "FETCH" },
+      { "id": "d", "text": "PULL" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Database"
+  },
+  {
+    "id": 2,
+    "title": "Level 1: SQL Basics",
+    "type": "true-false",
+    "question": "The SQL command `INSERT INTO` is used to delete records.",
+    "correctAnswer": false,
+    "icon": "Trash2"
+  },
+  {
+    "id": 3,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which clause in SQL is used to filter the result set?",
+    "options": [
+      { "id": "a", "text": "WHERE" },
+      { "id": "b", "text": "HAVING" },
+      { "id": "c", "text": "FILTER" },
+      { "id": "d", "text": "LIMIT" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Filter"
+  },
+  {
+    "id": 4,
+    "title": "Level 1: SQL Basics",
+    "type": "fill-blanks",
+    "question": "Complete the query to select all columns from the 'users' table:",
+    "codeTemplate": "SELECT * FROM _______;",
+    "blanks": ["users"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 5,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which command removes a table from the database?",
+    "options": [
+      { "id": "a", "text": "DELETE TABLE" },
+      { "id": "b", "text": "DROP TABLE" },
+      { "id": "c", "text": "REMOVE TABLE" },
+      { "id": "d", "text": "TRUNCATE TABLE" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Trash"
+  },
+  {
+    "id": 6,
+    "title": "Level 1: SQL Basics",
+    "type": "drag-drop",
+    "question": "Arrange the SQL query parts in the correct order:",
+    "items": [
+      { "id": "1", "text": "SELECT" },
+      { "id": "2", "text": "FROM" },
+      { "id": "3", "text": "WHERE" },
+      { "id": "4", "text": "ORDER BY" }
+    ],
+    "correctOrder": ["1", "2", "3", "4"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 7,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which SQL statement is used to add new data into a table?",
+    "options": [
+      { "id": "a", "text": "APPEND" },
+      { "id": "b", "text": "INSERT INTO" },
+      { "id": "c", "text": "ADD TO" },
+      { "id": "d", "text": "PUT INTO" }
+    ],
+    "correctAnswer": "b",
+    "icon": "FilePlus"
+  },
+  {
+    "id": 8,
+    "title": "Level 1: SQL Basics",
+    "type": "true-false",
+    "question": "The `*` symbol in `SELECT * FROM table` selects all columns.",
+    "correctAnswer": true,
+    "icon": "Asterisk"
+  },
+  {
+    "id": 9,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which SQL keyword is used to change existing data in a table?",
+    "options": [
+      { "id": "a", "text": "CHANGE" },
+      { "id": "b", "text": "UPDATE" },
+      { "id": "c", "text": "MODIFY" },
+      { "id": "d", "text": "ALTER" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Edit"
+  },
+  {
+    "id": 10,
+    "title": "Level 1: SQL Basics",
+    "type": "fill-blanks",
+    "question": "Fill in the blanks to insert a record into a table:",
+    "codeTemplate": "INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');",
+    "blanks": ["users", "name", "email", "'Alice'", "'alice@example.com'"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 11,
+    "title": "Level 1: SQL Basics",
+    "type": "true-false",
+    "question": "SQL is case-sensitive for its commands (e.g., SELECT vs select).",
+    "correctAnswer": false,
+    "icon": "Text"
+  },
+  {
+    "id": 12,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "What is the default sorting order of the `ORDER BY` clause?",
+    "options": [
+      { "id": "a", "text": "DESC" },
+      { "id": "b", "text": "RANDOM" },
+      { "id": "c", "text": "ASC" },
+      { "id": "d", "text": "NONE" }
+    ],
+    "correctAnswer": "c",
+    "icon": "SortAsc"
+  },
+  {
+    "id": 13,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which SQL keyword is used to rename a table column?",
+    "options": [
+      { "id": "a", "text": "MODIFY" },
+      { "id": "b", "text": "RENAME TO" },
+      { "id": "c", "text": "ALTER TABLE" },
+      { "id": "d", "text": "CHANGE COLUMN" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Pencil"
+  },
+  {
+    "id": 14,
+    "title": "Level 1: SQL Basics",
+    "type": "fill-blanks",
+    "question": "Write the SQL to delete all records from a table called `orders`:",
+    "codeTemplate": "DELETE FROM orders;",
+    "blanks": ["DELETE", "FROM", "orders"],
+    "icon": "Trash"
+  },
+  {
+    "id": 15,
+    "title": "Level 1: SQL Basics",
+    "type": "drag-drop",
+    "question": "Order the steps to insert data into a table correctly:",
+    "items": [
+      { "id": "1", "text": "INSERT INTO table_name" },
+      { "id": "2", "text": "(column1, column2)" },
+      { "id": "3", "text": "VALUES" },
+      { "id": "4", "text": "('value1', 'value2')" }
+    ],
+    "correctOrder": ["1", "2", "3", "4"],
+    "icon": "ListOrdered"
+  },
+  {
+    "id": 16,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which clause limits the number of returned rows?",
+    "options": [
+      { "id": "a", "text": "FIRST" },
+      { "id": "b", "text": "TOP" },
+      { "id": "c", "text": "LIMIT" },
+      { "id": "d", "text": "ROWNUM" }
+    ],
+    "correctAnswer": "c",
+    "icon": "AlignVerticalSpaceAround"
+  },
+  {
+    "id": 17,
+    "title": "Level 1: SQL Basics",
+    "type": "true-false",
+    "question": "SQL is used only with MySQL databases.",
+    "correctAnswer": false,
+    "icon": "Server"
+  },
+  {
+    "id": 18,
+    "title": "Level 1: SQL Basics",
+    "type": "multiple-choice",
+    "question": "Which of the following is a valid SQL comment syntax?",
+    "options": [
+      { "id": "a", "text": "# This is a comment" },
+      { "id": "b", "text": "-- This is a comment" },
+      { "id": "c", "text": "// This is a comment" },
+      { "id": "d", "text": "/* This is a comment */" }
+    ],
+    "correctAnswer": "b",
+    "icon": "MessageSquare"
+  },
+  {
+    "id": 19,
+    "title": "Level 1: SQL Basics",
+    "type": "fill-blanks",
+    "question": "Write an SQL query to select 'name' and 'email' from 'users':",
+    "codeTemplate": "SELECT name, email FROM users;",
+    "blanks": ["SELECT", "name", "email", "FROM", "users"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 20,
+    "title": "Level 1: SQL Basics",
+    "type": "true-false",
+    "question": "The `UPDATE` command can change data in multiple rows at once.",
+    "correctAnswer": true,
+    "icon": "Edit3"
+  }
+]

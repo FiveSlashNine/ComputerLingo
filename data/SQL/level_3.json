@@ -1,0 +1,238 @@
+[
+  {
+    "id": 1,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "Which SQL clause allows a query to be nested within another query?",
+    "options": [
+      { "id": "a", "text": "GROUP BY" },
+      { "id": "b", "text": "SUBSELECT" },
+      { "id": "c", "text": "SUBQUERY" },
+      { "id": "d", "text": "SELECT" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Layers"
+  },
+  {
+    "id": 2,
+    "title": "Level 3: SQL Advanced",
+    "type": "true-false",
+    "question": "Indexes improve query performance by reducing the number of rows scanned.",
+    "correctAnswer": true,
+    "icon": "Zap"
+  },
+  {
+    "id": 3,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "What does the SQL keyword EXISTS check for?",
+    "options": [
+      { "id": "a", "text": "If a value is NULL" },
+      { "id": "b", "text": "If a subquery returns any rows" },
+      { "id": "c", "text": "If a table exists in the database" },
+      { "id": "d", "text": "If a row exists in the current table" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Eye"
+  },
+  {
+    "id": 4,
+    "title": "Level 3: SQL Advanced",
+    "type": "fill-blanks",
+    "question": "Complete the subquery to find products with a price above average:",
+    "codeTemplate": "SELECT name FROM products WHERE price > (SELECT AVG(price) FROM products);",
+    "blanks": ["SELECT", "AVG(price)", "FROM", "products"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 5,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "Which SQL feature ensures that a group of SQL statements execute as a single unit?",
+    "options": [
+      { "id": "a", "text": "Procedure" },
+      { "id": "b", "text": "Transaction" },
+      { "id": "c", "text": "Trigger" },
+      { "id": "d", "text": "Cursor" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Repeat"
+  },
+  {
+    "id": 6,
+    "title": "Level 3: SQL Advanced",
+    "type": "true-false",
+    "question": "The ROLLBACK command is used to undo transactions that have not yet been committed.",
+    "correctAnswer": true,
+    "icon": "RotateCcw"
+  },
+  {
+    "id": 7,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "Which of the following is a property of ACID in databases?",
+    "options": [
+      { "id": "a", "text": "Atomicity" },
+      { "id": "b", "text": "Concurrency" },
+      { "id": "c", "text": "Distribution" },
+      { "id": "d", "text": "Integrity" }
+    ],
+    "correctAnswer": "a",
+    "icon": "ShieldCheck"
+  },
+  {
+    "id": 8,
+    "title": "Level 3: SQL Advanced",
+    "type": "fill-blanks",
+    "question": "Complete the syntax to start and end a transaction:",
+    "codeTemplate": "BEGIN TRANSACTION; -- some queries -- COMMIT;",
+    "blanks": ["BEGIN TRANSACTION", "COMMIT"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 9,
+    "title": "Level 3: SQL Advanced",
+    "type": "drag-drop",
+    "question": "Arrange the transaction steps in the correct order:",
+    "items": [
+      { "id": "1", "text": "BEGIN TRANSACTION" },
+      { "id": "2", "text": "Execute SQL operations" },
+      { "id": "3", "text": "COMMIT or ROLLBACK" }
+    ],
+    "correctOrder": ["1", "2", "3"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 10,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "Which SQL statement is used to create an index on a table?",
+    "options": [
+      { "id": "a", "text": "MAKE INDEX" },
+      { "id": "b", "text": "CREATE INDEX" },
+      { "id": "c", "text": "BUILD INDEX" },
+      { "id": "d", "text": "SET INDEX" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Bookmark"
+  },
+  {
+    "id": 11,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "What does the SQL keyword 'WITH' allow you to do?",
+    "options": [
+      { "id": "a", "text": "Create temporary tables" },
+      { "id": "b", "text": "Define Common Table Expressions (CTEs)" },
+      { "id": "c", "text": "Start a transaction" },
+      { "id": "d", "text": "Alias a subquery" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Columns"
+  },
+  {
+    "id": 12,
+    "title": "Level 3: SQL Advanced",
+    "type": "true-false",
+    "question": "A Common Table Expression (CTE) must always end with a SELECT statement.",
+    "correctAnswer": true,
+    "icon": "ClipboardList"
+  },
+  {
+    "id": 13,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "Which SQL command is used to grant privileges to a user?",
+    "options": [
+      { "id": "a", "text": "PERMIT" },
+      { "id": "b", "text": "GRANT" },
+      { "id": "c", "text": "ALLOW" },
+      { "id": "d", "text": "GIVE" }
+    ],
+    "correctAnswer": "b",
+    "icon": "UserPlus"
+  },
+  {
+    "id": 14,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "Which command removes all rows from a table but keeps the table structure?",
+    "options": [
+      { "id": "a", "text": "DELETE" },
+      { "id": "b", "text": "REMOVE" },
+      { "id": "c", "text": "TRUNCATE" },
+      { "id": "d", "text": "DROP" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Trash2"
+  },
+  {
+    "id": 15,
+    "title": "Level 3: SQL Advanced",
+    "type": "fill-blanks",
+    "question": "Fill in the blanks to revoke SELECT privilege from a user:",
+    "codeTemplate": "REVOKE SELECT ON database.table FROM 'username';",
+    "blanks": ["REVOKE", "SELECT", "ON", "FROM"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 16,
+    "title": "Level 3: SQL Advanced",
+    "type": "drag-drop",
+    "question": "Arrange the following to form a correct CTE structure:",
+    "items": [
+      { "id": "1", "text": "WITH recent_sales AS" },
+      { "id": "2", "text": "(SELECT * FROM sales WHERE sale_date > '2023-01-01')" },
+      { "id": "3", "text": "SELECT * FROM recent_sales;" }
+    ],
+    "correctOrder": ["1", "2", "3"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 17,
+    "title": "Level 3: SQL Advanced",
+    "type": "true-false",
+    "question": "You can use a CTE recursively to solve hierarchical queries.",
+    "correctAnswer": true,
+    "icon": "Repeat"
+  },
+  {
+    "id": 18,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "What is the default isolation level in most SQL databases?",
+    "options": [
+      { "id": "a", "text": "READ UNCOMMITTED" },
+      { "id": "b", "text": "READ COMMITTED" },
+      { "id": "c", "text": "REPEATABLE READ" },
+      { "id": "d", "text": "SERIALIZABLE" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Lock"
+  },
+  {
+    "id": 19,
+    "title": "Level 3: SQL Advanced",
+    "type": "multiple-choice",
+    "question": "Which SQL command is used to remove a view?",
+    "options": [
+      { "id": "a", "text": "DELETE VIEW" },
+      { "id": "b", "text": "DROP VIEW" },
+      { "id": "c", "text": "REMOVE VIEW" },
+      { "id": "d", "text": "TRUNCATE VIEW" }
+    ],
+    "correctAnswer": "b",
+    "icon": "EyeOff"
+  },
+  {
+    "id": 20,
+    "title": "Level 3: SQL Advanced",
+    "type": "fill-blanks",
+    "question": "Complete the SQL to create a view:",
+    "codeTemplate": "CREATE VIEW view_name AS SELECT column1, column2 FROM table_name;",
+    "blanks": ["CREATE VIEW", "AS SELECT", "FROM"],
+    "icon": "Terminal"
+  }
+  
+]
+

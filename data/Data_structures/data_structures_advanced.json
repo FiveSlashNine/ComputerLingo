@@ -1,0 +1,457 @@
+{
+  "category": "data_structures",
+  "level": "advanced",
+  "topics": [
+    {
+      "title": "Self-Balancing Trees (AVL & Red-Black)",
+      "tutorial": "Self-balancing BSTs maintain O(log n) height via rotations or coloring rules. AVL uses height differences, Red-Black uses node colors and properties.",
+      "questions": [
+        {
+          "id": "adv-ds-sbt-q1",
+          "type": "multiple-choice",
+          "question": "AVL balance factor range is:",
+          "options": [
+            "-1 to 1",
+            "-2 to 2",
+            "0 to 2",
+            "-n to n"
+          ],
+          "correctAnswer": "-1 to 1",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-sbt-q2",
+          "type": "true-false",
+          "question": "Red-Black trees ensure no path is twice another in black nodes.",
+          "correctAnswer": true,
+          "icon": "Check"
+        },
+        {
+          "id": "adv-ds-sbt-q3",
+          "type": "fill-blanks",
+          "question": "AVL rotates when balance factor is ___.",
+          "codeTemplate": "",
+          "blanks": [
+            "|bf| > 1"
+          ],
+          "icon": "RotateCcw"
+        },
+        {
+          "id": "adv-ds-sbt-q4",
+          "type": "multiple-choice",
+          "question": "Red-Black insert fix may require:",
+          "options": [
+            "1 rotation",
+            "2 rotations",
+            "Recoloring",
+            "All"
+          ],
+          "correctAnswer": "All",
+          "icon": "Edit3"
+        },
+        {
+          "id": "adv-ds-sbt-q5",
+          "type": "true-false",
+          "question": "AVL is more rigidly balanced than Red-Black.",
+          "correctAnswer": true,
+          "icon": "XCircle"
+        },
+        {
+          "id": "adv-ds-sbt-q6",
+          "type": "drag-drop",
+          "question": "Match rotation to case:",
+          "items": [
+            {
+              "id": "LL",
+              "text": "Left-Left"
+            },
+            {
+              "id": "LR",
+              "text": "Left-Right"
+            },
+            {
+              "id": "RR",
+              "text": "Right-Right"
+            },
+            {
+              "id": "RL",
+              "text": "Right-Left"
+            }
+          ],
+          "correctOrder": [
+            "LL\u2192Single right",
+            "RR\u2192Single left",
+            "LR\u2192Left-right",
+            "RL\u2192Right-left"
+          ],
+          "icon": "ArrowsRightLeft"
+        }
+      ]
+    },
+    {
+      "title": "B-Trees",
+      "tutorial": "B-Trees are multi-way trees optimized for disks. Each node has between \u2308m/2\u2309 and m children, keeping tree height low.",
+      "questions": [
+        {
+          "id": "adv-ds-btree-q1",
+          "type": "multiple-choice",
+          "question": "Max keys in B-Tree of order m is:",
+          "options": [
+            "m-1",
+            "m",
+            "2m-1",
+            "2m"
+          ],
+          "correctAnswer": "m-1",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-btree-q2",
+          "type": "true-false",
+          "question": "All leaves in B-Tree are at same depth.",
+          "correctAnswer": true,
+          "icon": "Check"
+        },
+        {
+          "id": "adv-ds-btree-q3",
+          "type": "fill-blanks",
+          "question": "On overflow, middle key is ___ to parent.",
+          "codeTemplate": "",
+          "blanks": [
+            "promoted"
+          ],
+          "icon": "Upload"
+        },
+        {
+          "id": "adv-ds-btree-q4",
+          "type": "multiple-choice",
+          "question": "Minimum children per node is:",
+          "options": [
+            "\u2308m/2\u2309",
+            "m/2",
+            "m-1",
+            "2"
+          ],
+          "correctAnswer": "\u2308m/2\u2309",
+          "icon": "Divide"
+        },
+        {
+          "id": "adv-ds-btree-q5",
+          "type": "drag-drop",
+          "question": "Match property:",
+          "items": [
+            {
+              "id": "High",
+              "text": "High fan-out"
+            },
+            {
+              "id": "Disk",
+              "text": "Disk optimized"
+            }
+          ],
+          "correctOrder": [
+            "High\u2192Many children",
+            "Disk\u2192Fewer levels"
+          ],
+          "icon": "Database"
+        },
+        {
+          "id": "adv-ds-btree-q6",
+          "type": "true-false",
+          "question": "Splits may propagate to root causing height increase.",
+          "correctAnswer": true,
+          "icon": "ArrowUp"
+        }
+      ]
+    },
+    {
+      "title": "Skip Lists",
+      "tutorial": "Skip Lists use probabilistic layers of linked lists. Level increases with probability p, giving average O(log n) operations.",
+      "questions": [
+        {
+          "id": "adv-ds-skiplist-q1",
+          "type": "multiple-choice",
+          "question": "Expected levels for p=1/2 is:",
+          "options": [
+            "log\u2082 n",
+            "n",
+            "\u221an",
+            "2n"
+          ],
+          "correctAnswer": "log\u2082 n",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-skiplist-q2",
+          "type": "true-false",
+          "question": "Skip Lists guarantee worst-case O(n).",
+          "correctAnswer": true,
+          "icon": "X"
+        },
+        {
+          "id": "adv-ds-skiplist-q3",
+          "type": "fill-blanks",
+          "question": "Each node appears in level i with probability ___.",
+          "codeTemplate": "",
+          "blanks": [
+            "p^i"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-skiplist-q4",
+          "type": "multiple-choice",
+          "question": "Skip List search average time is O(log n). True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Search"
+        },
+        {
+          "id": "adv-ds-skiplist-q5",
+          "type": "drag-drop",
+          "question": "Match part to function:",
+          "items": [
+            {
+              "id": "Top",
+              "text": "Top list"
+            },
+            {
+              "id": "Base",
+              "text": "Base list"
+            }
+          ],
+          "correctOrder": [
+            "Top\u2192Express lane",
+            "Base\u2192Full list"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-skiplist-q6",
+          "type": "true-false",
+          "question": "Insertion updates pointers at each level.",
+          "correctAnswer": true,
+          "icon": "Edit3"
+        }
+      ]
+    },
+    {
+      "title": "Segment Trees",
+      "tutorial": "Segment Trees support range queries/point updates in O(log n) by storing aggregates in a binary tree over array segments.",
+      "questions": [
+        {
+          "id": "adv-ds-segtree-q1",
+          "type": "multiple-choice",
+          "question": "Segment tree size \u2248:",
+          "options": [
+            "2n",
+            "4n",
+            "n",
+            "log n"
+          ],
+          "correctAnswer": "4n",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-segtree-q2",
+          "type": "true-false",
+          "question": "Point update runs in O(log n).",
+          "correctAnswer": true,
+          "icon": "Edit3"
+        },
+        {
+          "id": "adv-ds-segtree-q3",
+          "type": "fill-blanks",
+          "question": "Internal nodes store ___ of segment.",
+          "codeTemplate": "",
+          "blanks": [
+            "aggregate"
+          ],
+          "icon": "Calculator"
+        },
+        {
+          "id": "adv-ds-segtree-q4",
+          "type": "multiple-choice",
+          "question": "Range query visits O(log n) nodes. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Search"
+        },
+        {
+          "id": "adv-ds-segtree-q5",
+          "type": "drag-drop",
+          "question": "Match ops:",
+          "items": [
+            {
+              "id": "Q",
+              "text": "Query"
+            },
+            {
+              "id": "U",
+              "text": "Update"
+            }
+          ],
+          "correctOrder": [
+            "Q\u2192Traverse segments",
+            "U\u2192Update leaf & parents"
+          ],
+          "icon": "ArrowsRightLeft"
+        },
+        {
+          "id": "adv-ds-segtree-q6",
+          "type": "true-false",
+          "question": "Segment tree can handle non-power-of-two size by padding.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        }
+      ]
+    },
+    {
+      "title": "Fenwick Trees (BIT)",
+      "tutorial": "Fenwick Trees support prefix-sum and point updates in O(log n) using bitwise index operations.",
+      "questions": [
+        {
+          "id": "adv-ds-bit-q1",
+          "type": "multiple-choice",
+          "question": "Parent index computed via clearing least significant ___ bit.",
+          "options": [
+            "1",
+            "0",
+            "all",
+            "leftmost"
+          ],
+          "correctAnswer": "1",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-bit-q2",
+          "type": "true-false",
+          "question": "Query prefix sum is O(log n).",
+          "correctAnswer": true,
+          "icon": "Search"
+        },
+        {
+          "id": "adv-ds-bit-q3",
+          "type": "fill-blanks",
+          "question": "Update at i uses i += i & ___.",
+          "codeTemplate": "",
+          "blanks": [
+            "-i"
+          ],
+          "icon": "Math"
+        },
+        {
+          "id": "adv-ds-bit-q4",
+          "type": "multiple-choice",
+          "question": "Fenwick Tree space is O(n). True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-bit-q5",
+          "type": "drag-drop",
+          "question": "Match method:",
+          "items": [
+            {
+              "id": "Q",
+              "text": "Query"
+            },
+            {
+              "id": "U",
+              "text": "Update"
+            }
+          ],
+          "correctOrder": [
+            "Q\u2192i-=i&-i",
+            "U\u2192i+=i&-i"
+          ],
+          "icon": "ArrowsRightLeft"
+        },
+        {
+          "id": "adv-ds-bit-q6",
+          "type": "true-false",
+          "question": "Fenwick can support range updates.",
+          "correctAnswer": false,
+          "icon": "X"
+        }
+      ]
+    },
+    {
+      "title": "Bloom Filters",
+      "tutorial": "Bloom Filters are probabilistic sets using k hash functions and bit array. Queries are O(k) and may yield false positives.",
+      "questions": [
+        {
+          "id": "adv-ds-bloom-q1",
+          "type": "multiple-choice",
+          "question": "Bloom Filter false ____, no false ____.",
+          "options": [
+            "positives/negatives",
+            "negatives/positives",
+            "positives/positives",
+            "negatives/negatives"
+          ],
+          "correctAnswer": "negatives/positives",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-ds-bloom-q2",
+          "type": "true-false",
+          "question": "Adding element sets k bits.",
+          "correctAnswer": true,
+          "icon": "Edit3"
+        },
+        {
+          "id": "adv-ds-bloom-q3",
+          "type": "fill-blanks",
+          "question": "False positive probability depends on bit array size and number of ___ functions.",
+          "codeTemplate": "",
+          "blanks": [
+            "hash"
+          ],
+          "icon": "Hash"
+        },
+        {
+          "id": "adv-ds-bloom-q4",
+          "type": "multiple-choice",
+          "question": "Bloom Filters support deletion. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "False",
+          "icon": "Trash"
+        },
+        {
+          "id": "adv-ds-bloom-q5",
+          "type": "drag-drop",
+          "question": "Match action:",
+          "items": [
+            {
+              "id": "I",
+              "text": "Insert"
+            },
+            {
+              "id": "Q",
+              "text": "Query"
+            }
+          ],
+          "correctOrder": [
+            "I\u2192Hash&set bits",
+            "Q\u2192Check bits"
+          ],
+          "icon": "Layers"
+        }
+      ]
+    }
+  ]
+}

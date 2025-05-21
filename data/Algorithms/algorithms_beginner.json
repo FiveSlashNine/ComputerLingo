@@ -1,0 +1,469 @@
+{
+  "category": "algorithms",
+  "level": "beginner",
+  "topics": [
+    {
+      "title": "Sorting",
+      "tutorial": "Sorting arranges elements in a list into a specified order. Bubble Sort repeatedly swaps adjacent out\u2010of\u2010order items. It's easy to implement but has O(n\u00b2) worst-case time.",
+      "questions": [
+        {
+          "id": "beg-sort-q1",
+          "type": "multiple-choice",
+          "question": "What does Bubble Sort compare on each pass?",
+          "options": [
+            "First and last elements",
+            "Adjacent elements",
+            "Pivot and element",
+            "Median elements"
+          ],
+          "correctAnswer": "Adjacent elements",
+          "icon": "ListChecks"
+        },
+        {
+          "id": "beg-sort-q2",
+          "type": "true-false",
+          "question": "Bubble Sort\u2019s worst-case time complexity is O(n\u00b2).",
+          "correctAnswer": true,
+          "icon": "Clock"
+        },
+        {
+          "id": "beg-sort-q3",
+          "type": "fill-blanks",
+          "question": "After one full pass, the ____ element is in its final position.",
+          "codeTemplate": "",
+          "blanks": [
+            "largest"
+          ],
+          "icon": "CursorText"
+        },
+        {
+          "id": "beg-sort-q4",
+          "type": "multiple-choice",
+          "question": "What is the best-case time complexity of Bubble Sort (when already sorted)?",
+          "options": [
+            "O(n)",
+            "O(n log n)",
+            "O(n\u00b2)",
+            "O(1)"
+          ],
+          "correctAnswer": "O(n)",
+          "icon": "TrendingUp"
+        },
+        {
+          "id": "beg-sort-q5",
+          "type": "true-false",
+          "question": "Bubble Sort is a stable sorting algorithm.",
+          "correctAnswer": true,
+          "icon": "Shuffle"
+        },
+        {
+          "id": "beg-sort-q6",
+          "type": "drag-drop",
+          "question": "Order the steps of Bubble Sort:",
+          "items": [
+            {
+              "id": "1",
+              "text": "Compare adjacent"
+            },
+            {
+              "id": "2",
+              "text": "Swap if out of order"
+            },
+            {
+              "id": "3",
+              "text": "Repeat passes"
+            },
+            {
+              "id": "4",
+              "text": "Stop when no swaps"
+            }
+          ],
+          "correctOrder": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "icon": "ArrowsRightLeft"
+        }
+      ]
+    },
+    {
+      "title": "Searching",
+      "tutorial": "Searching finds a target in a collection. Linear Search checks each element in turn (O(n)). It works on unsorted data but can be slow on large lists.",
+      "questions": [
+        {
+          "id": "beg-search-q1",
+          "type": "multiple-choice",
+          "question": "What is Linear Search\u2019s worst-case complexity?",
+          "options": [
+            "O(1)",
+            "O(n)",
+            "O(log n)",
+            "O(n\u00b2)"
+          ],
+          "correctAnswer": "O(n)",
+          "icon": "Search"
+        },
+        {
+          "id": "beg-search-q2",
+          "type": "true-false",
+          "question": "Linear Search requires a sorted list.",
+          "correctAnswer": false,
+          "icon": "Sliders"
+        },
+        {
+          "id": "beg-search-q3",
+          "type": "fill-blanks",
+          "question": "In the worst case, Linear Search examines ____ elements.",
+          "codeTemplate": "",
+          "blanks": [
+            "all"
+          ],
+          "icon": "List"
+        },
+        {
+          "id": "beg-search-q4",
+          "type": "multiple-choice",
+          "question": "Which search has O(1) average-case with good hashing?",
+          "options": [
+            "Linear Search",
+            "Binary Search",
+            "Hash Lookup",
+            "DFS"
+          ],
+          "correctAnswer": "Hash Lookup",
+          "icon": "Hash"
+        },
+        {
+          "id": "beg-search-q5",
+          "type": "drag-drop",
+          "question": "Match search to complexity:",
+          "items": [
+            {
+              "id": "A",
+              "text": "Linear"
+            },
+            {
+              "id": "B",
+              "text": "Binary Search"
+            }
+          ],
+          "correctOrder": [
+            "A\u2192O(n)",
+            "B\u2192O(log n)"
+          ],
+          "icon": "SortAscending"
+        },
+        {
+          "id": "beg-search-q6",
+          "type": "true-false",
+          "question": "Binary Search can be implemented both recursively and iteratively.",
+          "correctAnswer": true,
+          "icon": "Repeat"
+        }
+      ]
+    },
+    {
+      "title": "Recursion",
+      "tutorial": "Recursion is when a function calls itself to solve smaller instances. Every recursive function needs a base case to stop the calls.",
+      "questions": [
+        {
+          "id": "beg-recur-q1",
+          "type": "multiple-choice",
+          "question": "What must recursion always have?",
+          "options": [
+            "Loop",
+            "Base case",
+            "Global",
+            "Stack"
+          ],
+          "correctAnswer": "Base case",
+          "icon": "RepeatOnce"
+        },
+        {
+          "id": "beg-recur-q2",
+          "type": "true-false",
+          "question": "Every recursive function uses extra stack space.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        },
+        {
+          "id": "beg-recur-q3",
+          "type": "fill-blanks",
+          "question": "Each recursive call uses additional ____ on the call stack.",
+          "codeTemplate": "",
+          "blanks": [
+            "space"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "beg-recur-q4",
+          "type": "multiple-choice",
+          "question": "Naive recursive Fibonacci has time complexity:",
+          "options": [
+            "O(n)",
+            "O(n\u00b2)",
+            "O(2\u207f)",
+            "O(log n)"
+          ],
+          "correctAnswer": "O(2\u207f)",
+          "icon": "Function"
+        },
+        {
+          "id": "beg-recur-q5",
+          "type": "drag-drop",
+          "question": "Order these steps for recursion:",
+          "items": [
+            {
+              "id": "1",
+              "text": "Check base"
+            },
+            {
+              "id": "2",
+              "text": "Make call"
+            },
+            {
+              "id": "3",
+              "text": "Return"
+            }
+          ],
+          "correctOrder": [
+            "1",
+            "2",
+            "3"
+          ],
+          "icon": "ArrowsClockwise"
+        },
+        {
+          "id": "beg-recur-q6",
+          "type": "true-false",
+          "question": "Recursion can always be rewritten as iteration.",
+          "correctAnswer": true,
+          "icon": "Code"
+        }
+      ]
+    },
+    {
+      "title": "Divide and Conquer",
+      "tutorial": "Divide and conquer breaks a problem into subproblems, solves each recursively, then combines the results. Merge Sort is a classic example.",
+      "questions": [
+        {
+          "id": "beg-dnc-q1",
+          "type": "multiple-choice",
+          "question": "Which is divide & conquer?",
+          "options": [
+            "Bubble Sort",
+            "Merge Sort",
+            "Linear Search",
+            "Stack"
+          ],
+          "correctAnswer": "Merge Sort",
+          "icon": "Divide"
+        },
+        {
+          "id": "beg-dnc-q2",
+          "type": "true-false",
+          "question": "Divide & conquer always yields O(n log n).",
+          "correctAnswer": false,
+          "icon": "Code"
+        },
+        {
+          "id": "beg-dnc-q3",
+          "type": "fill-blanks",
+          "question": "You ____ the problem into parts.",
+          "codeTemplate": "",
+          "blanks": [
+            "split"
+          ],
+          "icon": "Split"
+        },
+        {
+          "id": "beg-dnc-q4",
+          "type": "multiple-choice",
+          "question": "Merge Sort merges sorted halves in O(n). True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Merge"
+        },
+        {
+          "id": "beg-dnc-q5",
+          "type": "drag-drop",
+          "question": "Match phases:",
+          "items": [
+            {
+              "id": "D",
+              "text": "Divide"
+            },
+            {
+              "id": "C",
+              "text": "Conquer"
+            },
+            {
+              "id": "M",
+              "text": "Merge"
+            }
+          ],
+          "correctOrder": [
+            "D\u2192Divide",
+            "C\u2192Conquer",
+            "M\u2192Merge"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "beg-dnc-q6",
+          "type": "true-false",
+          "question": "Merge Sort is stable.",
+          "correctAnswer": true,
+          "icon": "Shuffle"
+        }
+      ]
+    },
+    {
+      "title": "Graph Traversal",
+      "tutorial": "Graph traversal visits nodes in a graph. Breadth-First Search (BFS) uses a queue to explore level by level, while Depth-First Search (DFS) uses a stack or recursion.",
+      "questions": [
+        {
+          "id": "beg-graph-q1",
+          "type": "multiple-choice",
+          "question": "Which traversal uses a queue?",
+          "options": [
+            "DFS",
+            "BFS",
+            "Both",
+            "None"
+          ],
+          "correctAnswer": "BFS",
+          "icon": "Queue"
+        },
+        {
+          "id": "beg-graph-q2",
+          "type": "true-false",
+          "question": "DFS can use recursion.",
+          "correctAnswer": true,
+          "icon": "Stack"
+        },
+        {
+          "id": "beg-graph-q3",
+          "type": "fill-blanks",
+          "question": "BFS visits in ____ order.",
+          "codeTemplate": "",
+          "blanks": [
+            "level"
+          ],
+          "icon": "Flowchart"
+        },
+        {
+          "id": "beg-graph-q4",
+          "type": "multiple-choice",
+          "question": "Dijkstra\u2019s algorithm finds shortest paths. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "LightningBolt"
+        },
+        {
+          "id": "beg-graph-q5",
+          "type": "drag-drop",
+          "question": "Match:",
+          "items": [
+            {
+              "id": "1",
+              "text": "BFS"
+            },
+            {
+              "id": "2",
+              "text": "DFS"
+            }
+          ],
+          "correctOrder": [
+            "1\u2192Level",
+            "2\u2192Depth"
+          ],
+          "icon": "Swap"
+        },
+        {
+          "id": "beg-graph-q6",
+          "type": "true-false",
+          "question": "Graph traversal must visit all nodes in disconnected graphs with multiple starts.",
+          "correctAnswer": false,
+          "icon": "Layers"
+        }
+      ]
+    },
+    {
+      "title": "Greedy Algorithms",
+      "tutorial": "Greedy algorithms make the best local choice at each step, hoping for a global optimum. They\u2019re simple but don\u2019t always guarantee the best solution.",
+      "questions": [
+        {
+          "id": "beg-greedy-q1",
+          "type": "multiple-choice",
+          "question": "Greedy always picks a ____ choice.",
+          "options": [
+            "Global",
+            "Local",
+            "Random",
+            "Historic"
+          ],
+          "correctAnswer": "Local",
+          "icon": "Lightning"
+        },
+        {
+          "id": "beg-greedy-q2",
+          "type": "true-false",
+          "question": "Greedy guarantees optimal solution.",
+          "correctAnswer": false,
+          "icon": "AlertCircle"
+        },
+        {
+          "id": "beg-greedy-q3",
+          "type": "fill-blanks",
+          "question": "Coin change is greedy when coins are ____.",
+          "codeTemplate": "",
+          "blanks": [
+            "canonical"
+          ],
+          "icon": "Coins"
+        },
+        {
+          "id": "beg-greedy-q4",
+          "type": "multiple-choice",
+          "question": "Activity Selection picks earliest finish. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Clock"
+        },
+        {
+          "id": "beg-greedy-q5",
+          "type": "drag-drop",
+          "question": "Match:",
+          "items": [
+            {
+              "id": "A",
+              "text": "Huffman"
+            },
+            {
+              "id": "B",
+              "text": "Prim"
+            }
+          ],
+          "correctOrder": [
+            "A\u2192Min Prefix",
+            "B\u2192MST"
+          ],
+          "icon": "TreeSelect"
+        }
+      ]
+    }
+  ]
+}

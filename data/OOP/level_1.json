@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "title": "Level 1: OOP Basics",
+    "type": "multiple-choice",
+    "question": "What does OOP stand for?",
+    "options": [
+      { "id": "a", "text": "Object-Oriented Programming" },
+      { "id": "b", "text": "Object Order Protocol" },
+      { "id": "c", "text": "Open Operation Process" },
+      { "id": "d", "text": "Ordered Object Procedures" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Boxes"
+  },
+  {
+    "id": 2,
+    "title": "Level 1: Class Keyword",
+    "type": "multiple-choice",
+    "question": "Which keyword is used to define a class in JavaScript?",
+    "options": [
+      { "id": "a", "text": "function" },
+      { "id": "b", "text": "class" },
+      { "id": "c", "text": "define" },
+      { "id": "d", "text": "object" }
+    ],
+    "correctAnswer": "b",
+    "icon": "FileCode"
+  },
+  {
+    "id": 3,
+    "title": "Level 1: Object Creation",
+    "type": "true-false",
+    "question": "In JavaScript, objects can be created using curly braces {}.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Braces"
+  },
+  {
+    "id": 4,
+    "title": "Level 1: Constructor Basics",
+    "type": "multiple-choice",
+    "question": "What is the purpose of a constructor method in a class?",
+    "options": [
+      { "id": "a", "text": "To destroy an object" },
+      { "id": "b", "text": "To initialize an object’s properties" },
+      { "id": "c", "text": "To inherit from another class" },
+      { "id": "d", "text": "To freeze an object" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Wrench"
+  },
+  {
+    "id": 5,
+    "title": "Level 1: Object Properties",
+    "type": "true-false",
+    "question": "Properties in objects can store functions as values.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Code2"
+  },
+  {
+    "id": 6,
+    "title": "Level 1: Method Definition",
+    "type": "fill-blanks",
+    "question": "Fill in the method definition:\n\nclass Dog {\n  bark() {\n    console.log(____);\n  }\n}",
+    "options": [],
+    "correctAnswer": ["\"Woof!\""],
+    "icon": "TextQuote"
+  },
+  {
+    "id": 7,
+    "title": "Level 1: Accessing Object Values",
+    "type": "multiple-choice",
+    "question": "How do you access a property 'name' of an object 'person'?",
+    "options": [
+      { "id": "a", "text": "person(name)" },
+      { "id": "b", "text": "person.name" },
+      { "id": "c", "text": "person->name" },
+      { "id": "d", "text": "name.person" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Search"
+  },
+  {
+    "id": 8,
+    "title": "Level 1: Instance vs Class",
+    "type": "true-false",
+    "question": "An object is an instance of a class.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Copy"
+  },
+  {
+    "id": 9,
+    "title": "Level 1: this Keyword",
+    "type": "multiple-choice",
+    "question": "What does the 'this' keyword refer to inside a class method?",
+    "options": [
+      { "id": "a", "text": "The global object" },
+      { "id": "b", "text": "The class itself" },
+      { "id": "c", "text": "The current instance of the class" },
+      { "id": "d", "text": "An imported module" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Pointer"
+  },
+  {
+    "id": 10,
+    "title": "Level 1: Basic Inheritance",
+    "type": "true-false",
+    "question": "Classes in JavaScript can inherit from other classes using the 'extends' keyword.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "ArrowDownRight"
+  },
+  {
+    "id": 11,
+    "title": "Level 1: Object Keys",
+    "type": "multiple-choice",
+    "question": "Which method returns all the keys of an object?",
+    "options": [
+      { "id": "a", "text": "Object.list()" },
+      { "id": "b", "text": "Object.keys()" },
+      { "id": "c", "text": "Object.get()" },
+      { "id": "d", "text": "Object.values()" }
+    ],
+    "correctAnswer": "b",
+    "icon": "KeyRound"
+  },
+  {
+    "id": 12,
+    "title": "Level 1: Object Comparison",
+    "type": "true-false",
+    "question": "Two different objects with the same values are strictly equal in JavaScript.",
+    "options": [],
+    "correctAnswer": false,
+    "icon": "EqualNot"
+  },
+  {
+    "id": 13,
+    "title": "Level 1: Class Instantiation",
+    "type": "fill-blanks",
+    "question": "Complete the code to create an object:\n\nclass Car {}\nlet myCar = ____ Car();",
+    "options": [],
+    "correctAnswer": ["new"],
+    "icon": "Plus"
+  },
+  {
+    "id": 14,
+    "title": "Level 1: Static Methods",
+    "type": "true-false",
+    "question": "Static methods are called on the class, not on instances.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Zap"
+  },
+  {
+    "id": 15,
+    "title": "Level 1: Encapsulation",
+    "type": "multiple-choice",
+    "question": "Encapsulation is the concept of:",
+    "options": [
+      { "id": "a", "text": "Making data public" },
+      { "id": "b", "text": "Hiding internal state and requiring all interaction to be performed through methods" },
+      { "id": "c", "text": "Allowing all properties to be mutable" },
+      { "id": "d", "text": "Copying data into new objects" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Lock"
+  },
+  {
+    "id": 16,
+    "title": "Level 1: Object Spread",
+    "type": "multiple-choice",
+    "question": "What does the spread operator (...) do with objects?",
+    "options": [
+      { "id": "a", "text": "Combines multiple objects into one" },
+      { "id": "b", "text": "Creates a shallow copy" },
+      { "id": "c", "text": "Deletes keys" },
+      { "id": "d", "text": "Freezes an object" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Copy"
+  },
+  {
+    "id": 17,
+    "title": "Level 1: Object.freeze",
+    "type": "true-false",
+    "question": "Object.freeze() prevents properties from being changed or added.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Snowflake"
+  },
+  {
+    "id": 18,
+    "title": "Level 1: Object.assign",
+    "type": "multiple-choice",
+    "question": "What does Object.assign(target, source) do?",
+    "options": [
+      { "id": "a", "text": "Merges two arrays" },
+      { "id": "b", "text": "Copies all properties from source to target" },
+      { "id": "c", "text": "Deletes source properties" },
+      { "id": "d", "text": "Converts objects to strings" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Merge"
+  },
+  {
+    "id": 19,
+    "title": "Level 1: typeof",
+    "type": "multiple-choice",
+    "question": "What does typeof {} return?",
+    "options": [
+      { "id": "a", "text": "\"object\"" },
+      { "id": "b", "text": "\"function\"" },
+      { "id": "c", "text": "\"class\"" },
+      { "id": "d", "text": "\"map\"" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Type"
+  },
+  {
+    "id": 20,
+    "title": "Level 1: JSON and Objects",
+    "type": "true-false",
+    "question": "JSON is a string representation of a JavaScript object.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "FileText"
+  }
+]

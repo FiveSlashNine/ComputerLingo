@@ -1,0 +1,478 @@
+{
+  "category": "data_structures",
+  "level": "intermediate",
+  "topics": [
+    {
+      "title": "Dynamic Arrays & Amortized Resizing",
+      "tutorial": "Dynamic arrays resize by doubling capacity when full. Individual resizes cost O(n), but appends are O(1) amortized.",
+      "questions": [
+        {
+          "id": "int-ds-dynarr-q1",
+          "type": "multiple-choice",
+          "question": "Why is append O(1) amortized?",
+          "options": [
+            "No resizes",
+            "Each resize O(1)",
+            "Rare resizes",
+            "Infinite memory"
+          ],
+          "correctAnswer": "Rare resizes",
+          "icon": "Infinity"
+        },
+        {
+          "id": "int-ds-dynarr-q2",
+          "type": "true-false",
+          "question": "Doubling capacity keeps total copy cost proportional to number of appends.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        },
+        {
+          "id": "int-ds-dynarr-q3",
+          "type": "fill-blanks",
+          "question": "k-th resize copies roughly 2^k ____.",
+          "codeTemplate": "",
+          "blanks": [
+            "elements"
+          ],
+          "icon": "Calculator"
+        },
+        {
+          "id": "int-ds-dynarr-q4",
+          "type": "multiple-choice",
+          "question": "After resizing, capacity is usually:",
+          "options": [
+            "+1",
+            "*2",
+            "*n",
+            "/2"
+          ],
+          "correctAnswer": "*2",
+          "icon": "Divide"
+        },
+        {
+          "id": "int-ds-dynarr-q5",
+          "type": "true-false",
+          "question": "Shrink-on-remove is often omitted to avoid thrashing.",
+          "correctAnswer": true,
+          "icon": "AlertCircle"
+        },
+        {
+          "id": "int-ds-dynarr-q6",
+          "type": "drag-drop",
+          "question": "Order append to full array:",
+          "items": [
+            {
+              "id": "1",
+              "text": "Check full"
+            },
+            {
+              "id": "2",
+              "text": "Allocate new"
+            },
+            {
+              "id": "3",
+              "text": "Copy"
+            },
+            {
+              "id": "4",
+              "text": "Insert"
+            }
+          ],
+          "correctOrder": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "icon": "ArrowsRightLeft"
+        }
+      ]
+    },
+    {
+      "title": "Doubly Linked Lists",
+      "tutorial": "Nodes have next and prev pointers. Insert/delete at either end is O(1), removal given a node is O(1), search is O(n).",
+      "questions": [
+        {
+          "id": "int-ds-dll-q1",
+          "type": "multiple-choice",
+          "question": "Additional pointer compared to singly list?",
+          "options": [
+            "child",
+            "prev",
+            "parent",
+            "random"
+          ],
+          "correctAnswer": "prev",
+          "icon": "ArrowLeft"
+        },
+        {
+          "id": "int-ds-dll-q2",
+          "type": "true-false",
+          "question": "Removal of known node is O(1).",
+          "correctAnswer": true,
+          "icon": "Trash"
+        },
+        {
+          "id": "int-ds-dll-q3",
+          "type": "fill-blanks",
+          "question": "Traverse backwards using ____ pointer.",
+          "codeTemplate": "",
+          "blanks": [
+            "prev"
+          ],
+          "icon": "ArrowDown"
+        },
+        {
+          "id": "int-ds-dll-q4",
+          "type": "multiple-choice",
+          "question": "Insert at tail without head pointer is:",
+          "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n\u00b2)"
+          ],
+          "correctAnswer": "O(n)",
+          "icon": "Clock"
+        },
+        {
+          "id": "int-ds-dll-q5",
+          "type": "true-false",
+          "question": "Doubly list uses more space per node.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        },
+        {
+          "id": "int-ds-dll-q6",
+          "type": "drag-drop",
+          "question": "Match operations to complexity:",
+          "items": [
+            {
+              "id": "A",
+              "text": "Insert head"
+            },
+            {
+              "id": "B",
+              "text": "Delete tail"
+            },
+            {
+              "id": "C",
+              "text": "Search"
+            }
+          ],
+          "correctOrder": [
+            "A\u2192O(1)",
+            "B\u2192O(1)",
+            "C\u2192O(n)"
+          ],
+          "icon": "SortNumeric"
+        }
+      ]
+    },
+    {
+      "title": "Binary Search Trees (BST)",
+      "tutorial": "BST maintains order: left<node<right. Operations average O(log n), worst-case O(n) if unbalanced.",
+      "questions": [
+        {
+          "id": "int-ds-bst-q1",
+          "type": "multiple-choice",
+          "question": "Average height of balanced BST?",
+          "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n log n)"
+          ],
+          "correctAnswer": "O(log n)",
+          "icon": "Tree"
+        },
+        {
+          "id": "int-ds-bst-q2",
+          "type": "true-false",
+          "question": "Inserting sorted data yields O(n) height.",
+          "correctAnswer": true,
+          "icon": "AlertCircle"
+        },
+        {
+          "id": "int-ds-bst-q3",
+          "type": "fill-blanks",
+          "question": "Inorder traversal yields ____ order.",
+          "codeTemplate": "",
+          "blanks": [
+            "sorted"
+          ],
+          "icon": "SortAscending"
+        },
+        {
+          "id": "int-ds-bst-q4",
+          "type": "multiple-choice",
+          "question": "Deleting node with two children uses:",
+          "options": [
+            "Leftmost in right subtree",
+            "Rightmost in left",
+            "Random",
+            "None"
+          ],
+          "correctAnswer": "Leftmost in right subtree",
+          "icon": "Layers"
+        },
+        {
+          "id": "int-ds-bst-q5",
+          "type": "true-false",
+          "question": "Search in BST is O(log n) average.",
+          "correctAnswer": true,
+          "icon": "Search"
+        },
+        {
+          "id": "int-ds-bst-q6",
+          "type": "drag-drop",
+          "question": "Match to average complexity:",
+          "items": [
+            {
+              "id": "S",
+              "text": "Search"
+            },
+            {
+              "id": "I",
+              "text": "Insert"
+            },
+            {
+              "id": "D",
+              "text": "Delete"
+            }
+          ],
+          "correctOrder": [
+            "S\u2192O(log n)",
+            "I\u2192O(log n)",
+            "D\u2192O(log n)"
+          ],
+          "icon": "SortNumeric"
+        }
+      ]
+    },
+    {
+      "title": "Heaps (Binary Heaps)",
+      "tutorial": "Binary heap stored in array. Insert and extract-min O(log n); peek-min O(1).",
+      "questions": [
+        {
+          "id": "int-ds-heap-q1",
+          "type": "multiple-choice",
+          "question": "Parent of index i is at floor((i-1)/2). True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Math"
+        },
+        {
+          "id": "int-ds-heap-q2",
+          "type": "true-false",
+          "question": "Insert in heap is O(log n).",
+          "correctAnswer": true,
+          "icon": "Plus"
+        },
+        {
+          "id": "int-ds-heap-q3",
+          "type": "fill-blanks",
+          "question": "Children of i are at 2i+1 and ____.",
+          "codeTemplate": "",
+          "blanks": [
+            "2i+2"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "int-ds-heap-q4",
+          "type": "multiple-choice",
+          "question": "Extract-min replaces root with last then ____.",
+          "options": [
+            "sift down",
+            "sift up",
+            "swap with mid",
+            "none"
+          ],
+          "correctAnswer": "sift down",
+          "icon": "ArrowDown"
+        },
+        {
+          "id": "int-ds-heap-q5",
+          "type": "true-false",
+          "question": "Heap sort uses heap to sort in place.",
+          "correctAnswer": true,
+          "icon": "SortAscending"
+        },
+        {
+          "id": "int-ds-heap-q6",
+          "type": "drag-drop",
+          "question": "Match operations:",
+          "items": [
+            {
+              "id": "P",
+              "text": "Peek"
+            },
+            {
+              "id": "E",
+              "text": "Extract"
+            }
+          ],
+          "correctOrder": [
+            "P\u2192O(1)",
+            "E\u2192O(log n)"
+          ],
+          "icon": "ArrowsRightLeft"
+        }
+      ]
+    },
+    {
+      "title": "Tries (Prefix Trees)",
+      "tutorial": "Trie stores strings char by char. Search/insert O(m) for string length m, independent of number of keys.",
+      "questions": [
+        {
+          "id": "int-ds-trie-q1",
+          "type": "multiple-choice",
+          "question": "Each edge in trie represents:",
+          "options": [
+            "Character",
+            "String",
+            "Index",
+            "Hash"
+          ],
+          "correctAnswer": "Character",
+          "icon": "Text"
+        },
+        {
+          "id": "int-ds-trie-q2",
+          "type": "true-false",
+          "question": "Trie uses more space than hash table.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        },
+        {
+          "id": "int-ds-trie-q3",
+          "type": "fill-blanks",
+          "question": "Search time is O(___).",
+          "codeTemplate": "",
+          "blanks": [
+            "m"
+          ],
+          "icon": "Search"
+        },
+        {
+          "id": "int-ds-trie-q4",
+          "type": "multiple-choice",
+          "question": "Prefix check can be O(m). True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Check"
+        },
+        {
+          "id": "int-ds-trie-q5",
+          "type": "drag-drop",
+          "question": "Match to use-case:",
+          "items": [
+            {
+              "id": "I",
+              "text": "Insert"
+            },
+            {
+              "id": "S",
+              "text": "Search"
+            }
+          ],
+          "correctOrder": [
+            "I\u2192Add word",
+            "S\u2192Find word"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "int-ds-trie-q6",
+          "type": "true-false",
+          "question": "Tries can auto-complete prefixes.",
+          "correctAnswer": true,
+          "icon": "Edit3"
+        }
+      ]
+    },
+    {
+      "title": "Disjoint Set Union (Union-Find)",
+      "tutorial": "Union-Find uses union by rank and path compression for nearly O(1) operations.",
+      "questions": [
+        {
+          "id": "int-ds-uf-q1",
+          "type": "multiple-choice",
+          "question": "Path compression flattens the ____ tree.",
+          "options": [
+            "parent",
+            "rank",
+            "random",
+            "data"
+          ],
+          "correctAnswer": "parent",
+          "icon": "Layers"
+        },
+        {
+          "id": "int-ds-uf-q2",
+          "type": "true-false",
+          "question": "Union by rank attaches smaller tree under larger.",
+          "correctAnswer": true,
+          "icon": "ArrowDown"
+        },
+        {
+          "id": "int-ds-uf-q3",
+          "type": "fill-blanks",
+          "question": "Find operation runs in O(___).",
+          "codeTemplate": "",
+          "blanks": [
+            "\u03b1(n)"
+          ],
+          "icon": "Function"
+        },
+        {
+          "id": "int-ds-uf-q4",
+          "type": "multiple-choice",
+          "question": "Union-Find useful for:",
+          "options": [
+            "MST",
+            "Shortest path",
+            "Sorting",
+            "Searching"
+          ],
+          "correctAnswer": "MST",
+          "icon": "Tree"
+        },
+        {
+          "id": "int-ds-uf-q5",
+          "type": "true-false",
+          "question": "Initialization of n elements is O(n).",
+          "correctAnswer": true,
+          "icon": "PlusCircle"
+        },
+        {
+          "id": "int-ds-uf-q6",
+          "type": "drag-drop",
+          "question": "Match operation:",
+          "items": [
+            {
+              "id": "F",
+              "text": "Find"
+            },
+            {
+              "id": "U",
+              "text": "Union"
+            }
+          ],
+          "correctOrder": [
+            "F\u2192Find set rep",
+            "U\u2192Merge sets"
+          ],
+          "icon": "ArrowsRightLeft"
+        }
+      ]
+    }
+  ]
+}

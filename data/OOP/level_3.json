@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "title": "Level 3: Advanced OOP - Mixins",
+    "type": "multiple-choice",
+    "question": "What is a mixin in JavaScript OOP?",
+    "options": [
+      { "id": "a", "text": "A method that calls another method" },
+      { "id": "b", "text": "A class that can inherit from multiple classes" },
+      { "id": "c", "text": "An object that provides methods to other classes without using inheritance" },
+      { "id": "d", "text": "A type of constructor" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Puzzle"
+  },
+  {
+    "id": 2,
+    "title": "Level 3: Composition vs Inheritance",
+    "type": "true-false",
+    "question": "Composition is often preferred over inheritance to achieve greater flexibility.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Layers"
+  },
+  {
+    "id": 3,
+    "title": "Level 3: Private Methods",
+    "type": "multiple-choice",
+    "question": "How are private methods defined in JavaScript classes?",
+    "options": [
+      { "id": "a", "text": "Using the 'private' keyword" },
+      { "id": "b", "text": "With a '#' prefix before the method name" },
+      { "id": "c", "text": "With '_' prefix" },
+      { "id": "d", "text": "With '$' prefix" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Shield"
+  },
+  {
+    "id": 4,
+    "title": "Level 3: Prototype Inheritance",
+    "type": "multiple-choice",
+    "question": "What does Object.create() do?",
+    "options": [
+      { "id": "a", "text": "Creates a new class" },
+      { "id": "b", "text": "Links a new object to a specified prototype" },
+      { "id": "c", "text": "Clones an object deeply" },
+      { "id": "d", "text": "Deletes an object's prototype" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Link"
+  },
+  {
+    "id": 5,
+    "title": "Level 3: Polymorphism Example",
+    "type": "true-false",
+    "question": "Polymorphism allows the same method name to behave differently on different objects.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "SwitchHorizontal"
+  },
+  {
+    "id": 6,
+    "title": "Level 3: Custom instanceof",
+    "type": "multiple-choice",
+    "question": "How can you customize the behavior of 'instanceof' in JavaScript?",
+    "options": [
+      { "id": "a", "text": "Override Symbol.hasInstance" },
+      { "id": "b", "text": "Use __proto__ directly" },
+      { "id": "c", "text": "Override the constructor" },
+      { "id": "d", "text": "Create a static isInstance method" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Code"
+  },
+  {
+    "id": 7,
+    "title": "Level 3: ES6 Class Internals",
+    "type": "multiple-choice",
+    "question": "What is true about ES6 class syntax?",
+    "options": [
+      { "id": "a", "text": "It uses prototypal inheritance under the hood" },
+      { "id": "b", "text": "It is a completely new system not related to prototypes" },
+      { "id": "c", "text": "It doesn’t allow constructor functions" },
+      { "id": "d", "text": "It is only syntactic sugar over objects" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Terminal"
+  },
+  {
+    "id": 8,
+    "title": "Level 3: Deep Inheritance",
+    "type": "true-false",
+    "question": "Deep inheritance hierarchies can lead to fragile code that is hard to maintain.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Layers"
+  },
+  {
+    "id": 9,
+    "title": "Level 3: Factory Functions",
+    "type": "multiple-choice",
+    "question": "Which of the following is a characteristic of a factory function?",
+    "options": [
+      { "id": "a", "text": "It always uses the new keyword" },
+      { "id": "b", "text": "It can return new objects without using class or new" },
+      { "id": "c", "text": "It defines static methods" },
+      { "id": "d", "text": "It sets __proto__ manually" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Package"
+  },
+  {
+    "id": 10,
+    "title": "Level 3: this Binding",
+    "type": "true-false",
+    "question": "In arrow functions, 'this' is lexically bound to its enclosing context.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "ArrowRight"
+  },
+  {
+    "id": 11,
+    "title": "Level 3: Extending Built-ins",
+    "type": "multiple-choice",
+    "question": "Which built-in can be extended to customize array behavior?",
+    "options": [
+      { "id": "a", "text": "Object" },
+      { "id": "b", "text": "Function" },
+      { "id": "c", "text": "Array" },
+      { "id": "d", "text": "Map" }
+    ],
+    "correctAnswer": "c",
+    "icon": "List"
+  },
+  {
+    "id": 12,
+    "title": "Level 3: Decorators (Conceptual)",
+    "type": "true-false",
+    "question": "Decorators allow you to modify class behavior in a declarative way.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Brush"
+  },
+  {
+    "id": 13,
+    "title": "Level 3: Encapsulation Enforcement",
+    "type": "multiple-choice",
+    "question": "Which is the best practice to enforce encapsulation in JavaScript?",
+    "options": [
+      { "id": "a", "text": "Use # for private fields" },
+      { "id": "b", "text": "Use public global variables" },
+      { "id": "c", "text": "Use underscore prefixes" },
+      { "id": "d", "text": "Use closure scopes only" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Lock"
+  },
+  {
+    "id": 14,
+    "title": "Level 3: Object.freeze",
+    "type": "true-false",
+    "question": "Object.freeze makes an object immutable.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Snowflake"
+  },
+  {
+    "id": 15,
+    "title": "Level 3: Symbol.iterator",
+    "type": "multiple-choice",
+    "question": "Which of the following enables an object to be iterable?",
+    "options": [
+      { "id": "a", "text": "Symbol.toString" },
+      { "id": "b", "text": "Symbol.iterator" },
+      { "id": "c", "text": "Object.keys()" },
+      { "id": "d", "text": "JSON.stringify()" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Repeat"
+  },
+  {
+    "id": 16,
+    "title": "Level 3: Class Fields Order",
+    "type": "true-false",
+    "question": "Class fields in JavaScript are initialized before the constructor runs.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "ChevronsUp"
+  },
+  {
+    "id": 17,
+    "title": "Level 3: Extend Class Dynamically",
+    "type": "multiple-choice",
+    "question": "How can you dynamically extend a class?",
+    "options": [
+      { "id": "a", "text": "By modifying prototype directly" },
+      { "id": "b", "text": "By using Object.assign on the class" },
+      { "id": "c", "text": "By using a factory that returns a subclass" },
+      { "id": "d", "text": "By redefining Object" }
+    ],
+    "correctAnswer": "c",
+    "icon": "GitBranch"
+  },
+  {
+    "id": 18,
+    "title": "Level 3: Getter and Setter",
+    "type": "multiple-choice",
+    "question": "What do getters and setters allow in a class?",
+    "options": [
+      { "id": "a", "text": "Control access to properties" },
+      { "id": "b", "text": "Create static methods" },
+      { "id": "c", "text": "Create private constructors" },
+      { "id": "d", "text": "Define async behavior" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Settings"
+  },
+  {
+    "id": 19,
+    "title": "Level 3: Method Binding",
+    "type": "true-false",
+    "question": "You can bind a method's 'this' context using .bind().",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Anchor"
+  },
+  {
+    "id": 20,
+    "title": "Level 3: OOP Principles",
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT one of the four main OOP principles?",
+    "options": [
+      { "id": "a", "text": "Abstraction" },
+      { "id": "b", "text": "Encapsulation" },
+      { "id": "c", "text": "Recursion" },
+      { "id": "d", "text": "Polymorphism" }
+    ],
+    "correctAnswer": "c",
+    "icon": "X"
+  }
+]

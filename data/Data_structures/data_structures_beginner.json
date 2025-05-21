@@ -1,0 +1,470 @@
+{
+  "category": "data_structures",
+  "level": "beginner",
+  "topics": [
+    {
+      "title": "Arrays",
+      "tutorial": "An array is a contiguous block of memory storing elements of the same type. Access by index is O(1), but inserting/deleting in the middle is O(n).",
+      "questions": [
+        {
+          "id": "ds-beg-array-q1",
+          "type": "multiple-choice",
+          "question": "Accessing element at index i is O(___).",
+          "options": [
+            "1",
+            "log n",
+            "n",
+            "n\u00b2"
+          ],
+          "correctAnswer": "1",
+          "icon": "Array"
+        },
+        {
+          "id": "ds-beg-array-q2",
+          "type": "true-false",
+          "question": "Arrays store elements in contiguous memory.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        },
+        {
+          "id": "ds-beg-array-q3",
+          "type": "fill-blanks",
+          "question": "Inserting in middle of array is O(___).",
+          "codeTemplate": "",
+          "blanks": [
+            "n"
+          ],
+          "icon": "Plus"
+        },
+        {
+          "id": "ds-beg-array-q4",
+          "type": "multiple-choice",
+          "question": "Deleting at end of array is O(1) if size known. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Trash"
+        },
+        {
+          "id": "ds-beg-array-q5",
+          "type": "true-false",
+          "question": "Searching unsorted array takes O(n).",
+          "correctAnswer": true,
+          "icon": "Search"
+        },
+        {
+          "id": "ds-beg-array-q6",
+          "type": "drag-drop",
+          "question": "Match operations to complexity:",
+          "items": [
+            {
+              "id": "A",
+              "text": "Access"
+            },
+            {
+              "id": "I",
+              "text": "Insert middle"
+            },
+            {
+              "id": "D",
+              "text": "Delete first"
+            }
+          ],
+          "correctOrder": [
+            "A\u2192O(1)",
+            "I\u2192O(n)",
+            "D\u2192O(n)"
+          ],
+          "icon": "SortNumeric"
+        }
+      ]
+    },
+    {
+      "title": "Stacks",
+      "tutorial": "A stack is LIFO: push and pop at the top only. Both operations are O(1).",
+      "questions": [
+        {
+          "id": "ds-beg-stack-q1",
+          "type": "multiple-choice",
+          "question": "Which method adds to a stack?",
+          "options": [
+            "push",
+            "pop",
+            "enqueue",
+            "dequeue"
+          ],
+          "correctAnswer": "push",
+          "icon": "Plus"
+        },
+        {
+          "id": "ds-beg-stack-q2",
+          "type": "true-false",
+          "question": "Popping from stack removes top element.",
+          "correctAnswer": true,
+          "icon": "Minus"
+        },
+        {
+          "id": "ds-beg-stack-q3",
+          "type": "fill-blanks",
+          "question": "Stacks follow ____ behavior.",
+          "codeTemplate": "",
+          "blanks": [
+            "LIFO"
+          ],
+          "icon": "ArrowUp"
+        },
+        {
+          "id": "ds-beg-stack-q4",
+          "type": "multiple-choice",
+          "question": "Stack can be implemented with array or linked list. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Layers"
+        },
+        {
+          "id": "ds-beg-stack-q5",
+          "type": "drag-drop",
+          "question": "Order: push A, push B, pop, peek",
+          "items": [
+            {
+              "id": "1",
+              "text": "push A"
+            },
+            {
+              "id": "2",
+              "text": "push B"
+            },
+            {
+              "id": "3",
+              "text": "pop"
+            },
+            {
+              "id": "4",
+              "text": "peek"
+            }
+          ],
+          "correctOrder": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "icon": "ArrowsRightLeft"
+        },
+        {
+          "id": "ds-beg-stack-q6",
+          "type": "true-false",
+          "question": "Peek returns top without removing.",
+          "correctAnswer": true,
+          "icon": "Eye"
+        }
+      ]
+    },
+    {
+      "title": "Queues",
+      "tutorial": "A queue is FIFO: enqueue at back, dequeue from front. Both operations can be O(1) with circular buffer or linked list.",
+      "questions": [
+        {
+          "id": "ds-beg-queue-q1",
+          "type": "multiple-choice",
+          "question": "Enqueue adds at the ___.",
+          "options": [
+            "front",
+            "back",
+            "middle",
+            "both ends"
+          ],
+          "correctAnswer": "back",
+          "icon": "Plus"
+        },
+        {
+          "id": "ds-beg-queue-q2",
+          "type": "true-false",
+          "question": "Dequeuing from an empty queue causes underflow.",
+          "correctAnswer": true,
+          "icon": "AlertCircle"
+        },
+        {
+          "id": "ds-beg-queue-q3",
+          "type": "fill-blanks",
+          "question": "Queues follow ____ behavior.",
+          "codeTemplate": "",
+          "blanks": [
+            "FIFO"
+          ],
+          "icon": "ArrowRight"
+        },
+        {
+          "id": "ds-beg-queue-q4",
+          "type": "multiple-choice",
+          "question": "Circular buffer helps avoid shifting. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Repeat"
+        },
+        {
+          "id": "ds-beg-queue-q5",
+          "type": "drag-drop",
+          "question": "Match steps:",
+          "items": [
+            {
+              "id": "1",
+              "text": "enqueue"
+            },
+            {
+              "id": "2",
+              "text": "dequeue"
+            },
+            {
+              "id": "3",
+              "text": "peek"
+            }
+          ],
+          "correctOrder": [
+            "1",
+            "2",
+            "3"
+          ],
+          "icon": "ListCheck"
+        },
+        {
+          "id": "ds-beg-queue-q6",
+          "type": "true-false",
+          "question": "Peek on queue returns front element.",
+          "correctAnswer": true,
+          "icon": "Eye"
+        }
+      ]
+    },
+    {
+      "title": "Linked Lists",
+      "tutorial": "A linked list is a chain of nodes with pointers. Insertion/deletion at head is O(1), access by index is O(n).",
+      "questions": [
+        {
+          "id": "ds-beg-linkedlist-q1",
+          "type": "multiple-choice",
+          "question": "Finding k-th element is O(___).",
+          "options": [
+            "1",
+            "log n",
+            "n",
+            "n\u00b2"
+          ],
+          "correctAnswer": "n",
+          "icon": "Layers"
+        },
+        {
+          "id": "ds-beg-linkedlist-q2",
+          "type": "true-false",
+          "question": "Inserting at head is O(1).",
+          "correctAnswer": true,
+          "icon": "Plus"
+        },
+        {
+          "id": "ds-beg-linkedlist-q3",
+          "type": "fill-blanks",
+          "question": "Each node stores data and a ____ pointer.",
+          "codeTemplate": "",
+          "blanks": [
+            "next"
+          ],
+          "icon": "ArrowDown"
+        },
+        {
+          "id": "ds-beg-linkedlist-q4",
+          "type": "multiple-choice",
+          "question": "Doubly linked list has two pointers. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Layers"
+        },
+        {
+          "id": "ds-beg-linkedlist-q5",
+          "type": "drag-drop",
+          "question": "Match operation to complexity:",
+          "items": [
+            {
+              "id": "A",
+              "text": "Insert head"
+            },
+            {
+              "id": "B",
+              "text": "Find k-th"
+            }
+          ],
+          "correctOrder": [
+            "A\u2192O(1)",
+            "B\u2192O(n)"
+          ],
+          "icon": "SortNumeric"
+        },
+        {
+          "id": "ds-beg-linkedlist-q6",
+          "type": "true-false",
+          "question": "Deleting tail in singly linked list is O(n).",
+          "correctAnswer": true,
+          "icon": "Trash"
+        }
+      ]
+    },
+    {
+      "title": "Binary Trees",
+      "tutorial": "A binary tree node has up to two children. Traversals (inorder, preorder, postorder) visit nodes in O(n).",
+      "questions": [
+        {
+          "id": "ds-beg-bintree-q1",
+          "type": "multiple-choice",
+          "question": "Max children per node?",
+          "options": [
+            "1",
+            "2",
+            "n",
+            "3"
+          ],
+          "correctAnswer": "2",
+          "icon": "Tree"
+        },
+        {
+          "id": "ds-beg-bintree-q2",
+          "type": "true-false",
+          "question": "Inorder traversal visits left, root, right.",
+          "correctAnswer": true,
+          "icon": "Repeat"
+        },
+        {
+          "id": "ds-beg-bintree-q3",
+          "type": "fill-blanks",
+          "question": "Tree height measures max ____ length.",
+          "codeTemplate": "",
+          "blanks": [
+            "path"
+          ],
+          "icon": "ArrowUp"
+        },
+        {
+          "id": "ds-beg-bintree-q4",
+          "type": "multiple-choice",
+          "question": "Level-order is BFS on tree. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Queue"
+        },
+        {
+          "id": "ds-beg-bintree-q5",
+          "type": "drag-drop",
+          "question": "Match traversal to order:",
+          "items": [
+            {
+              "id": "I",
+              "text": "Inorder"
+            },
+            {
+              "id": "P",
+              "text": "Preorder"
+            }
+          ],
+          "correctOrder": [
+            "I\u2192Left,Root,Right",
+            "P\u2192Root,Left,Right"
+          ],
+          "icon": "SortDescending"
+        },
+        {
+          "id": "ds-beg-bintree-q6",
+          "type": "true-false",
+          "question": "Postorder visits children before root.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        }
+      ]
+    },
+    {
+      "title": "Hash Tables",
+      "tutorial": "Hash tables map keys to buckets via hash functions. Average lookup/insertion/deletion is O(1), worst-case O(n) with collisions.",
+      "questions": [
+        {
+          "id": "ds-beg-hashtable-q1",
+          "type": "multiple-choice",
+          "question": "Average lookup time?",
+          "options": [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n log n)"
+          ],
+          "correctAnswer": "O(1)",
+          "icon": "Hash"
+        },
+        {
+          "id": "ds-beg-hashtable-q2",
+          "type": "true-false",
+          "question": "Chaining resolves collisions.",
+          "correctAnswer": true,
+          "icon": "Link"
+        },
+        {
+          "id": "ds-beg-hashtable-q3",
+          "type": "fill-blanks",
+          "question": "A good hash function distributes keys ____.",
+          "codeTemplate": "",
+          "blanks": [
+            "uniformly"
+          ],
+          "icon": "Shuffle"
+        },
+        {
+          "id": "ds-beg-hashtable-q4",
+          "type": "multiple-choice",
+          "question": "Open addressing uses probing. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Circle"
+        },
+        {
+          "id": "ds-beg-hashtable-q5",
+          "type": "drag-drop",
+          "question": "Match resolution to method:",
+          "items": [
+            {
+              "id": "C",
+              "text": "Chaining"
+            },
+            {
+              "id": "O",
+              "text": "Open addressing"
+            }
+          ],
+          "correctOrder": [
+            "C\u2192Linked lists",
+            "O\u2192Probing"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "ds-beg-hashtable-q6",
+          "type": "true-false",
+          "question": "Resize when load factor > threshold.",
+          "correctAnswer": true,
+          "icon": "Resize"
+        }
+      ]
+    }
+  ]
+}

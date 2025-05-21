@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "title": "Level 3: Tail Recursion",
+    "type": "multiple-choice",
+    "question": "Which of the following conditions makes a function tail-recursive?",
+    "options": [
+      { "id": "a", "text": "The recursive call is the last operation in the function" },
+      { "id": "b", "text": "The function modifies global state" },
+      { "id": "c", "text": "The recursion happens in a loop" },
+      { "id": "d", "text": "It returns a function" }
+    ],
+    "correctAnswer": "a",
+    "icon": "CornerDownLeft"
+  },
+  {
+    "id": 2,
+    "title": "Level 3: Trampoline Optimization",
+    "type": "true-false",
+    "question": "Trampolines can be used in JavaScript to simulate tail call optimization.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Jump"
+  },
+  {
+    "id": 3,
+    "title": "Level 3: Complex Recursion Use Case",
+    "type": "multiple-choice",
+    "question": "Which of the following problems benefits the most from recursion?",
+    "options": [
+      { "id": "a", "text": "Array sorting" },
+      { "id": "b", "text": "Traversing deeply nested structures" },
+      { "id": "c", "text": "Simple mathematical calculations" },
+      { "id": "d", "text": "String interpolation" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Layers"
+  },
+  {
+    "id": 4,
+    "title": "Level 3: Memoization Pattern",
+    "type": "fill-blanks",
+    "question": "Complete the function using memoization:\n\nfunction fib(n, memo = {}) {\n  if (n <= 1) return n;\n  if (memo[n]) return memo[n];\n  memo[n] = ____ + ____;\n  return memo[n];\n}",
+    "options": [],
+    "correctAnswer": ["fib(n - 1, memo)", "fib(n - 2, memo)"],
+    "icon": "Database"
+  },
+  {
+    "id": 5,
+    "title": "Level 3: Mutual Recursion",
+    "type": "true-false",
+    "question": "In mutual recursion, two or more functions call each other in a cycle.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "RefreshCcw"
+  },
+  {
+    "id": 6,
+    "title": "Level 3: Functional Style",
+    "type": "multiple-choice",
+    "question": "Which paradigm makes the most use of recursion?",
+    "options": [
+      { "id": "a", "text": "Procedural programming" },
+      { "id": "b", "text": "Object-oriented programming" },
+      { "id": "c", "text": "Functional programming" },
+      { "id": "d", "text": "Imperative programming" }
+    ],
+    "correctAnswer": "c",
+    "icon": "FunctionSquare"
+  },
+  {
+    "id": 7,
+    "title": "Level 3: Recursion vs Iteration",
+    "type": "true-false",
+    "question": "Any recursive algorithm can be rewritten as an iterative one.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Repeat"
+  },
+  {
+    "id": 8,
+    "title": "Level 3: Backtracking",
+    "type": "multiple-choice",
+    "question": "Which algorithm heavily relies on recursion and backtracking?",
+    "options": [
+      { "id": "a", "text": "Quick Sort" },
+      { "id": "b", "text": "Binary Search" },
+      { "id": "c", "text": "Depth-First Search" },
+      { "id": "d", "text": "Heap Sort" }
+    ],
+    "correctAnswer": "c",
+    "icon": "GitBranch"
+  },
+  {
+    "id": 9,
+    "title": "Level 3: Ackermann Function",
+    "type": "true-false",
+    "question": "The Ackermann function grows faster than any primitive recursive function.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Zap"
+  },
+  {
+    "id": 10,
+    "title": "Level 3: Recursive Maze Solver",
+    "type": "multiple-choice",
+    "question": "Which technique would you use to recursively solve a maze?",
+    "options": [
+      { "id": "a", "text": "Breadth-first search" },
+      { "id": "b", "text": "Stack simulation" },
+      { "id": "c", "text": "Backtracking" },
+      { "id": "d", "text": "Greedy algorithm" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Map"
+  },
+  {
+    "id": 11,
+    "title": "Level 3: Stack Overflow Prevention",
+    "type": "true-false",
+    "question": "Tail call optimization can prevent stack overflow errors.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "ShieldCheck"
+  },
+  {
+    "id": 12,
+    "title": "Level 3: Recursion Tree Cost",
+    "type": "multiple-choice",
+    "question": "What is the main cost in a recursion tree of Fibonacci(n)?",
+    "options": [
+      { "id": "a", "text": "Heap allocation" },
+      { "id": "b", "text": "Redundant subproblem calls" },
+      { "id": "c", "text": "Garbage collection" },
+      { "id": "d", "text": "Thread context switching" }
+    ],
+    "correctAnswer": "b",
+    "icon": "TreePine"
+  },
+  {
+    "id": 13,
+    "title": "Level 3: Recursive Parser",
+    "type": "true-false",
+    "question": "Recursive descent parsing is a top-down parsing technique.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "FileText"
+  },
+  {
+    "id": 14,
+    "title": "Level 3: Fill Memo Table",
+    "type": "fill-blanks",
+    "question": "To optimize a recursive solution, you can store previously computed results in a _________.",
+    "options": [],
+    "correctAnswer": ["memoization table"],
+    "icon": "Notebook"
+  },
+  {
+    "id": 15,
+    "title": "Level 3: Tree Traversal",
+    "type": "true-false",
+    "question": "In post-order traversal, the root node is visited last.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "GitCommit"
+  },
+  {
+    "id": 16,
+    "title": "Level 3: Nested Recursion",
+    "type": "multiple-choice",
+    "question": "Which example shows nested recursion?",
+    "options": [
+      { "id": "a", "text": "f(n) = f(n - 1) + f(n - 2)" },
+      { "id": "b", "text": "f(n) = f(f(n - 1))" },
+      { "id": "c", "text": "f(n) = n * f(n - 1)" },
+      { "id": "d", "text": "f(n) = f(n / 2)" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Infinity"
+  },
+  {
+    "id": 17,
+    "title": "Level 3: JSON Tree Printer",
+    "type": "true-false",
+    "question": "You can use recursion to print a nested JSON object.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Braces"
+  },
+  {
+    "id": 18,
+    "title": "Level 3: Recursion vs Iteration",
+    "type": "true-false",
+    "question": "Recursion is usually faster than iteration in terms of performance.",
+    "options": [],
+    "correctAnswer": false,
+    "icon": "Timer"
+  },
+  {
+    "id": 19,
+    "title": "Level 3: Dynamic Programming",
+    "type": "multiple-choice",
+    "question": "Which approach often combines recursion with memoization?",
+    "options": [
+      { "id": "a", "text": "Greedy" },
+      { "id": "b", "text": "Backtracking" },
+      { "id": "c", "text": "Divide and conquer" },
+      { "id": "d", "text": "Dynamic programming" }
+    ],
+    "correctAnswer": "d",
+    "icon": "Activity"
+  },
+  {
+    "id": 20,
+    "title": "Level 3: Call Stack Simulation",
+    "type": "multiple-choice",
+    "question": "How can you simulate recursion using iteration?",
+    "options": [
+      { "id": "a", "text": "Use a queue" },
+      { "id": "b", "text": "Use a stack to track state manually" },
+      { "id": "c", "text": "Use setInterval" },
+      { "id": "d", "text": "Use event listeners" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Box"
+  }
+]

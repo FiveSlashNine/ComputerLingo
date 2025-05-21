@@ -1,0 +1,482 @@
+{
+  "category": "big_o",
+  "level": "advanced",
+  "topics": [
+    {
+      "title": "Master Theorem",
+      "tutorial": "The Master Theorem solves recurrences T(n)=aT(n/b)+\u0398(n^d) with three cases based on comparison of n^d and n^{log_b(a)}.",
+      "questions": [
+        {
+          "id": "adv-o-mt-q1",
+          "type": "multiple-choice",
+          "question": "If d < log_b(a), T(n) = \u0398(n^{log_b(a)}). True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Check"
+        },
+        {
+          "id": "adv-o-mt-q2",
+          "type": "true-false",
+          "question": "If d = log_b(a), T(n) = \u0398(n^d log n).",
+          "correctAnswer": true,
+          "icon": "TrendingUp"
+        },
+        {
+          "id": "adv-o-mt-q3",
+          "type": "fill-blanks",
+          "question": "Case 3 applies when d > log_b(a), giving T(n)=\u0398(n^___).",
+          "codeTemplate": "",
+          "blanks": [
+            "d"
+          ],
+          "icon": "Calculator"
+        },
+        {
+          "id": "adv-o-mt-q4",
+          "type": "drag-drop",
+          "question": "Match cases to conditions:",
+          "items": [
+            {
+              "id": "1",
+              "text": "Case 1"
+            },
+            {
+              "id": "2",
+              "text": "Case 2"
+            },
+            {
+              "id": "3",
+              "text": "Case 3"
+            }
+          ],
+          "correctOrder": [
+            "1\u2192d < log_b(a)",
+            "2\u2192d = log_b(a)",
+            "3\u2192d > log_b(a)"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-o-mt-q5",
+          "type": "multiple-choice",
+          "question": "Master Theorem applies to divide-and-conquer recurrences of the form ...?",
+          "options": [
+            "T(n)=T(n-1)+n",
+            "T(n)=aT(n/b)+f(n)",
+            "T(n)=n^2",
+            "T(n)=log n"
+          ],
+          "correctAnswer": "T(n)=aT(n/b)+f(n)",
+          "icon": "Function"
+        },
+        {
+          "id": "adv-o-mt-q6",
+          "type": "true-false",
+          "question": "Master Theorem can\u2019t handle irregular divide sizes.",
+          "correctAnswer": false,
+          "icon": "AlertCircle"
+        }
+      ]
+    },
+    {
+      "title": "\u03a9, \u0398, o Notations",
+      "tutorial": "\u03a9(f(n)) lower bounds, \u0398(f(n)) tight bounds, o(g(n)) means f grows strictly slower than g.",
+      "questions": [
+        {
+          "id": "adv-o-omega-q1",
+          "type": "multiple-choice",
+          "question": "If f(n)=2n and g(n)=n, f(n)=\u03a9(g(n)). True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Check"
+        },
+        {
+          "id": "adv-o-o-q2",
+          "type": "true-false",
+          "question": "n = o(n log n).",
+          "correctAnswer": true,
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-o-theta-q3",
+          "type": "fill-blanks",
+          "question": "If f(n)=3n^2+5n, f(n)=\u0398(___).",
+          "codeTemplate": "",
+          "blanks": [
+            "n^2"
+          ],
+          "icon": "Math"
+        },
+        {
+          "id": "adv-o-notations-q4",
+          "type": "drag-drop",
+          "question": "Match notation to meaning:",
+          "items": [
+            {
+              "id": "T",
+              "text": "\u0398(f)"
+            },
+            {
+              "id": "O",
+              "text": "O(f)"
+            },
+            {
+              "id": "o",
+              "text": "o(f)"
+            }
+          ],
+          "correctOrder": [
+            "T\u2192Tight bound",
+            "O\u2192Upper bound",
+            "o\u2192Strictly smaller"
+          ],
+          "icon": "ChartPie"
+        },
+        {
+          "id": "adv-o-o2-q5",
+          "type": "multiple-choice",
+          "question": "O(f) includes functions that grow no faster than f. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Check"
+        },
+        {
+          "id": "adv-o-o2-q6",
+          "type": "true-false",
+          "question": "o(f) allows equality f(n)=g(n).",
+          "correctAnswer": false,
+          "icon": "X"
+        }
+      ]
+    },
+    {
+      "title": "Polylogarithmic & Iterated Log",
+      "tutorial": "Polylog: (log n)^k; iterated log: number of logs to reduce n \u2264 1.",
+      "questions": [
+        {
+          "id": "adv-o-polylog-q1",
+          "type": "multiple-choice",
+          "question": "Which grows fastest as n\u2192\u221e?",
+          "options": [
+            "log* n",
+            "log n",
+            "(log n)^2",
+            "constant"
+          ],
+          "correctAnswer": "(log n)^2",
+          "icon": "ChartLine"
+        },
+        {
+          "id": "adv-o-iterated-q2",
+          "type": "true-false",
+          "question": "log* n grows slower than log log n.",
+          "correctAnswer": true,
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-o-polylog-q3",
+          "type": "fill-blanks",
+          "question": "Polylogarithmic form O((log n)^__).",
+          "codeTemplate": "",
+          "blanks": [
+            "k"
+          ],
+          "icon": "Math"
+        },
+        {
+          "id": "adv-o-polylog-q4",
+          "type": "drag-drop",
+          "question": "Order growth (slow\u2192fast):",
+          "items": [
+            {
+              "id": "1",
+              "text": "constant"
+            },
+            {
+              "id": "2",
+              "text": "log* n"
+            },
+            {
+              "id": "3",
+              "text": "log n"
+            },
+            {
+              "id": "4",
+              "text": "n^0.1"
+            }
+          ],
+          "correctOrder": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "icon": "SortNumeric"
+        },
+        {
+          "id": "adv-o-polylog-q5",
+          "type": "multiple-choice",
+          "question": "log* n is used in which algorithm's complexity?",
+          "options": [
+            "Union-Find",
+            "Quick Sort",
+            "Merge Sort",
+            "Binary Search"
+          ],
+          "correctAnswer": "Union-Find",
+          "icon": "Tree"
+        },
+        {
+          "id": "adv-o-polylog-q6",
+          "type": "true-false",
+          "question": "Iterated log grows slower than any polylog.",
+          "correctAnswer": true,
+          "icon": "Infinity"
+        }
+      ]
+    },
+    {
+      "title": "Complexity Classes",
+      "tutorial": "P: polynomial time; NP: verifiable in poly; NP-complete: hardest in NP; NP-hard: at least as hard as NP.",
+      "questions": [
+        {
+          "id": "adv-o-cc-q1",
+          "type": "multiple-choice",
+          "question": "Which class is solvable in polynomial time?",
+          "options": [
+            "P",
+            "NP",
+            "NP-complete",
+            "EXP"
+          ],
+          "correctAnswer": "P",
+          "icon": "O"
+        },
+        {
+          "id": "adv-o-cc-q2",
+          "type": "true-false",
+          "question": "If any NP-complete is in P, then P=NP.",
+          "correctAnswer": true,
+          "icon": "Check"
+        },
+        {
+          "id": "adv-o-cc-q3",
+          "type": "fill-blanks",
+          "question": "Traveling Salesman decision is NP-__.",
+          "codeTemplate": "",
+          "blanks": [
+            "complete"
+          ],
+          "icon": "Map"
+        },
+        {
+          "id": "adv-o-cc-q4",
+          "type": "drag-drop",
+          "question": "Match to definition:",
+          "items": [
+            {
+              "id": "N",
+              "text": "NP"
+            },
+            {
+              "id": "H",
+              "text": "NP-hard"
+            },
+            {
+              "id": "C",
+              "text": "NP-complete"
+            }
+          ],
+          "correctOrder": [
+            "N\u2192Verifiable",
+            "H\u2192At least as hard",
+            "C\u2192Both"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-o-cc-q5",
+          "type": "multiple-choice",
+          "question": "NP-hard problems need not be in NP. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "X"
+        },
+        {
+          "id": "adv-o-cc-q6",
+          "type": "true-false",
+          "question": "All NP-complete are NP-hard.",
+          "correctAnswer": true,
+          "icon": "Check"
+        }
+      ]
+    },
+    {
+      "title": "Randomized & Expected Complexity",
+      "tutorial": "Las Vegas: always correct, expected time; Monte Carlo: bounded time, possible error.",
+      "questions": [
+        {
+          "id": "adv-o-rand-q1",
+          "type": "multiple-choice",
+          "question": "Las Vegas algorithms have:",
+          "options": [
+            "Worst-case time",
+            "Expected time",
+            "Error probability",
+            "No randomness"
+          ],
+          "correctAnswer": "Expected time",
+          "icon": "Clock"
+        },
+        {
+          "id": "adv-o-rand-q2",
+          "type": "true-false",
+          "question": "Monte Carlo may give wrong results.",
+          "correctAnswer": true,
+          "icon": "AlertCircle"
+        },
+        {
+          "id": "adv-o-rand-q3",
+          "type": "fill-blanks",
+          "question": "Randomized Quick Sort expected time O(___).",
+          "codeTemplate": "",
+          "blanks": [
+            "n log n"
+          ],
+          "icon": "Shuffle"
+        },
+        {
+          "id": "adv-o-rand-q4",
+          "type": "drag-drop",
+          "question": "Match algorithm to property:",
+          "items": [
+            {
+              "id": "L",
+              "text": "Las Vegas"
+            },
+            {
+              "id": "M",
+              "text": "Monte Carlo"
+            }
+          ],
+          "correctOrder": [
+            "L\u2192Always correct",
+            "M\u2192Bounded time"
+          ],
+          "icon": "Repeat"
+        },
+        {
+          "id": "adv-o-rand-q5",
+          "type": "multiple-choice",
+          "question": "Monte Carlo algorithms have a bound on:",
+          "options": [
+            "Time",
+            "Error probability",
+            "Memory",
+            "All"
+          ],
+          "correctAnswer": "Time",
+          "icon": "Timer"
+        },
+        {
+          "id": "adv-o-rand-q6",
+          "type": "true-false",
+          "question": "Las Vegas always finishes within worst-case time.",
+          "correctAnswer": false,
+          "icon": "X"
+        }
+      ]
+    },
+    {
+      "title": "Smoothed & Average-Case Analysis",
+      "tutorial": "Smoothed analysis: expected performance under slight random input perturbations; average-case: expected over distribution.",
+      "questions": [
+        {
+          "id": "adv-o-smoothed-q1",
+          "type": "multiple-choice",
+          "question": "Smoothed analysis lies between worst and average. True or false?",
+          "options": [
+            "True",
+            "False"
+          ],
+          "correctAnswer": "True",
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-o-smoothed-q2",
+          "type": "true-false",
+          "question": "Simplex algorithm has polynomial smoothed complexity.",
+          "correctAnswer": true,
+          "icon": "Check"
+        },
+        {
+          "id": "adv-o-smoothed-q3",
+          "type": "fill-blanks",
+          "question": "Average-case requires a ____ over inputs.",
+          "codeTemplate": "",
+          "blanks": [
+            "distribution"
+          ],
+          "icon": "ChartPie"
+        },
+        {
+          "id": "adv-o-smoothed-q4",
+          "type": "drag-drop",
+          "question": "Match analysis to description:",
+          "items": [
+            {
+              "id": "W",
+              "text": "Worst-case"
+            },
+            {
+              "id": "A",
+              "text": "Average-case"
+            },
+            {
+              "id": "S",
+              "text": "Smoothed"
+            }
+          ],
+          "correctOrder": [
+            "W\u2192Max input",
+            "A\u2192Expected distribution",
+            "S\u2192Expected perturbation"
+          ],
+          "icon": "Layers"
+        },
+        {
+          "id": "adv-o-smoothed-q5",
+          "type": "multiple-choice",
+          "question": "Average-case depends on input ____.",
+          "options": [
+            "Size",
+            "Distribution",
+            "Algorithm",
+            "Memory"
+          ],
+          "correctAnswer": "Distribution",
+          "icon": "ChartBar"
+        },
+        {
+          "id": "adv-o-smoothed-q6",
+          "type": "true-false",
+          "question": "Smoothed analysis is more realistic than worst-case.",
+          "correctAnswer": true,
+          "icon": "ThumbsUp"
+        }
+      ]
+    }
+  ]
+}
