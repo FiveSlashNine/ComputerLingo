@@ -1,544 +1,696 @@
-{
-  "category": "big_o",
-  "level": "intermediate",
-  "topics": [
-    {
-      "title": "Logarithmic Time \u2013 O(log n)",
-      "tutorial": "Logarithmic algorithms reduce the problem size by a constant factor each step. Binary Search halves the search space each comparison.",
-      "questions": [
-        {
-          "id": "int-o-log-q1",
-          "type": "multiple-choice",
-          "question": "Which operation runs in O(log n)?",
-          "options": [
-            "Linear search",
-            "Binary search",
-            "Bubble Sort",
-            "Hash lookup"
-          ],
-          "correctAnswer": "Binary search",
-          "icon": "Search"
-        },
-        {
-          "id": "int-o-log-q2",
-          "type": "true-false",
-          "question": "Binary Search examines at most \u2308log\u2082 n\u2309 + 1 elements.",
-          "correctAnswer": true,
-          "icon": "Calculator"
-        },
-        {
-          "id": "int-o-log-q3",
-          "type": "fill-blanks",
-          "question": "Doubling the input size adds at most ___ comparisons in Binary Search.",
-          "codeTemplate": "",
-          "blanks": [
-            "1"
-          ],
-          "icon": "Plus"
-        },
-        {
-          "id": "int-o-log-q4",
-          "type": "multiple-choice",
-          "question": "Binary Search requires which property?",
-          "options": [
-            "Unsorted data",
-            "Sorted data",
-            "Equal elements",
-            "Unique values"
-          ],
-          "correctAnswer": "Sorted data",
-          "icon": "SortAscending"
-        },
-        {
-          "id": "int-o-log-q5",
-          "type": "drag-drop",
-          "question": "Match search to complexity:",
-          "items": [
-            {
-              "id": "A",
-              "text": "Binary Search"
-            },
-            {
-              "id": "B",
-              "text": "Linear Search"
-            }
-          ],
-          "correctOrder": [
-            "A\u2192O(log n)",
-            "B\u2192O(n)"
-          ],
-          "icon": "SortAtoZ"
-        },
-        {
-          "id": "int-o-log-q6",
-          "type": "true-false",
-          "question": "Binary Search can be implemented recursively.",
-          "correctAnswer": true,
-          "icon": "Repeat"
-        }
-      ]
-    },
-    {
-      "title": "Linearithmic Time \u2013 O(n log n)",
-      "tutorial": "Algorithms like Merge Sort and Heap Sort run in O(n log n), combining a linear pass with a logarithmic division of work.",
-      "questions": [
-        {
-          "id": "int-o-nlogn-q1",
-          "type": "multiple-choice",
-          "question": "Which sort guarantees O(n log n) worst-case?",
-          "options": [
-            "Quick Sort",
-            "Merge Sort",
-            "Bubble Sort",
-            "Selection Sort"
-          ],
-          "correctAnswer": "Merge Sort",
-          "icon": "SortAscending"
-        },
-        {
-          "id": "int-o-nlogn-q2",
-          "type": "true-false",
-          "question": "Heap Sort runs in O(n log n) worst-case.",
-          "correctAnswer": true,
-          "icon": "Heap"
-        },
-        {
-          "id": "int-o-nlogn-q3",
-          "type": "fill-blanks",
-          "question": "Merge Sort\u2019s merge step runs in O(___).",
-          "codeTemplate": "",
-          "blanks": [
-            "n"
-          ],
-          "icon": "Merge"
-        },
-        {
-          "id": "int-o-nlogn-q4",
-          "type": "multiple-choice",
-          "question": "Quick Sort average-case is O(n log n). True or false?",
-          "options": [
-            "True",
-            "False"
-          ],
-          "correctAnswer": "True",
-          "icon": "TrendingUp"
-        },
-        {
-          "id": "int-o-nlogn-q5",
-          "type": "drag-drop",
-          "question": "Match algorithm to complexity:",
-          "items": [
-            {
-              "id": "A",
-              "text": "Merge Sort"
-            },
-            {
-              "id": "B",
-              "text": "Quick Sort"
-            }
-          ],
-          "correctOrder": [
-            "A\u2192O(n log n)",
-            "B\u2192O(n log n) average"
-          ],
-          "icon": "Layers"
-        },
-        {
-          "id": "int-o-nlogn-q6",
-          "type": "true-false",
-          "question": "TimSort runs in O(n log n) worst-case.",
-          "correctAnswer": true,
-          "icon": "Shuffle"
-        }
-      ]
-    },
-    {
-      "title": "Polynomial Time \u2013 O(n\u1d4f)",
-      "tutorial": "Polynomial-time algorithms grow proportional to n\u1d4f. Quadratic (k=2) and cubic (k=3) are common; higher k can be impractical.",
-      "questions": [
-        {
-          "id": "int-o-poly-q1",
-          "type": "multiple-choice",
-          "question": "Three nested loops yield O(___).",
-          "options": [
-            "n",
-            "n log n",
-            "n\u00b2",
-            "n\u00b3"
-          ],
-          "correctAnswer": "n\u00b3",
-          "icon": "Loop"
-        },
-        {
-          "id": "int-o-poly-q2",
-          "type": "true-false",
-          "question": "O(n\u00b3) grows faster than O(n\u00b2).",
-          "correctAnswer": true,
-          "icon": "ChartLine"
-        },
-        {
-          "id": "int-o-poly-q3",
-          "type": "fill-blanks",
-          "question": "An algorithm with two nested loops then a single loop is O(___).",
-          "codeTemplate": "",
-          "blanks": [
-            "n\u00b2"
-          ],
-          "icon": "Layers"
-        },
-        {
-          "id": "int-o-poly-q4",
-          "type": "multiple-choice",
-          "question": "Which is polynomial-time?",
-          "options": [
-            "Subset Sum brute",
-            "Matrix multiplication naive",
-            "Graph BFS",
-            "Factorial permutations"
-          ],
-          "correctAnswer": "Graph BFS",
-          "icon": "Graph"
-        },
-        {
-          "id": "int-o-poly-q5",
-          "type": "drag-drop",
-          "question": "Match loops to complexity:",
-          "items": [
-            {
-              "id": "1",
-              "text": "2 loops"
-            },
-            {
-              "id": "2",
-              "text": "3 loops"
-            }
-          ],
-          "correctOrder": [
-            "1\u2192O(n\u00b2)",
-            "2\u2192O(n\u00b3)"
-          ],
-          "icon": "SortNumeric"
-        },
-        {
-          "id": "int-o-poly-q6",
-          "type": "true-false",
-          "question": "Polynomial time means worst-case is O(n\u1d4f) for some constant k.",
-          "correctAnswer": true,
-          "icon": "Layers"
-        }
-      ]
-    },
-    {
-      "title": "Exponential Time \u2013 O(2\u207f)",
-      "tutorial": "Exponential algorithms double work with each input unit. Subset-sum brute and naive Fibonacci are O(2\u207f).",
-      "questions": [
-        {
-          "id": "int-o-exp-q1",
-          "type": "multiple-choice",
-          "question": "Solving subset sum by checking all subsets is O(___).",
-          "options": [
-            "n\u00b2",
-            "2\u207f",
-            "n!",
-            "n log n"
-          ],
-          "correctAnswer": "2\u207f",
-          "icon": "Calculator"
-        },
-        {
-          "id": "int-o-exp-q2",
-          "type": "true-false",
-          "question": "Doubling n squares the work for O(2\u207f) algorithms.",
-          "correctAnswer": false,
-          "icon": "X"
-        },
-        {
-          "id": "int-o-exp-q3",
-          "type": "fill-blanks",
-          "question": "Naive Fibonacci recursion runs in O(___).",
-          "codeTemplate": "",
-          "blanks": [
-            "2\u207f"
-          ],
-          "icon": "Function"
-        },
-        {
-          "id": "int-o-exp-q4",
-          "type": "multiple-choice",
-          "question": "Which problem is exponential brute?",
-          "options": [
-            "Binary Search",
-            "Merge Sort",
-            "Subset Sum",
-            "Hash lookup"
-          ],
-          "correctAnswer": "Subset Sum",
-          "icon": "Hash"
-        },
-        {
-          "id": "int-o-exp-q5",
-          "type": "drag-drop",
-          "question": "Match growth to label:",
-          "items": [
-            {
-              "id": "A",
-              "text": "2\u207f"
-            },
-            {
-              "id": "B",
-              "text": "n\u00b2"
-            }
-          ],
-          "correctOrder": [
-            "A\u2192Exponential",
-            "B\u2192Polynomial"
-          ],
-          "icon": "SortNumeric"
-        },
-        {
-          "id": "int-o-exp-q6",
-          "type": "true-false",
-          "question": "Exponential time is always worse than polynomial for large n.",
-          "correctAnswer": true,
-          "icon": "ChartBar"
-        }
-      ]
-    },
-    {
-      "title": "Factorial Time \u2013 O(n!)",
-      "tutorial": "Factorial-time algorithms generate permutations, like brute-force TSP. n! grows super-exponentially.",
-      "questions": [
-        {
-          "id": "int-o-fact-q1",
-          "type": "multiple-choice",
-          "question": "Listing all permutations is O(___).",
-          "options": [
-            "n",
-            "2\u207f",
-            "n!",
-            "n\u00b2"
-          ],
-          "correctAnswer": "n!",
-          "icon": "List"
-        },
-        {
-          "id": "int-o-fact-q2",
-          "type": "true-false",
-          "question": "5! = 120, so n=5 yields 120 steps in O(n!) algorithm.",
-          "correctAnswer": true,
-          "icon": "Calculator"
-        },
-        {
-          "id": "int-o-fact-q3",
-          "type": "fill-blanks",
-          "question": "Brute-force TSP over n cities is O(___).",
-          "codeTemplate": "",
-          "blanks": [
-            "n!"
-          ],
-          "icon": "Map"
-        },
-        {
-          "id": "int-o-fact-q4",
-          "type": "multiple-choice",
-          "question": "Which grows faster: O(2\u207f) or O(n!)?",
-          "options": [
-            "O(2\u207f)",
-            "O(n!)"
-          ],
-          "correctAnswer": "O(n!)",
-          "icon": "Up"
-        },
-        {
-          "id": "int-o-fact-q5",
-          "type": "drag-drop",
-          "question": "Match n to n!:",
-          "items": [
-            {
-              "id": "3",
-              "text": "3"
-            },
-            {
-              "id": "4",
-              "text": "4"
-            }
-          ],
-          "correctOrder": [
-            "3\u21926",
-            "4\u219224"
-          ],
-          "icon": "Numbers"
-        },
-        {
-          "id": "int-o-fact-q6",
-          "type": "true-false",
-          "question": "n! grows slower than 2\u207f for large n.",
-          "correctAnswer": false,
-          "icon": "X"
-        }
-      ]
-    },
-    {
-      "title": "Amortized Analysis",
-      "tutorial": "Amortized analysis averages cost over sequences of operations. Dynamic array resizing is O(1) amortized.",
-      "questions": [
-        {
-          "id": "int-o-amort-q1",
-          "type": "multiple-choice",
-          "question": "Dynamic array append is O(1) amortized because:",
-          "options": [
-            "Resizes never occur",
-            "Each resize is O(1)",
-            "Resizes are rare",
-            "Memory infinite"
-          ],
-          "correctAnswer": "Resizes are rare",
-          "icon": "Array"
-        },
-        {
-          "id": "int-o-amort-q2",
-          "type": "true-false",
-          "question": "Occasional O(n) resizes average to O(1) per append.",
-          "correctAnswer": true,
-          "icon": "Layers"
-        },
-        {
-          "id": "int-o-amort-q3",
-          "type": "fill-blanks",
-          "question": "Resizing in doubling strategy happens every roughly ___ inserts.",
-          "codeTemplate": "",
-          "blanks": [
-            "n"
-          ],
-          "icon": "Loop"
-        },
-        {
-          "id": "int-o-amort-q4",
-          "type": "multiple-choice",
-          "question": "Amortized cost is average over:",
-          "options": [
-            "Single op",
-            "All ops",
-            "Worst ops",
-            "Best ops"
-          ],
-          "correctAnswer": "All ops",
-          "icon": "ChartPie"
-        },
-        {
-          "id": "int-o-amort-q5",
-          "type": "drag-drop",
-          "question": "Match cost:",
-          "items": [
-            {
-              "id": "W",
-              "text": "Worst-case"
-            },
-            {
-              "id": "A",
-              "text": "Amortized"
-            }
-          ],
-          "correctOrder": [
-            "W\u2192Single expensive",
-            "A\u2192Average many"
-          ],
-          "icon": "Scale"
-        },
-        {
-          "id": "int-o-amort-q6",
-          "type": "true-false",
-          "question": "Amortized analysis applies to any data structure.",
-          "correctAnswer": false,
-          "icon": "AlertCircle"
-        }
-      ]
-    },
-    {
-      "title": "Polylog & Iterated Log",
-      "tutorial": "Polylog functions are (log n)^k. Iterated log log* n counts how many times log must be applied to reduce n \u22641.",
-      "questions": [
-        {
-          "id": "int-o-polylog-q1",
-          "type": "multiple-choice",
-          "question": "Which grows fastest for large n?",
-          "options": [
-            "log* n",
-            "log n",
-            "(log n)\u00b2",
-            "constant"
-          ],
-          "correctAnswer": "(log n)\u00b2",
-          "icon": "ChartLine"
-        },
-        {
-          "id": "int-o-polylog-q2",
-          "type": "true-false",
-          "question": "log* n grows slower than log log n.",
-          "correctAnswer": true,
-          "icon": "X"
-        },
-        {
-          "id": "int-o-polylog-q3",
-          "type": "fill-blanks",
-          "question": "Polylogarithmic form: O((log n)^___).",
-          "codeTemplate": "",
-          "blanks": [
-            "k"
-          ],
-          "icon": "Math"
-        },
-        {
-          "id": "int-o-polylog-q4",
-          "type": "multiple-choice",
-          "question": "log* n measures:",
-          "options": [
-            "Exponentials",
-            "Iterations of log",
-            "Factorials",
-            "Roots"
-          ],
-          "correctAnswer": "Iterations of log",
-          "icon": "Repeat"
-        },
-        {
-          "id": "int-o-polylog-q5",
-          "type": "drag-drop",
-          "question": "Order growth (slow\u2192fast):",
-          "items": [
-            {
-              "id": "1",
-              "text": "constant"
-            },
-            {
-              "id": "2",
-              "text": "log* n"
-            },
-            {
-              "id": "3",
-              "text": "log n"
-            },
-            {
-              "id": "4",
-              "text": "n^\u03b5"
-            }
-          ],
-          "correctOrder": [
-            "1",
-            "2",
-            "3",
-            "4"
-          ],
-          "icon": "SortNumeric"
-        },
-        {
-          "id": "int-o-polylog-q6",
-          "type": "true-false",
-          "question": "(log n)\u00b2 is polylogarithmic.",
-          "correctAnswer": true,
-          "icon": "Check"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "int-o-log-q1",
+    "title": "Level 2: Logarithmic Time – O(log n)",
+    "type": "multiple-choice",
+    "question": "Which operation runs in O(log n)?",
+    "icon": "Search",
+    "options": [
+      {
+        "id": "a",
+        "text": "Linear search"
+      },
+      {
+        "id": "b",
+        "text": "Binary search"
+      },
+      {
+        "id": "c",
+        "text": "Bubble Sort"
+      },
+      {
+        "id": "d",
+        "text": "Hash lookup"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "int-o-log-q2",
+    "title": "Level 2: Logarithmic Time – O(log n)",
+    "type": "true-false",
+    "question": "Binary Search examines at most ⌈log₂ n⌉ + 1 elements.",
+    "icon": "Calculator",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-log-q3",
+    "title": "Level 2: Logarithmic Time – O(log n)",
+    "type": "fill-blanks",
+    "question": "Doubling the input size adds at most ___ comparisons in Binary Search.",
+    "icon": "Plus",
+    "codeTemplate": "Doubling the input size adds at most ___ comparisons in Binary Search.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "int-o-log-q4",
+    "title": "Level 2: Logarithmic Time – O(log n)",
+    "type": "multiple-choice",
+    "question": "Binary Search requires which property?",
+    "icon": "SortAscending",
+    "options": [
+      {
+        "id": "a",
+        "text": "Unsorted data"
+      },
+      {
+        "id": "b",
+        "text": "Sorted data"
+      },
+      {
+        "id": "c",
+        "text": "Equal elements"
+      },
+      {
+        "id": "d",
+        "text": "Unique values"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "int-o-log-q5",
+    "title": "Level 2: Logarithmic Time – O(log n)",
+    "type": "drag-drop",
+    "question": "Match search to complexity:",
+    "icon": "SortAtoZ",
+    "items": [
+      {
+        "id": "A",
+        "text": "Binary Search"
+      },
+      {
+        "id": "B",
+        "text": "Linear Search"
+      }
+    ],
+    "correctOrder": [
+      "A→O(log n)",
+      "B→O(n)"
+    ]
+  },
+  {
+    "id": "int-o-log-q6",
+    "title": "Level 2: Logarithmic Time – O(log n)",
+    "type": "true-false",
+    "question": "Binary Search can be implemented recursively.",
+    "icon": "Repeat",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-nlogn-q1",
+    "title": "Level 2: Linearithmic Time – O(n log n)",
+    "type": "multiple-choice",
+    "question": "Which sort guarantees O(n log n) worst-case?",
+    "icon": "SortAscending",
+    "options": [
+      {
+        "id": "a",
+        "text": "Quick Sort"
+      },
+      {
+        "id": "b",
+        "text": "Merge Sort"
+      },
+      {
+        "id": "c",
+        "text": "Bubble Sort"
+      },
+      {
+        "id": "d",
+        "text": "Selection Sort"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "int-o-nlogn-q2",
+    "title": "Level 2: Linearithmic Time – O(n log n)",
+    "type": "true-false",
+    "question": "Heap Sort runs in O(n log n) worst-case.",
+    "icon": "Heap",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-nlogn-q3",
+    "title": "Level 2: Linearithmic Time – O(n log n)",
+    "type": "fill-blanks",
+    "question": "Merge Sort’s merge step runs in O(___).",
+    "icon": "Merge",
+    "codeTemplate": "Merge Sort’s merge step runs in O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "int-o-nlogn-q4",
+    "title": "Level 2: Linearithmic Time – O(n log n)",
+    "type": "multiple-choice",
+    "question": "Quick Sort average-case is O(n log n). True or false?",
+    "icon": "TrendingUp",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "int-o-nlogn-q5",
+    "title": "Level 2: Linearithmic Time – O(n log n)",
+    "type": "drag-drop",
+    "question": "Match algorithm to complexity:",
+    "icon": "Layers",
+    "items": [
+      {
+        "id": "A",
+        "text": "Merge Sort"
+      },
+      {
+        "id": "B",
+        "text": "Quick Sort"
+      }
+    ],
+    "correctOrder": [
+      "A→O(n log n)",
+      "B→O(n log n) average"
+    ]
+  },
+  {
+    "id": "int-o-nlogn-q6",
+    "title": "Level 2: Linearithmic Time – O(n log n)",
+    "type": "true-false",
+    "question": "TimSort runs in O(n log n) worst-case.",
+    "icon": "Shuffle",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-poly-q1",
+    "title": "Level 2: Polynomial Time – O(nᵏ)",
+    "type": "multiple-choice",
+    "question": "Three nested loops yield O(___).",
+    "icon": "Loop",
+    "options": [
+      {
+        "id": "a",
+        "text": "n"
+      },
+      {
+        "id": "b",
+        "text": "n log n"
+      },
+      {
+        "id": "c",
+        "text": "n²"
+      },
+      {
+        "id": "d",
+        "text": "n³"
+      }
+    ],
+    "correctAnswer": "d"
+  },
+  {
+    "id": "int-o-poly-q2",
+    "title": "Level 2: Polynomial Time – O(nᵏ)",
+    "type": "true-false",
+    "question": "O(n³) grows faster than O(n²).",
+    "icon": "ChartLine",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-poly-q3",
+    "title": "Level 2: Polynomial Time – O(nᵏ)",
+    "type": "fill-blanks",
+    "question": "An algorithm with two nested loops then a single loop is O(___).",
+    "icon": "Layers",
+    "codeTemplate": "An algorithm with two nested loops then a single loop is O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "int-o-poly-q4",
+    "title": "Level 2: Polynomial Time – O(nᵏ)",
+    "type": "multiple-choice",
+    "question": "Which is polynomial-time?",
+    "icon": "Graph",
+    "options": [
+      {
+        "id": "a",
+        "text": "Subset Sum brute"
+      },
+      {
+        "id": "b",
+        "text": "Matrix multiplication naive"
+      },
+      {
+        "id": "c",
+        "text": "Graph BFS"
+      },
+      {
+        "id": "d",
+        "text": "Factorial permutations"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "int-o-poly-q5",
+    "title": "Level 2: Polynomial Time – O(nᵏ)",
+    "type": "drag-drop",
+    "question": "Match loops to complexity:",
+    "icon": "SortNumeric",
+    "items": [
+      {
+        "id": "1",
+        "text": "2 loops"
+      },
+      {
+        "id": "2",
+        "text": "3 loops"
+      }
+    ],
+    "correctOrder": [
+      "1→O(n²)",
+      "2→O(n³)"
+    ]
+  },
+  {
+    "id": "int-o-poly-q6",
+    "title": "Level 2: Polynomial Time – O(nᵏ)",
+    "type": "true-false",
+    "question": "Polynomial time means worst-case is O(nᵏ) for some constant k.",
+    "icon": "Layers",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-exp-q1",
+    "title": "Level 2: Exponential Time – O(2ⁿ)",
+    "type": "multiple-choice",
+    "question": "Solving subset sum by checking all subsets is O(___).",
+    "icon": "Calculator",
+    "options": [
+      {
+        "id": "a",
+        "text": "n²"
+      },
+      {
+        "id": "b",
+        "text": "2ⁿ"
+      },
+      {
+        "id": "c",
+        "text": "n!"
+      },
+      {
+        "id": "d",
+        "text": "n log n"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "int-o-exp-q2",
+    "title": "Level 2: Exponential Time – O(2ⁿ)",
+    "type": "true-false",
+    "question": "Doubling n squares the work for O(2ⁿ) algorithms.",
+    "icon": "X",
+    "correctAnswer": false
+  },
+  {
+    "id": "int-o-exp-q3",
+    "title": "Level 2: Exponential Time – O(2ⁿ)",
+    "type": "fill-blanks",
+    "question": "Naive Fibonacci recursion runs in O(___).",
+    "icon": "Function",
+    "codeTemplate": "Naive Fibonacci recursion runs in O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "int-o-exp-q4",
+    "title": "Level 2: Exponential Time – O(2ⁿ)",
+    "type": "multiple-choice",
+    "question": "Which problem is exponential brute?",
+    "icon": "Hash",
+    "options": [
+      {
+        "id": "a",
+        "text": "Binary Search"
+      },
+      {
+        "id": "b",
+        "text": "Merge Sort"
+      },
+      {
+        "id": "c",
+        "text": "Subset Sum"
+      },
+      {
+        "id": "d",
+        "text": "Hash lookup"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "int-o-exp-q5",
+    "title": "Level 2: Exponential Time – O(2ⁿ)",
+    "type": "drag-drop",
+    "question": "Match growth to label:",
+    "icon": "SortNumeric",
+    "items": [
+      {
+        "id": "A",
+        "text": "2ⁿ"
+      },
+      {
+        "id": "B",
+        "text": "n²"
+      }
+    ],
+    "correctOrder": [
+      "A→Exponential",
+      "B→Polynomial"
+    ]
+  },
+  {
+    "id": "int-o-exp-q6",
+    "title": "Level 2: Exponential Time – O(2ⁿ)",
+    "type": "true-false",
+    "question": "Exponential time is always worse than polynomial for large n.",
+    "icon": "ChartBar",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-fact-q1",
+    "title": "Level 2: Factorial Time – O(n!)",
+    "type": "multiple-choice",
+    "question": "Listing all permutations is O(___).",
+    "icon": "List",
+    "options": [
+      {
+        "id": "a",
+        "text": "n"
+      },
+      {
+        "id": "b",
+        "text": "2ⁿ"
+      },
+      {
+        "id": "c",
+        "text": "n!"
+      },
+      {
+        "id": "d",
+        "text": "n²"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "int-o-fact-q2",
+    "title": "Level 2: Factorial Time – O(n!)",
+    "type": "true-false",
+    "question": "5! = 120, so n=5 yields 120 steps in O(n!) algorithm.",
+    "icon": "Calculator",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-fact-q3",
+    "title": "Level 2: Factorial Time – O(n!)",
+    "type": "fill-blanks",
+    "question": "Brute-force TSP over n cities is O(___).",
+    "icon": "Map",
+    "codeTemplate": "Brute-force TSP over n cities is O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "int-o-fact-q4",
+    "title": "Level 2: Factorial Time – O(n!)",
+    "type": "multiple-choice",
+    "question": "Which grows faster: O(2ⁿ) or O(n!)?",
+    "icon": "Up",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(2ⁿ)"
+      },
+      {
+        "id": "b",
+        "text": "O(n!)"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "int-o-fact-q5",
+    "title": "Level 2: Factorial Time – O(n!)",
+    "type": "drag-drop",
+    "question": "Match n to n!:",
+    "icon": "Numbers",
+    "items": [
+      {
+        "id": "3",
+        "text": "3"
+      },
+      {
+        "id": "4",
+        "text": "4"
+      }
+    ],
+    "correctOrder": [
+      "3→6",
+      "4→24"
+    ]
+  },
+  {
+    "id": "int-o-fact-q6",
+    "title": "Level 2: Factorial Time – O(n!)",
+    "type": "true-false",
+    "question": "n! grows slower than 2ⁿ for large n.",
+    "icon": "X",
+    "correctAnswer": false
+  },
+  {
+    "id": "int-o-amort-q1",
+    "title": "Level 2: Amortized Analysis",
+    "type": "multiple-choice",
+    "question": "Dynamic array append is O(1) amortized because:",
+    "icon": "Array",
+    "options": [
+      {
+        "id": "a",
+        "text": "Resizes never occur"
+      },
+      {
+        "id": "b",
+        "text": "Each resize is O(1)"
+      },
+      {
+        "id": "c",
+        "text": "Resizes are rare"
+      },
+      {
+        "id": "d",
+        "text": "Memory infinite"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "int-o-amort-q2",
+    "title": "Level 2: Amortized Analysis",
+    "type": "true-false",
+    "question": "Occasional O(n) resizes average to O(1) per append.",
+    "icon": "Layers",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-amort-q3",
+    "title": "Level 2: Amortized Analysis",
+    "type": "fill-blanks",
+    "question": "Resizing in doubling strategy happens every roughly ___ inserts.",
+    "icon": "Loop",
+    "codeTemplate": "Resizing in doubling strategy happens every roughly ___ inserts.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "int-o-amort-q4",
+    "title": "Level 2: Amortized Analysis",
+    "type": "multiple-choice",
+    "question": "Amortized cost is average over:",
+    "icon": "ChartPie",
+    "options": [
+      {
+        "id": "a",
+        "text": "Single op"
+      },
+      {
+        "id": "b",
+        "text": "All ops"
+      },
+      {
+        "id": "c",
+        "text": "Worst ops"
+      },
+      {
+        "id": "d",
+        "text": "Best ops"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "int-o-amort-q5",
+    "title": "Level 2: Amortized Analysis",
+    "type": "drag-drop",
+    "question": "Match cost:",
+    "icon": "Scale",
+    "items": [
+      {
+        "id": "W",
+        "text": "Worst-case"
+      },
+      {
+        "id": "A",
+        "text": "Amortized"
+      }
+    ],
+    "correctOrder": [
+      "W→Single expensive",
+      "A→Average many"
+    ]
+  },
+  {
+    "id": "int-o-amort-q6",
+    "title": "Level 2: Amortized Analysis",
+    "type": "true-false",
+    "question": "Amortized analysis applies to any data structure.",
+    "icon": "AlertCircle",
+    "correctAnswer": false
+  },
+  {
+    "id": "int-o-polylog-q1",
+    "title": "Level 2: Polylog & Iterated Log",
+    "type": "multiple-choice",
+    "question": "Which grows fastest for large n?",
+    "icon": "ChartLine",
+    "options": [
+      {
+        "id": "a",
+        "text": "log* n"
+      },
+      {
+        "id": "b",
+        "text": "log n"
+      },
+      {
+        "id": "c",
+        "text": "(log n)²"
+      },
+      {
+        "id": "d",
+        "text": "constant"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "int-o-polylog-q2",
+    "title": "Level 2: Polylog & Iterated Log",
+    "type": "true-false",
+    "question": "log* n grows slower than log log n.",
+    "icon": "X",
+    "correctAnswer": true
+  },
+  {
+    "id": "int-o-polylog-q3",
+    "title": "Level 2: Polylog & Iterated Log",
+    "type": "fill-blanks",
+    "question": "Polylogarithmic form: O((log n)^___).",
+    "icon": "Math",
+    "codeTemplate": "Polylogarithmic form: O((log n)^___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "int-o-polylog-q4",
+    "title": "Level 2: Polylog & Iterated Log",
+    "type": "multiple-choice",
+    "question": "log* n measures:",
+    "icon": "Repeat",
+    "options": [
+      {
+        "id": "a",
+        "text": "Exponentials"
+      },
+      {
+        "id": "b",
+        "text": "Iterations of log"
+      },
+      {
+        "id": "c",
+        "text": "Factorials"
+      },
+      {
+        "id": "d",
+        "text": "Roots"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "int-o-polylog-q5",
+    "title": "Level 2: Polylog & Iterated Log",
+    "type": "drag-drop",
+    "question": "Order growth (slow→fast):",
+    "icon": "SortNumeric",
+    "items": [
+      {
+        "id": "1",
+        "text": "constant"
+      },
+      {
+        "id": "2",
+        "text": "log* n"
+      },
+      {
+        "id": "3",
+        "text": "log n"
+      },
+      {
+        "id": "4",
+        "text": "n^ε"
+      }
+    ],
+    "correctOrder": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  {
+    "id": "int-o-polylog-q6",
+    "title": "Level 2: Polylog & Iterated Log",
+    "type": "true-false",
+    "question": "(log n)² is polylogarithmic.",
+    "icon": "Check",
+    "correctAnswer": true
+  }
+]
