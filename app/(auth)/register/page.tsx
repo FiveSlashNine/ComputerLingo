@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Form } from "@/components/forms/form";
 import { BookOpen, Trophy, Users } from "lucide-react";
-import { signUp } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
+import axios from "axios";
 
 export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,24 +21,19 @@ export default function Register() {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    const { data, error } = await signUp.email(
-      {
+    try {
+      const response = await axios.post("/api/auth/register", {
         email,
         password,
-        callbackURL: "/login",
-        name: "",
-      },
-      {}
-    );
+      });
 
-    setIsLoading(false);
-
-    if (error) {
-      setErrorMessage(
-        error.message || "Registration failed. Please try again."
-      );
-    } else {
       router.push("/login");
+    } catch (e: any) {
+      setErrorMessage(
+        e.response.data.error || "Registration failed. Please try again."
+      );
+    } finally {
+      setIsLoading(false);
     }
   }
 

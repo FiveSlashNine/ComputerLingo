@@ -41,21 +41,35 @@ export async function incrementUserLevel(
   categoryId: number,
   levelId: number
 ) {
-  const result = await db
+  const current = await db
     .selectFrom("UserProgress")
     .select("level_index")
     .where("user_id", "=", userId)
     .where("category_id", "=", categoryId)
     .executeTakeFirst();
 
-  const currentLevel = result?.level_index ?? 0;
-
-  if (levelId > currentLevel) {
+  if (current && levelId > current.level_index) {
     await db
       .updateTable("UserProgress")
-      .set({ level_index: levelId }) // Set to the actual levelId
+      .set({ level_index: current.level_index + 1 })
       .where("user_id", "=", userId)
       .where("category_id", "=", categoryId)
+      .execute();
+  }
+}
+
+export async function addUserToUserProgress(id: string) {
+  const categories = await db.selectFrom("Categories").select("id").execute();
+
+  for (const cat of categories) {
+    await db
+      .insertInto("UserProgress")
+      .values({
+        user_id: id,
+        category_id: cat.id,
+        level_index: 0,
+      })
+      .onConflict((oc) => oc.columns(["user_id", "category_id"]).doNothing())
       .execute();
   }
 }

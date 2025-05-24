@@ -15,7 +15,6 @@ import {
   Terminal,
   ListChecks,
 } from "lucide-react";
-import { useSession } from "next-auth/react";
 
 import { MultipleChoiceExercise } from "@/components/levels/MultipleChoiceExercise";
 import { TrueFalseExercise } from "@/components/levels/TrueFalseExercise";

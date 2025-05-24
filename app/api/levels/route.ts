@@ -4,7 +4,8 @@ import {
   getNumLevelsForCategoryId,
   incrementUserLevel,
 } from "@/lib/db";
-import { useSession } from "@/lib/auth-client";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -25,7 +26,9 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const { data: session } = useSession();
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
 
   const { searchParams } = new URL(req.url);
   const categoryId = Number(searchParams.get("categoryId"));
