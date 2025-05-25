@@ -1,15 +1,4 @@
-import NavBar from "@/components/navigation/NavBar";
-import "../../../../globals.css";
-
-import { Nunito } from "next/font/google";
-import Footer from "@/components/navigation/Footer";
 import { Protected } from "@/components/navigation/Protected";
-
-const nunito = Nunito({
-  subsets: ["latin"],
-  variable: "--font-nunito",
-  display: "swap",
-});
 
 let title = "ComputerLingo - Learn Computer Science with Fun and Games";
 let description =

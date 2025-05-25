@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Form } from "@/components/forms/form";
+import { RegisterForm } from "@/components/forms/RegisterForm";
 import { BookOpen, Trophy, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
@@ -19,11 +19,13 @@ export default function Register() {
     setErrorMessage("");
 
     const email = formData.get("email") as string;
+    const username = formData.get("username") as string;
     const password = formData.get("password") as string;
 
     try {
-      const response = await axios.post("/api/auth/register", {
+      await axios.post("/api/auth/register", {
         email,
+        username,
         password,
       });
 
@@ -106,7 +108,7 @@ export default function Register() {
             </div>
           )}
 
-          <Form action={register}>
+          <RegisterForm action={register}>
             <Button
               className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600"
               disabled={isLoading}
@@ -124,7 +126,7 @@ export default function Register() {
               </Link>
               {" instead."}
             </p>
-          </Form>
+          </RegisterForm>
         </div>
       </div>
     </div>

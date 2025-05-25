@@ -4,7 +4,6 @@ import { readdirSync, statSync } from "fs";
 import { join } from "path";
 import postgres from "postgres";
 
-// Ensure env variable is set
 if (!process.env.POSTGRES_URL) {
   throw new Error("POSTGRES_URL environment variable is not defined.");
 }
@@ -25,6 +24,16 @@ interface Categories {
   levels: number;
 }
 
+interface User {
+  id: string;
+  name: string;
+  email: string;
+  emailVerified: boolean;
+  image: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 interface UserProgress {
   user_id: string;
   category_id: number;
@@ -34,6 +43,23 @@ interface UserProgress {
 interface Database {
   Categories: Categories;
   UserProgress: UserProgress;
+  user: User;
+}
+
+export async function getLeaderboardData(): Promise<
+  { userId: string; name: string; score: string | bigint | number }[]
+> {
+  return await db
+    .selectFrom("UserProgress")
+    .innerJoin("user", "user.id", "UserProgress.user_id")
+    .select([
+      "UserProgress.user_id as userId",
+      "user.name as name",
+      db.fn.sum("UserProgress.level_index").as("score"),
+    ])
+    .groupBy(["UserProgress.user_id", "user.name"])
+    .orderBy("score", "desc")
+    .execute();
 }
 
 export async function incrementUserLevel(

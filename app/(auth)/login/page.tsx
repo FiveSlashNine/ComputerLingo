@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { Form } from "@/components/forms/form";
+import { LoginForm } from "@/components/forms/LoginForm";
 import { signIn } from "@/lib/auth-client";
 import { Code, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -85,7 +85,7 @@ export default function Login() {
             </div>
           )}
 
-          <Form
+          <LoginForm
             action={async (formData: FormData) => {
               setErrorMessage("");
               const { data, error } = await signIn.email(
@@ -118,7 +118,7 @@ export default function Login() {
               </Link>
               {" for free."}
             </p>
-          </Form>
+          </LoginForm>
         </div>
       </div>
     </div>
