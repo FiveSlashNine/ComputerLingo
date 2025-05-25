@@ -1,0 +1,231 @@
+[
+  {
+    "id": 1,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "Which SQL keyword is used to combine rows from two or more tables based on a related column?",
+    "options": [
+      { "id": "a", "text": "COMBINE" },
+      { "id": "b", "text": "UNION" },
+      { "id": "c", "text": "JOIN" },
+      { "id": "d", "text": "MERGE" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Link2"
+  },
+  {
+    "id": 2,
+    "title": "Level 2: SQL Intermediate",
+    "type": "true-false",
+    "question": "An INNER JOIN returns only rows with matching values in both tables.",
+    "correctAnswer": true,
+    "icon": "ArrowRightLeft"
+  },
+  {
+    "id": 3,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "Which JOIN returns all rows from the left table and matched rows from the right table?",
+    "options": [
+      { "id": "a", "text": "LEFT JOIN" },
+      { "id": "b", "text": "RIGHT JOIN" },
+      { "id": "c", "text": "FULL JOIN" },
+      { "id": "d", "text": "INNER JOIN" }
+    ],
+    "correctAnswer": "a",
+    "icon": "CornerDownLeft"
+  },
+  {
+    "id": 4,
+    "title": "Level 2: SQL Intermediate",
+    "type": "fill-blanks",
+    "question": "Complete the JOIN clause to connect `orders` and `customers` by `customer_id`:",
+    "codeTemplate": "SELECT * FROM orders JOIN customers ON orders.customer_id = customers.id;",
+    "blanks": ["orders", "JOIN", "customers", "ON", "orders.customer_id", "=", "customers.id"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 5,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "Which clause is used to filter records after aggregation?",
+    "options": [
+      { "id": "a", "text": "WHERE" },
+      { "id": "b", "text": "HAVING" },
+      { "id": "c", "text": "GROUP BY" },
+      { "id": "d", "text": "LIMIT" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Filter"
+  },
+  {
+    "id": 6,
+    "title": "Level 2: SQL Intermediate",
+    "type": "true-false",
+    "question": "You can use WHERE to filter grouped data in SQL.",
+    "correctAnswer": false,
+    "icon": "X"
+  },
+  {
+    "id": 7,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "What does the `IS NULL` condition check?",
+    "options": [
+      { "id": "a", "text": "If a column equals zero" },
+      { "id": "b", "text": "If a column is empty string" },
+      { "id": "c", "text": "If a column has no value" },
+      { "id": "d", "text": "If a column is a foreign key" }
+    ],
+    "correctAnswer": "c",
+    "icon": "HelpCircle"
+  },
+  {
+    "id": 8,
+    "title": "Level 2: SQL Intermediate",
+    "type": "drag-drop",
+    "question": "Arrange the parts of an UPDATE query in the correct order:",
+    "items": [
+      { "id": "1", "text": "UPDATE table_name" },
+      { "id": "2", "text": "SET column = value" },
+      { "id": "3", "text": "WHERE condition" }
+    ],
+    "correctOrder": ["1", "2", "3"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 9,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "Which clause is used to group rows that have the same values in specified columns?",
+    "options": [
+      { "id": "a", "text": "GROUP BY" },
+      { "id": "b", "text": "CLUSTER BY" },
+      { "id": "c", "text": "ORDER BY" },
+      { "id": "d", "text": "FILTER BY" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Grid"
+  },
+  {
+    "id": 10,
+    "title": "Level 2: SQL Intermediate",
+    "type": "fill-blanks",
+    "question": "Complete the statement to count users by country:",
+    "codeTemplate": "SELECT country, COUNT(*) FROM users GROUP BY country;",
+    "blanks": ["SELECT", "country", "COUNT(*)", "FROM", "users", "GROUP BY", "country"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 11,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "What type of JOIN returns all records when there is a match in either left or right table?",
+    "options": [
+      { "id": "a", "text": "INNER JOIN" },
+      { "id": "b", "text": "FULL OUTER JOIN" },
+      { "id": "c", "text": "LEFT JOIN" },
+      { "id": "d", "text": "CROSS JOIN" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Merge"
+  },
+  {
+    "id": 12,
+    "title": "Level 2: SQL Intermediate",
+    "type": "true-false",
+    "question": "A FOREIGN KEY is used to link two tables together.",
+    "correctAnswer": true,
+    "icon": "Link"
+  },
+  {
+    "id": 13,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "What happens if you omit the WHERE clause in an UPDATE statement?",
+    "options": [
+      { "id": "a", "text": "Only the first row is updated" },
+      { "id": "b", "text": "No rows are updated" },
+      { "id": "c", "text": "All rows in the table are updated" },
+      { "id": "d", "text": "The query fails" }
+    ],
+    "correctAnswer": "c",
+    "icon": "AlertCircle"
+  },
+  {
+    "id": 14,
+    "title": "Level 2: SQL Intermediate",
+    "type": "fill-blanks",
+    "question": "Complete the syntax to define a PRIMARY KEY:",
+    "codeTemplate": "CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(100));",
+    "blanks": ["PRIMARY", "KEY"],
+    "icon": "Key"
+  },
+  {
+    "id": 15,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "Which SQL statement removes rows from a table based on a condition?",
+    "options": [
+      { "id": "a", "text": "REMOVE FROM table WHERE..." },
+      { "id": "b", "text": "DELETE FROM table WHERE..." },
+      { "id": "c", "text": "DROP ROW FROM table" },
+      { "id": "d", "text": "ERASE FROM table" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Trash2"
+  },
+  {
+    "id": 16,
+    "title": "Level 2: SQL Intermediate",
+    "type": "true-false",
+    "question": "A NULL value is the same as an empty string in SQL.",
+    "correctAnswer": false,
+    "icon": "XCircle"
+  },
+  {
+    "id": 17,
+    "title": "Level 2: SQL Intermediate",
+    "type": "drag-drop",
+    "question": "Arrange the steps to create a FOREIGN KEY relationship:",
+    "items": [
+      { "id": "1", "text": "CREATE TABLE orders" },
+      { "id": "2", "text": "Add column customer_id INT" },
+      { "id": "3", "text": "FOREIGN KEY (customer_id)" },
+      { "id": "4", "text": "REFERENCES customers(id)" }
+    ],
+    "correctOrder": ["1", "2", "3", "4"],
+    "icon": "Anchor"
+  },
+  {
+    "id": 18,
+    "title": "Level 2: SQL Intermediate",
+    "type": "multiple-choice",
+    "question": "Which function returns the number of rows in a group?",
+    "options": [
+      { "id": "a", "text": "TOTAL()" },
+      { "id": "b", "text": "COUNT()" },
+      { "id": "c", "text": "SUM()" },
+      { "id": "d", "text": "NUMBER()" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Hash"
+  },
+  {
+    "id": 19,
+    "title": "Level 2: SQL Intermediate",
+    "type": "true-false",
+    "question": "GROUP BY is often used with aggregate functions like COUNT and AVG.",
+    "correctAnswer": true,
+    "icon": "BarChart2"
+  },
+  {
+    "id": 20,
+    "title": "Level 2: SQL Intermediate",
+    "type": "fill-blanks",
+    "question": "Complete the statement to get the average price per category:",
+    "codeTemplate": "SELECT category, AVG(price) FROM products GROUP BY category;",
+    "blanks": ["category", "AVG(price)", "GROUP BY", "category"],
+    "icon": "Terminal"
+  }
+]

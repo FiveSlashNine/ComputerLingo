@@ -1,0 +1,609 @@
+[
+  {
+    "id": "beg-o-q1",
+    "title": "Level 1: What Is Big O Notation?",
+    "type": "multiple-choice",
+    "question": "Big O notation describes behavior as n approaches ___.",
+    "icon": "Infinity",
+    "options": [
+      {
+        "id": "a",
+        "text": "0"
+      },
+      {
+        "id": "b",
+        "text": "∞"
+      },
+      {
+        "id": "c",
+        "text": "1"
+      },
+      {
+        "id": "d",
+        "text": "n!"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "beg-o-q2",
+    "title": "Level 1: What Is Big O Notation?",
+    "type": "true-false",
+    "question": "Big O ignores constant factors and lower-order terms.",
+    "icon": "Shuffle",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-o-q3",
+    "title": "Level 1: What Is Big O Notation?",
+    "type": "fill-blanks",
+    "question": "Big O focuses on the ____ term of a function.",
+    "icon": "SortAscending",
+    "codeTemplate": "Big O focuses on the ____ term of a function.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "beg-o-q4",
+    "title": "Level 1: What Is Big O Notation?",
+    "type": "multiple-choice",
+    "question": "O(n + log n) simplifies to:",
+    "icon": "Calculator",
+    "options": [
+      {
+        "id": "a",
+        "text": "O(n)"
+      },
+      {
+        "id": "b",
+        "text": "O(log n)"
+      },
+      {
+        "id": "c",
+        "text": "O(n log n)"
+      },
+      {
+        "id": "d",
+        "text": "O(1)"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "beg-o-q5",
+    "title": "Level 1: What Is Big O Notation?",
+    "type": "true-false",
+    "question": "O(3n + 2) is O(n).",
+    "icon": "Check",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-o-q6",
+    "title": "Level 1: What Is Big O Notation?",
+    "type": "drag-drop",
+    "question": "Match growth to Big O:",
+    "icon": "Scale",
+    "items": [
+      {
+        "id": "A",
+        "text": "5"
+      },
+      {
+        "id": "B",
+        "text": "n"
+      },
+      {
+        "id": "C",
+        "text": "n²"
+      }
+    ],
+    "correctOrder": [
+      "A→O(1)",
+      "B→O(n)",
+      "C→O(n²)"
+    ]
+  },
+  {
+    "id": "beg-o1-q1",
+    "title": "Level 1: Constant Time – O(1)",
+    "type": "multiple-choice",
+    "question": "Which is O(1)?",
+    "icon": "Array",
+    "options": [
+      {
+        "id": "a",
+        "text": "Loop"
+      },
+      {
+        "id": "b",
+        "text": "Hash lookup (average)"
+      },
+      {
+        "id": "c",
+        "text": "Nested loops"
+      },
+      {
+        "id": "d",
+        "text": "Array index access"
+      }
+    ],
+    "correctAnswer": "d"
+  },
+  {
+    "id": "beg-o1-q2",
+    "title": "Level 1: Constant Time – O(1)",
+    "type": "true-false",
+    "question": "Accessing the first element of a list is O(1).",
+    "icon": "List",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-o1-q3",
+    "title": "Level 1: Constant Time – O(1)",
+    "type": "fill-blanks",
+    "question": "Looking up a key in a hash table is O(___) on average.",
+    "icon": "Hash",
+    "codeTemplate": "Looking up a key in a hash table is O(___) on average.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "beg-o1-q4",
+    "title": "Level 1: Constant Time – O(1)",
+    "type": "multiple-choice",
+    "question": "Which arithmetic operation is O(1)?",
+    "icon": "Plus",
+    "options": [
+      {
+        "id": "a",
+        "text": "Addition"
+      },
+      {
+        "id": "b",
+        "text": "Matrix multiplication"
+      },
+      {
+        "id": "c",
+        "text": "Sorting"
+      },
+      {
+        "id": "d",
+        "text": "Graph traversal"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "beg-o1-q5",
+    "title": "Level 1: Constant Time – O(1)",
+    "type": "true-false",
+    "question": "Checking a variable's value is O(1).",
+    "icon": "Search",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-o1-q6",
+    "title": "Level 1: Constant Time – O(1)",
+    "type": "drag-drop",
+    "question": "Order these O(1) actions:",
+    "icon": "Numbers",
+    "items": [
+      {
+        "id": "1",
+        "text": "Access index"
+      },
+      {
+        "id": "2",
+        "text": "Simple addition"
+      },
+      {
+        "id": "3",
+        "text": "Hash compute"
+      }
+    ],
+    "correctOrder": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "id": "beg-on-q1",
+    "title": "Level 1: Linear Time – O(n)",
+    "type": "multiple-choice",
+    "question": "Summing n elements is O(___).",
+    "icon": "Sum",
+    "options": [
+      {
+        "id": "a",
+        "text": "n"
+      },
+      {
+        "id": "b",
+        "text": "n²"
+      },
+      {
+        "id": "c",
+        "text": "1"
+      },
+      {
+        "id": "d",
+        "text": "log n"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "beg-on-q2",
+    "title": "Level 1: Linear Time – O(n)",
+    "type": "true-false",
+    "question": "A single for-loop over n items is O(n).",
+    "icon": "Loop",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-on-q3",
+    "title": "Level 1: Linear Time – O(n)",
+    "type": "fill-blanks",
+    "question": "Filtering a list of size n is O(___).",
+    "icon": "Filter",
+    "codeTemplate": "Filtering a list of size n is O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "beg-on-q4",
+    "title": "Level 1: Linear Time – O(n)",
+    "type": "multiple-choice",
+    "question": "Which is not O(n)?",
+    "icon": "X",
+    "options": [
+      {
+        "id": "a",
+        "text": "Linear search"
+      },
+      {
+        "id": "b",
+        "text": "Single loop"
+      },
+      {
+        "id": "c",
+        "text": "Nested loops"
+      },
+      {
+        "id": "d",
+        "text": "Summation"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "beg-on-q5",
+    "title": "Level 1: Linear Time – O(n)",
+    "type": "true-false",
+    "question": "Traversing a linked list is O(n).",
+    "icon": "LinkedList",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-on-q6",
+    "title": "Level 1: Linear Time – O(n)",
+    "type": "drag-drop",
+    "question": "Match tasks to O(n):",
+    "icon": "Tasks",
+    "items": [
+      {
+        "id": "A",
+        "text": "Search"
+      },
+      {
+        "id": "B",
+        "text": "Sort"
+      }
+    ],
+    "correctOrder": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": "beg-on2-q1",
+    "title": "Level 1: Quadratic Time – O(n²)",
+    "type": "multiple-choice",
+    "question": "O(n²) arises from how many nested loops?",
+    "icon": "Layers",
+    "options": [
+      {
+        "id": "a",
+        "text": "1"
+      },
+      {
+        "id": "b",
+        "text": "2"
+      },
+      {
+        "id": "c",
+        "text": "3"
+      },
+      {
+        "id": "d",
+        "text": "0"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "beg-on2-q2",
+    "title": "Level 1: Quadratic Time – O(n²)",
+    "type": "true-false",
+    "question": "Bubble Sort worst-case is O(n²).",
+    "icon": "Check",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-on2-q3",
+    "title": "Level 1: Quadratic Time – O(n²)",
+    "type": "fill-blanks",
+    "question": "Two nested loops over n items yield O(___).",
+    "icon": "Loop",
+    "codeTemplate": "Two nested loops over n items yield O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "beg-on2-q4",
+    "title": "Level 1: Quadratic Time – O(n²)",
+    "type": "multiple-choice",
+    "question": "Selection sort is O(n²). True or false?",
+    "icon": "Select",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "beg-on2-q5",
+    "title": "Level 1: Quadratic Time – O(n²)",
+    "type": "true-false",
+    "question": "Comparing all pairs in an array is O(n²).",
+    "icon": "Calculator",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-on2-q6",
+    "title": "Level 1: Quadratic Time – O(n²)",
+    "type": "drag-drop",
+    "question": "Match loops to complexity:",
+    "icon": "SortNumeric",
+    "items": [
+      {
+        "id": "1",
+        "text": "1 loop"
+      },
+      {
+        "id": "2",
+        "text": "2 loops"
+      }
+    ],
+    "correctOrder": [
+      "1→O(n)",
+      "2→O(n²)"
+    ]
+  },
+  {
+    "id": "beg-cases-q1",
+    "title": "Level 1: Best, Average, Worst Cases",
+    "type": "multiple-choice",
+    "question": "Big O typically describes which case?",
+    "icon": "Clock",
+    "options": [
+      {
+        "id": "a",
+        "text": "Best"
+      },
+      {
+        "id": "b",
+        "text": "Average"
+      },
+      {
+        "id": "c",
+        "text": "Worst"
+      },
+      {
+        "id": "d",
+        "text": "None"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "beg-cases-q2",
+    "title": "Level 1: Best, Average, Worst Cases",
+    "type": "true-false",
+    "question": "Quick Sort best-case is O(n log n).",
+    "icon": "TrendingUp",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-cases-q3",
+    "title": "Level 1: Best, Average, Worst Cases",
+    "type": "fill-blanks",
+    "question": "Ω(n) describes the ____ case.",
+    "icon": "Infinity",
+    "codeTemplate": "Ω(n) describes the ____ case.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "beg-cases-q4",
+    "title": "Level 1: Best, Average, Worst Cases",
+    "type": "multiple-choice",
+    "question": "Θ(n) denotes which case?",
+    "icon": "Equalizer",
+    "options": [
+      {
+        "id": "a",
+        "text": "Best"
+      },
+      {
+        "id": "b",
+        "text": "Average"
+      },
+      {
+        "id": "c",
+        "text": "Worst"
+      },
+      {
+        "id": "d",
+        "text": "All"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "beg-cases-q5",
+    "title": "Level 1: Best, Average, Worst Cases",
+    "type": "true-false",
+    "question": "Worst-case for hash lookup is O(n).",
+    "icon": "Hash",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-cases-q6",
+    "title": "Level 1: Best, Average, Worst Cases",
+    "type": "drag-drop",
+    "question": "Match notation to case:",
+    "icon": "ChartPie",
+    "items": [
+      {
+        "id": "O",
+        "text": "O"
+      },
+      {
+        "id": "Ω",
+        "text": "Ω"
+      },
+      {
+        "id": "Θ",
+        "text": "Θ"
+      }
+    ],
+    "correctOrder": [
+      "O→Worst",
+      "Ω→Best",
+      "Θ→Average"
+    ]
+  },
+  {
+    "id": "beg-simp-q1",
+    "title": "Level 1: Simplifying Big O Expressions",
+    "type": "multiple-choice",
+    "question": "3n²+5n+20 simplifies to O(___).",
+    "icon": "SortDescending",
+    "options": [
+      {
+        "id": "a",
+        "text": "n"
+      },
+      {
+        "id": "b",
+        "text": "n²"
+      },
+      {
+        "id": "c",
+        "text": "n³"
+      },
+      {
+        "id": "d",
+        "text": "1"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "beg-simp-q2",
+    "title": "Level 1: Simplifying Big O Expressions",
+    "type": "true-false",
+    "question": "n log n + n is O(n log n).",
+    "icon": "Merge",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-simp-q3",
+    "title": "Level 1: Simplifying Big O Expressions",
+    "type": "fill-blanks",
+    "question": "4n+100 is O(___).",
+    "icon": "Calculator",
+    "codeTemplate": "4n+100 is O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "beg-simp-q4",
+    "title": "Level 1: Simplifying Big O Expressions",
+    "type": "multiple-choice",
+    "question": "2n+n² simplifies to O(___).",
+    "icon": "Math",
+    "options": [
+      {
+        "id": "a",
+        "text": "n"
+      },
+      {
+        "id": "b",
+        "text": "n²"
+      },
+      {
+        "id": "c",
+        "text": "n³"
+      },
+      {
+        "id": "d",
+        "text": "log n"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "beg-simp-q5",
+    "title": "Level 1: Simplifying Big O Expressions",
+    "type": "true-false",
+    "question": "Constants are ignored in Big O.",
+    "icon": "Shuffle",
+    "correctAnswer": true
+  },
+  {
+    "id": "beg-simp-q6",
+    "title": "Level 1: Simplifying Big O Expressions",
+    "type": "drag-drop",
+    "question": "Match expression to simplified:",
+    "icon": "Equal",
+    "items": [
+      {
+        "id": "A",
+        "text": "5n"
+      },
+      {
+        "id": "B",
+        "text": "n²+2n"
+      }
+    ],
+    "correctOrder": [
+      "A→O(n)",
+      "B→O(n²)"
+    ]
+  }
+]

@@ -1,0 +1,592 @@
+[
+  {
+    "id": "adv-o-mt-q1",
+    "title": "Level 3: Master Theorem",
+    "type": "multiple-choice",
+    "question": "If d < log_b(a), T(n) = Θ(n^{log_b(a)}). True or false?",
+    "icon": "Check",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-mt-q2",
+    "title": "Level 3: Master Theorem",
+    "type": "true-false",
+    "question": "If d = log_b(a), T(n) = Θ(n^d log n).",
+    "icon": "TrendingUp",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-mt-q3",
+    "title": "Level 3: Master Theorem",
+    "type": "fill-blanks",
+    "question": "Case 3 applies when d > log_b(a), giving T(n)=Θ(n^___).",
+    "icon": "Calculator",
+    "codeTemplate": "Case 3 applies when d > log_b(a), giving T(n)=Θ(n^___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-o-mt-q4",
+    "title": "Level 3: Master Theorem",
+    "type": "drag-drop",
+    "question": "Match cases to conditions:",
+    "icon": "Layers",
+    "items": [
+      {
+        "id": "1",
+        "text": "Case 1"
+      },
+      {
+        "id": "2",
+        "text": "Case 2"
+      },
+      {
+        "id": "3",
+        "text": "Case 3"
+      }
+    ],
+    "correctOrder": [
+      "1→d < log_b(a)",
+      "2→d = log_b(a)",
+      "3→d > log_b(a)"
+    ]
+  },
+  {
+    "id": "adv-o-mt-q5",
+    "title": "Level 3: Master Theorem",
+    "type": "multiple-choice",
+    "question": "Master Theorem applies to divide-and-conquer recurrences of the form ...?",
+    "icon": "Function",
+    "options": [
+      {
+        "id": "a",
+        "text": "T(n)=T(n-1)+n"
+      },
+      {
+        "id": "b",
+        "text": "T(n)=aT(n/b)+f(n)"
+      },
+      {
+        "id": "c",
+        "text": "T(n)=n^2"
+      },
+      {
+        "id": "d",
+        "text": "T(n)=log n"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "adv-o-mt-q6",
+    "title": "Level 3: Master Theorem",
+    "type": "true-false",
+    "question": "Master Theorem can’t handle irregular divide sizes.",
+    "icon": "AlertCircle",
+    "correctAnswer": false
+  },
+  {
+    "id": "adv-o-omega-q1",
+    "title": "Level 3: Ω, Θ, o Notations",
+    "type": "multiple-choice",
+    "question": "If f(n)=2n and g(n)=n, f(n)=Ω(g(n)). True or false?",
+    "icon": "Check",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-o-q2",
+    "title": "Level 3: Ω, Θ, o Notations",
+    "type": "true-false",
+    "question": "n = o(n log n).",
+    "icon": "Layers",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-theta-q3",
+    "title": "Level 3: Ω, Θ, o Notations",
+    "type": "fill-blanks",
+    "question": "If f(n)=3n^2+5n, f(n)=Θ(___).",
+    "icon": "Math",
+    "codeTemplate": "If f(n)=3n^2+5n, f(n)=Θ(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-o-notations-q4",
+    "title": "Level 3: Ω, Θ, o Notations",
+    "type": "drag-drop",
+    "question": "Match notation to meaning:",
+    "icon": "ChartPie",
+    "items": [
+      {
+        "id": "T",
+        "text": "Θ(f)"
+      },
+      {
+        "id": "O",
+        "text": "O(f)"
+      },
+      {
+        "id": "o",
+        "text": "o(f)"
+      }
+    ],
+    "correctOrder": [
+      "T→Tight bound",
+      "O→Upper bound",
+      "o→Strictly smaller"
+    ]
+  },
+  {
+    "id": "adv-o-o2-q5",
+    "title": "Level 3: Ω, Θ, o Notations",
+    "type": "multiple-choice",
+    "question": "O(f) includes functions that grow no faster than f. True or false?",
+    "icon": "Check",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-o2-q6",
+    "title": "Level 3: Ω, Θ, o Notations",
+    "type": "true-false",
+    "question": "o(f) allows equality f(n)=g(n).",
+    "icon": "X",
+    "correctAnswer": false
+  },
+  {
+    "id": "adv-o-polylog-q1",
+    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "type": "multiple-choice",
+    "question": "Which grows fastest as n→∞?",
+    "icon": "ChartLine",
+    "options": [
+      {
+        "id": "a",
+        "text": "log* n"
+      },
+      {
+        "id": "b",
+        "text": "log n"
+      },
+      {
+        "id": "c",
+        "text": "(log n)^2"
+      },
+      {
+        "id": "d",
+        "text": "constant"
+      }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "adv-o-iterated-q2",
+    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "type": "true-false",
+    "question": "log* n grows slower than log log n.",
+    "icon": "Layers",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-polylog-q3",
+    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "type": "fill-blanks",
+    "question": "Polylogarithmic form O((log n)^__).",
+    "icon": "Math",
+    "codeTemplate": "Polylogarithmic form O((log n)^__).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-o-polylog-q4",
+    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "type": "drag-drop",
+    "question": "Order growth (slow→fast):",
+    "icon": "SortNumeric",
+    "items": [
+      {
+        "id": "1",
+        "text": "constant"
+      },
+      {
+        "id": "2",
+        "text": "log* n"
+      },
+      {
+        "id": "3",
+        "text": "log n"
+      },
+      {
+        "id": "4",
+        "text": "n^0.1"
+      }
+    ],
+    "correctOrder": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  {
+    "id": "adv-o-polylog-q5",
+    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "type": "multiple-choice",
+    "question": "log* n is used in which algorithm's complexity?",
+    "icon": "Tree",
+    "options": [
+      {
+        "id": "a",
+        "text": "Union-Find"
+      },
+      {
+        "id": "b",
+        "text": "Quick Sort"
+      },
+      {
+        "id": "c",
+        "text": "Merge Sort"
+      },
+      {
+        "id": "d",
+        "text": "Binary Search"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-polylog-q6",
+    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "type": "true-false",
+    "question": "Iterated log grows slower than any polylog.",
+    "icon": "Infinity",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-cc-q1",
+    "title": "Level 3: Complexity Classes",
+    "type": "multiple-choice",
+    "question": "Which class is solvable in polynomial time?",
+    "icon": "O",
+    "options": [
+      {
+        "id": "a",
+        "text": "P"
+      },
+      {
+        "id": "b",
+        "text": "NP"
+      },
+      {
+        "id": "c",
+        "text": "NP-complete"
+      },
+      {
+        "id": "d",
+        "text": "EXP"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-cc-q2",
+    "title": "Level 3: Complexity Classes",
+    "type": "true-false",
+    "question": "If any NP-complete is in P, then P=NP.",
+    "icon": "Check",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-cc-q3",
+    "title": "Level 3: Complexity Classes",
+    "type": "fill-blanks",
+    "question": "Traveling Salesman decision is NP-__.",
+    "icon": "Map",
+    "codeTemplate": "Traveling Salesman decision is NP-__.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-o-cc-q4",
+    "title": "Level 3: Complexity Classes",
+    "type": "drag-drop",
+    "question": "Match to definition:",
+    "icon": "Layers",
+    "items": [
+      {
+        "id": "N",
+        "text": "NP"
+      },
+      {
+        "id": "H",
+        "text": "NP-hard"
+      },
+      {
+        "id": "C",
+        "text": "NP-complete"
+      }
+    ],
+    "correctOrder": [
+      "N→Verifiable",
+      "H→At least as hard",
+      "C→Both"
+    ]
+  },
+  {
+    "id": "adv-o-cc-q5",
+    "title": "Level 3: Complexity Classes",
+    "type": "multiple-choice",
+    "question": "NP-hard problems need not be in NP. True or false?",
+    "icon": "X",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-cc-q6",
+    "title": "Level 3: Complexity Classes",
+    "type": "true-false",
+    "question": "All NP-complete are NP-hard.",
+    "icon": "Check",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-rand-q1",
+    "title": "Level 3: Randomized & Expected Complexity",
+    "type": "multiple-choice",
+    "question": "Las Vegas algorithms have:",
+    "icon": "Clock",
+    "options": [
+      {
+        "id": "a",
+        "text": "Worst-case time"
+      },
+      {
+        "id": "b",
+        "text": "Expected time"
+      },
+      {
+        "id": "c",
+        "text": "Error probability"
+      },
+      {
+        "id": "d",
+        "text": "No randomness"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "adv-o-rand-q2",
+    "title": "Level 3: Randomized & Expected Complexity",
+    "type": "true-false",
+    "question": "Monte Carlo may give wrong results.",
+    "icon": "AlertCircle",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-rand-q3",
+    "title": "Level 3: Randomized & Expected Complexity",
+    "type": "fill-blanks",
+    "question": "Randomized Quick Sort expected time O(___).",
+    "icon": "Shuffle",
+    "codeTemplate": "Randomized Quick Sort expected time O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-o-rand-q4",
+    "title": "Level 3: Randomized & Expected Complexity",
+    "type": "drag-drop",
+    "question": "Match algorithm to property:",
+    "icon": "Repeat",
+    "items": [
+      {
+        "id": "L",
+        "text": "Las Vegas"
+      },
+      {
+        "id": "M",
+        "text": "Monte Carlo"
+      }
+    ],
+    "correctOrder": [
+      "L→Always correct",
+      "M→Bounded time"
+    ]
+  },
+  {
+    "id": "adv-o-rand-q5",
+    "title": "Level 3: Randomized & Expected Complexity",
+    "type": "multiple-choice",
+    "question": "Monte Carlo algorithms have a bound on:",
+    "icon": "Timer",
+    "options": [
+      {
+        "id": "a",
+        "text": "Time"
+      },
+      {
+        "id": "b",
+        "text": "Error probability"
+      },
+      {
+        "id": "c",
+        "text": "Memory"
+      },
+      {
+        "id": "d",
+        "text": "All"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-rand-q6",
+    "title": "Level 3: Randomized & Expected Complexity",
+    "type": "true-false",
+    "question": "Las Vegas always finishes within worst-case time.",
+    "icon": "X",
+    "correctAnswer": false
+  },
+  {
+    "id": "adv-o-smoothed-q1",
+    "title": "Level 3: Smoothed & Average-Case Analysis",
+    "type": "multiple-choice",
+    "question": "Smoothed analysis lies between worst and average. True or false?",
+    "icon": "Layers",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-o-smoothed-q2",
+    "title": "Level 3: Smoothed & Average-Case Analysis",
+    "type": "true-false",
+    "question": "Simplex algorithm has polynomial smoothed complexity.",
+    "icon": "Check",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-o-smoothed-q3",
+    "title": "Level 3: Smoothed & Average-Case Analysis",
+    "type": "fill-blanks",
+    "question": "Average-case requires a ____ over inputs.",
+    "icon": "ChartPie",
+    "codeTemplate": "Average-case requires a ____ over inputs.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-o-smoothed-q4",
+    "title": "Level 3: Smoothed & Average-Case Analysis",
+    "type": "drag-drop",
+    "question": "Match analysis to description:",
+    "icon": "Layers",
+    "items": [
+      {
+        "id": "W",
+        "text": "Worst-case"
+      },
+      {
+        "id": "A",
+        "text": "Average-case"
+      },
+      {
+        "id": "S",
+        "text": "Smoothed"
+      }
+    ],
+    "correctOrder": [
+      "W→Max input",
+      "A→Expected distribution",
+      "S→Expected perturbation"
+    ]
+  },
+  {
+    "id": "adv-o-smoothed-q5",
+    "title": "Level 3: Smoothed & Average-Case Analysis",
+    "type": "multiple-choice",
+    "question": "Average-case depends on input ____.",
+    "icon": "ChartBar",
+    "options": [
+      {
+        "id": "a",
+        "text": "Size"
+      },
+      {
+        "id": "b",
+        "text": "Distribution"
+      },
+      {
+        "id": "c",
+        "text": "Algorithm"
+      },
+      {
+        "id": "d",
+        "text": "Memory"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "adv-o-smoothed-q6",
+    "title": "Level 3: Smoothed & Average-Case Analysis",
+    "type": "true-false",
+    "question": "Smoothed analysis is more realistic than worst-case.",
+    "icon": "ThumbsUp",
+    "correctAnswer": true
+  }
+]

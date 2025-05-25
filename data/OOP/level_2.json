@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "title": "Level 2: Inheritance in JS",
+    "type": "multiple-choice",
+    "question": "Which keyword is used in JavaScript to create a subclass?",
+    "options": [
+      { "id": "a", "text": "extends" },
+      { "id": "b", "text": "inherits" },
+      { "id": "c", "text": "super" },
+      { "id": "d", "text": "classof" }
+    ],
+    "correctAnswer": "a",
+    "icon": "ArrowDownRight"
+  },
+  {
+    "id": 2,
+    "title": "Level 2: Calling Parent Constructor",
+    "type": "multiple-choice",
+    "question": "Which keyword is used to call the parent class constructor?",
+    "options": [
+      { "id": "a", "text": "base" },
+      { "id": "b", "text": "parent" },
+      { "id": "c", "text": "super" },
+      { "id": "d", "text": "this" }
+    ],
+    "correctAnswer": "c",
+    "icon": "CornerUpLeft"
+  },
+  {
+    "id": 3,
+    "title": "Level 2: Method Overriding",
+    "type": "true-false",
+    "question": "In JavaScript, a subclass can override a method defined in its parent class.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "RefreshCw"
+  },
+  {
+    "id": 4,
+    "title": "Level 2: Polymorphism Concept",
+    "type": "multiple-choice",
+    "question": "What does polymorphism allow objects to do?",
+    "options": [
+      { "id": "a", "text": "Change class names at runtime" },
+      { "id": "b", "text": "Behave differently based on their class" },
+      { "id": "c", "text": "Transform into arrays" },
+      { "id": "d", "text": "Duplicate their own properties" }
+    ],
+    "correctAnswer": "b",
+    "icon": "SwitchHorizontal"
+  },
+  {
+    "id": 5,
+    "title": "Level 2: Abstract Behavior",
+    "type": "true-false",
+    "question": "JavaScript natively supports abstract classes like Java or C#.",
+    "options": [],
+    "correctAnswer": false,
+    "icon": "XOctagon"
+  },
+  {
+    "id": 6,
+    "title": "Level 2: Prototype Chain",
+    "type": "multiple-choice",
+    "question": "What is the prototype chain used for?",
+    "options": [
+      { "id": "a", "text": "Memory optimization" },
+      { "id": "b", "text": "Event handling" },
+      { "id": "c", "text": "Inheritance of properties and methods" },
+      { "id": "d", "text": "Object serialization" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Link"
+  },
+  {
+    "id": 7,
+    "title": "Level 2: super in Methods",
+    "type": "true-false",
+    "question": "The keyword 'super' can be used to call methods from a parent class.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "CornerLeftDown"
+  },
+  {
+    "id": 8,
+    "title": "Level 2: Instanceof Usage",
+    "type": "multiple-choice",
+    "question": "What does the 'instanceof' operator check?",
+    "options": [
+      { "id": "a", "text": "If an object is empty" },
+      { "id": "b", "text": "If an object inherits from a specific class" },
+      { "id": "c", "text": "If a class is abstract" },
+      { "id": "d", "text": "If a method is public" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Eye"
+  },
+  {
+    "id": 9,
+    "title": "Level 2: Class vs Object",
+    "type": "true-false",
+    "question": "A class is a blueprint, while an object is an instance of that blueprint.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Layout"
+  },
+  {
+    "id": 10,
+    "title": "Level 2: Private Fields",
+    "type": "multiple-choice",
+    "question": "How do you declare a private field in a JavaScript class?",
+    "options": [
+      { "id": "a", "text": "private x;" },
+      { "id": "b", "text": "let x = private;" },
+      { "id": "c", "text": "#x" },
+      { "id": "d", "text": "_x" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Shield"
+  },
+  {
+    "id": 11,
+    "title": "Level 2: Custom Class Example",
+    "type": "fill-blanks",
+    "question": "Complete the code:\n\nclass Animal {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nclass Dog ____ Animal {\n  constructor(name) {\n    ____ (name);\n  }\n}",
+    "options": [],
+    "correctAnswer": ["extends", "super"],
+    "icon": "Puzzle"
+  },
+  {
+    "id": 12,
+    "title": "Level 2: Class Declaration",
+    "type": "true-false",
+    "question": "You can use function syntax to simulate classes in JavaScript.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "FunctionSquare"
+  },
+  {
+    "id": 13,
+    "title": "Level 2: this Context",
+    "type": "multiple-choice",
+    "question": "Inside an arrow function, what does 'this' refer to?",
+    "options": [
+      { "id": "a", "text": "Global object" },
+      { "id": "b", "text": "The enclosing lexical context" },
+      { "id": "c", "text": "The object the method is called on" },
+      { "id": "d", "text": "Always undefined" }
+    ],
+    "correctAnswer": "b",
+    "icon": "ArrowRight"
+  },
+  {
+    "id": 14,
+    "title": "Level 2: Object Composition",
+    "type": "true-false",
+    "question": "Composition is when objects contain other objects to reuse functionality.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Layers"
+  },
+  {
+    "id": 15,
+    "title": "Level 2: Class Properties",
+    "type": "multiple-choice",
+    "question": "Which of these is the correct way to define a property outside of constructor in a class?",
+    "options": [
+      { "id": "a", "text": "this.name = 'Alex';" },
+      { "id": "b", "text": "name = 'Alex';" },
+      { "id": "c", "text": "let name = 'Alex';" },
+      { "id": "d", "text": "define name = 'Alex';" }
+    ],
+    "correctAnswer": "b",
+    "icon": "PenTool"
+  },
+  {
+    "id": 16,
+    "title": "Level 2: Multiple Inheritance",
+    "type": "true-false",
+    "question": "JavaScript supports multiple inheritance through classes.",
+    "options": [],
+    "correctAnswer": false,
+    "icon": "Slash"
+  },
+  {
+    "id": 17,
+    "title": "Level 2: Object Literals",
+    "type": "multiple-choice",
+    "question": "Which syntax represents an object literal?",
+    "options": [
+      { "id": "a", "text": "{ name: 'John' }" },
+      { "id": "b", "text": "new Object('John')" },
+      { "id": "c", "text": "Object.create('John')" },
+      { "id": "d", "text": "class John {}" }
+    ],
+    "correctAnswer": "a",
+    "icon": "Code"
+  },
+  {
+    "id": 18,
+    "title": "Level 2: Static vs Instance",
+    "type": "true-false",
+    "question": "Static methods can only be called from the class, not instances.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Bolt"
+  },
+  {
+    "id": 19,
+    "title": "Level 2: Object Cloning",
+    "type": "multiple-choice",
+    "question": "Which method is used to clone objects shallowly?",
+    "options": [
+      { "id": "a", "text": "Object.clone()" },
+      { "id": "b", "text": "Object.copy()" },
+      { "id": "c", "text": "Object.assign({}, obj)" },
+      { "id": "d", "text": "obj.copyTo()" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Copy"
+  },
+  {
+    "id": 20,
+    "title": "Level 2: instanceof Result",
+    "type": "true-false",
+    "question": "{} instanceof Object returns true.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Check"
+  }
+]

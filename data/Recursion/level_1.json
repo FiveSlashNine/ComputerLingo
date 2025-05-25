@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "title": "Level 1: Base Case",
+    "type": "multiple-choice",
+    "question": "What is the base case in recursion?",
+    "options": [
+      { "id": "a", "text": "The first recursive call" },
+      { "id": "b", "text": "A case that stops recursion" },
+      { "id": "c", "text": "The return value" },
+      { "id": "d", "text": "A loop termination" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Anchor"
+  },
+  {
+    "id": 2,
+    "title": "Level 1: What is Recursion?",
+    "type": "true-false",
+    "question": "Recursion is when a function calls itself.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Repeat"
+  },
+  {
+    "id": 3,
+    "title": "Level 1: Recursive Structure",
+    "type": "multiple-choice",
+    "question": "What must every recursive function include?",
+    "options": [
+      { "id": "a", "text": "A while loop" },
+      { "id": "b", "text": "A base case and a recursive call" },
+      { "id": "c", "text": "A return statement only" },
+      { "id": "d", "text": "An infinite loop" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Structure"
+  },
+  {
+    "id": 4,
+    "title": "Level 1: Factorial Function",
+    "type": "fill-blanks",
+    "question": "Complete the factorial function:\n\nfunction factorial(n) {\n  if (n === 0) return 1;\n  return n * _____;\n}",
+    "options": [],
+    "correctAnswer": ["factorial(n - 1)"],
+    "icon": "Function"
+  },
+  {
+    "id": 5,
+    "title": "Level 1: Infinite Recursion",
+    "type": "true-false",
+    "question": "A recursive function without a base case will eventually stop.",
+    "options": [],
+    "correctAnswer": false,
+    "icon": "Skull"
+  },
+  {
+    "id": 6,
+    "title": "Level 1: Use of Recursion",
+    "type": "multiple-choice",
+    "question": "Which of the following problems is best solved with recursion?",
+    "options": [
+      { "id": "a", "text": "Adding two numbers" },
+      { "id": "b", "text": "Iterating through an array" },
+      { "id": "c", "text": "Calculating factorial" },
+      { "id": "d", "text": "Multiplying by 2" }
+    ],
+    "correctAnswer": "c",
+    "icon": "PuzzlePiece"
+  },
+  {
+    "id": 7,
+    "title": "Level 1: Base Case Example",
+    "type": "fill-blanks",
+    "question": "Fill in the base case:\n\nfunction countdown(n) {\n  if (______) return;\n  console.log(n);\n  countdown(n - 1);\n}",
+    "options": [],
+    "correctAnswer": ["n <= 0"],
+    "icon": "Clock"
+  },
+  {
+    "id": 8,
+    "title": "Level 1: Stack Usage",
+    "type": "true-false",
+    "question": "Recursive calls are stored in the function call stack.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Stack"
+  },
+  {
+    "id": 9,
+    "title": "Level 1: Countdown Example",
+    "type": "multiple-choice",
+    "question": "What is the output of countdown(3)?\nfunction countdown(n) {\n if(n <= 0) return;\n console.log(n);\n countdown(n - 1);\n}",
+    "options": [
+      { "id": "a", "text": "1 2 3" },
+      { "id": "b", "text": "3 2 1" },
+      { "id": "c", "text": "3 2 1 0" },
+      { "id": "d", "text": "3 2 1 undefined" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Terminal"
+  },
+  {
+    "id": 10,
+    "title": "Level 1: Recursive Return",
+    "type": "multiple-choice",
+    "question": "What does the recursive call usually return?",
+    "options": [
+      { "id": "a", "text": "The same input" },
+      { "id": "b", "text": "A modified result" },
+      { "id": "c", "text": "Nothing" },
+      { "id": "d", "text": "An infinite loop" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Reply"
+  },
+  {
+    "id": 11,
+    "title": "Level 1: Nested Recursion",
+    "type": "true-false",
+    "question": "A function can call itself more than once within the same function body.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Fork"
+  },
+  {
+    "id": 12,
+    "title": "Level 1: Recursion vs Iteration",
+    "type": "multiple-choice",
+    "question": "Which is generally more memory-efficient?",
+    "options": [
+      { "id": "a", "text": "Recursion" },
+      { "id": "b", "text": "Iteration" },
+      { "id": "c", "text": "Both equally" },
+      { "id": "d", "text": "Depends on the input" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Memory"
+  },
+  {
+    "id": 13,
+    "title": "Level 1: Return Value",
+    "type": "true-false",
+    "question": "Each recursive call creates its own execution context.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Cube"
+  },
+  {
+    "id": 14,
+    "title": "Level 1: Simple Recursion Flow",
+    "type": "fill-blanks",
+    "question": "Complete the recursive function to sum numbers from 1 to n:\nfunction sum(n) {\n if (n === 1) return 1;\n return n + ________;\n}",
+    "options": [],
+    "correctAnswer": ["sum(n - 1)"],
+    "icon": "Plus"
+  },
+  {
+    "id": 15,
+    "title": "Level 1: Recursive Thinking",
+    "type": "multiple-choice",
+    "question": "Which of these is a recursive way to define a list of numbers?",
+    "options": [
+      { "id": "a", "text": "Using for loops" },
+      { "id": "b", "text": "Function that appends then calls itself" },
+      { "id": "c", "text": "Using while loop" },
+      { "id": "d", "text": "Sorting algorithm" }
+    ],
+    "correctAnswer": "b",
+    "icon": "List"
+  },
+  {
+    "id": 16,
+    "title": "Level 1: Simple Tree Traversal",
+    "type": "true-false",
+    "question": "Tree traversal algorithms often use recursion.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Tree"
+  },
+  {
+    "id": 17,
+    "title": "Level 1: Call Stack Growth",
+    "type": "true-false",
+    "question": "Each recursive call adds a new frame to the call stack.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Stack"
+  },
+  {
+    "id": 18,
+    "title": "Level 1: Stop Condition",
+    "type": "multiple-choice",
+    "question": "What happens if a recursive function never meets its base case?",
+    "options": [
+      { "id": "a", "text": "It returns 0" },
+      { "id": "b", "text": "It throws a syntax error" },
+      { "id": "c", "text": "It causes a stack overflow" },
+      { "id": "d", "text": "It finishes after 10 calls" }
+    ],
+    "correctAnswer": "c",
+    "icon": "AlertCircle"
+  },
+  {
+    "id": 19,
+    "title": "Level 1: Recursion Keyword",
+    "type": "multiple-choice",
+    "question": "Which keyword is used to call the function within itself?",
+    "options": [
+      { "id": "a", "text": "this" },
+      { "id": "b", "text": "return" },
+      { "id": "c", "text": "function" },
+      { "id": "d", "text": "the function's name" }
+    ],
+    "correctAnswer": "d",
+    "icon": "Code"
+  },
+  {
+    "id": 20,
+    "title": "Level 1: Debugging Recursion",
+    "type": "true-false",
+    "question": "Console logging before the recursive call helps debug recursion depth.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Bug"
+  }
+]

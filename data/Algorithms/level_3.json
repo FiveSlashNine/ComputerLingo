@@ -1,0 +1,548 @@
+[
+  {
+    "id": "adv-sort-q1",
+    "title": "Level 3: Sorting",
+    "type": "multiple-choice",
+    "question": "Introsort switches to Heap Sort when recursion depth exceeds ___·log n.",
+    "icon": "TrendingUp",
+    "options": [
+      {
+        "id": "a",
+        "text": "1"
+      },
+      {
+        "id": "b",
+        "text": "2"
+      },
+      {
+        "id": "c",
+        "text": "n"
+      },
+      {
+        "id": "d",
+        "text": "√n"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "adv-sort-q2",
+    "title": "Level 3: Sorting",
+    "type": "true-false",
+    "question": "TimSort detects runs to optimize sorted segments.",
+    "icon": "Shuffle",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-sort-q3",
+    "title": "Level 3: Sorting",
+    "type": "fill-blanks",
+    "question": "Introsort guarantees worst-case O(___).",
+    "icon": "Code",
+    "codeTemplate": "Introsort guarantees worst-case O(___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-sort-q4",
+    "title": "Level 3: Sorting",
+    "type": "drag-drop",
+    "question": "Match sort to strategy:",
+    "icon": "Merge",
+    "items": [
+      {
+        "id": "I",
+        "text": "Introsort"
+      },
+      {
+        "id": "T",
+        "text": "TimSort"
+      }
+    ],
+    "correctOrder": [
+      "I→Quick→Heap",
+      "T→Merge→Insertion with runs"
+    ]
+  },
+  {
+    "id": "adv-sort-q5",
+    "title": "Level 3: Sorting",
+    "type": "multiple-choice",
+    "question": "TimSort worst-case complexity is O(n log n). True or false?",
+    "icon": "Clock",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-sort-q6",
+    "title": "Level 3: Sorting",
+    "type": "true-false",
+    "question": "Introsort is stable.",
+    "icon": "X",
+    "correctAnswer": false
+  },
+  {
+    "id": "adv-search-q1",
+    "title": "Level 3: Searching",
+    "type": "multiple-choice",
+    "question": "Suffix Array binary search takes O(m + log n). True or false?",
+    "icon": "Search",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-search-q2",
+    "title": "Level 3: Searching",
+    "type": "true-false",
+    "question": "R-Tree is balanced for spatial indexing.",
+    "icon": "Layers",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-search-q3",
+    "title": "Level 3: Searching",
+    "type": "fill-blanks",
+    "question": "LCP array stores longest common ____ between suffixes.",
+    "icon": "Code",
+    "codeTemplate": "LCP array stores longest common ____ between suffixes.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-search-q4",
+    "title": "Level 3: Searching",
+    "type": "drag-drop",
+    "question": "Match index to use-case:",
+    "icon": "Map",
+    "items": [
+      {
+        "id": "S",
+        "text": "Suffix Array"
+      },
+      {
+        "id": "R",
+        "text": "R-Tree"
+      }
+    ],
+    "correctOrder": [
+      "S→String substrings",
+      "R→Spatial ranges"
+    ]
+  },
+  {
+    "id": "adv-search-q5",
+    "title": "Level 3: Searching",
+    "type": "multiple-choice",
+    "question": "k-d Tree partitions k-dimensional space. True or false?",
+    "icon": "Map",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-search-q6",
+    "title": "Level 3: Searching",
+    "type": "true-false",
+    "question": "Trie search is O(m) for string length m.",
+    "icon": "Tree",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-recur-q1",
+    "title": "Level 3: Recursion & Optimization",
+    "type": "multiple-choice",
+    "question": "CPS transforms calls into passing a ___ argument.",
+    "icon": "Code",
+    "options": [
+      {
+        "id": "a",
+        "text": "state"
+      },
+      {
+        "id": "b",
+        "text": "callback"
+      },
+      {
+        "id": "c",
+        "text": "pointer"
+      },
+      {
+        "id": "d",
+        "text": "stack"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "adv-recur-q2",
+    "title": "Level 3: Recursion & Optimization",
+    "type": "true-false",
+    "question": "A trampoline loops to avoid deep recursion.",
+    "icon": "Repeat",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-recur-q3",
+    "title": "Level 3: Recursion & Optimization",
+    "type": "fill-blanks",
+    "question": "Tail-call optimization removes extra ____ usage.",
+    "icon": "Layers",
+    "codeTemplate": "Tail-call optimization removes extra ____ usage.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-recur-q4",
+    "title": "Level 3: Recursion & Optimization",
+    "type": "drag-drop",
+    "question": "Order recursion-to-iteration:",
+    "icon": "ArrowsClockwise",
+    "items": [
+      {
+        "id": "1",
+        "text": "Identify tail calls"
+      },
+      {
+        "id": "2",
+        "text": "Accumulate result"
+      },
+      {
+        "id": "3",
+        "text": "Test base"
+      },
+      {
+        "id": "4",
+        "text": "Rewrite as loop"
+      }
+    ],
+    "correctOrder": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  {
+    "id": "adv-recur-q5",
+    "title": "Level 3: Recursion & Optimization",
+    "type": "multiple-choice",
+    "question": "Memoization turns exponential to ___ time.",
+    "icon": "Layers",
+    "options": [
+      {
+        "id": "a",
+        "text": "linear"
+      },
+      {
+        "id": "b",
+        "text": "logarithmic"
+      },
+      {
+        "id": "c",
+        "text": "quadratic"
+      },
+      {
+        "id": "d",
+        "text": "constant"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-recur-q6",
+    "title": "Level 3: Recursion & Optimization",
+    "type": "true-false",
+    "question": "Continuation-passing style can eliminate stack frames.",
+    "icon": "Code",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-dnc-q1",
+    "title": "Level 3: Divide and Conquer – Advanced",
+    "type": "multiple-choice",
+    "question": "FFT-based multiplication runs in O(n log n). True or false?",
+    "icon": "TrendingUp",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-dnc-q2",
+    "title": "Level 3: Divide and Conquer – Advanced",
+    "type": "true-false",
+    "question": "Strassen’s exponent ≈2.81.",
+    "icon": "Check",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-dnc-q3",
+    "title": "Level 3: Divide and Conquer – Advanced",
+    "type": "fill-blanks",
+    "question": "Coppersmith–Winograd exponent ≈ ___.",
+    "icon": "Calculator",
+    "codeTemplate": "Coppersmith–Winograd exponent ≈ ___.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-dnc-q4",
+    "title": "Level 3: Divide and Conquer – Advanced",
+    "type": "drag-drop",
+    "question": "Match algorithm to exponent:",
+    "icon": "Math",
+    "items": [
+      {
+        "id": "S",
+        "text": "Strassen"
+      },
+      {
+        "id": "C",
+        "text": "C-W"
+      }
+    ],
+    "correctOrder": [
+      "S→2.81",
+      "C→2.376"
+    ]
+  },
+  {
+    "id": "adv-dnc-q5",
+    "title": "Level 3: Divide and Conquer – Advanced",
+    "type": "multiple-choice",
+    "question": "Divide and conquer always reduces exponent?",
+    "icon": "Code",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "adv-dnc-q6",
+    "title": "Level 3: Divide and Conquer – Advanced",
+    "type": "true-false",
+    "question": "FFT uses roots of unity.",
+    "icon": "Layers",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-graph-q1",
+    "title": "Level 3: Graph Algorithms",
+    "type": "multiple-choice",
+    "question": "Dinic’s algorithm uses BFS to build a ___ graph.",
+    "icon": "Queue",
+    "options": [
+      {
+        "id": "a",
+        "text": "residual"
+      },
+      {
+        "id": "b",
+        "text": "complete"
+      },
+      {
+        "id": "c",
+        "text": "spanning"
+      },
+      {
+        "id": "d",
+        "text": "directed"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-graph-q2",
+    "title": "Level 3: Graph Algorithms",
+    "type": "true-false",
+    "question": "Johnson’s adds potentials to remove negatives.",
+    "icon": "Code",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-graph-q3",
+    "title": "Level 3: Graph Algorithms",
+    "type": "fill-blanks",
+    "question": "Dinic’s on unit networks is O(√V·___).",
+    "icon": "Calculator",
+    "codeTemplate": "Dinic’s on unit networks is O(√V·___).",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-graph-q4",
+    "title": "Level 3: Graph Algorithms",
+    "type": "drag-drop",
+    "question": "Match step to algorithm:",
+    "icon": "Layers",
+    "items": [
+      {
+        "id": "J",
+        "text": "Johnson’s"
+      },
+      {
+        "id": "D",
+        "text": "Dinic’s"
+      }
+    ],
+    "correctOrder": [
+      "J→Reweight",
+      "D→Blocking flow"
+    ]
+  },
+  {
+    "id": "adv-graph-q5",
+    "title": "Level 3: Graph Algorithms",
+    "type": "multiple-choice",
+    "question": "Bellman-Ford complexity is O(VE). True or false?",
+    "icon": "Clock",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "adv-graph-q6",
+    "title": "Level 3: Graph Algorithms",
+    "type": "true-false",
+    "question": "Edmonds-Karp uses BFS for augmenting paths.",
+    "icon": "Map",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-greedy-q1",
+    "title": "Level 3: Greedy & Beyond",
+    "type": "multiple-choice",
+    "question": "Matroid exchange property holds for ___.",
+    "icon": "Code",
+    "options": [
+      {
+        "id": "a",
+        "text": "circuits"
+      },
+      {
+        "id": "b",
+        "text": "bases"
+      },
+      {
+        "id": "c",
+        "text": "weights"
+      },
+      {
+        "id": "d",
+        "text": "vertices"
+      }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "adv-greedy-q2",
+    "title": "Level 3: Greedy & Beyond",
+    "type": "true-false",
+    "question": "Set cover greedy is O(ln n) approximation.",
+    "icon": "AlertCircle",
+    "correctAnswer": true
+  },
+  {
+    "id": "adv-greedy-q3",
+    "title": "Level 3: Greedy & Beyond",
+    "type": "fill-blanks",
+    "question": "Graphic matroid independent sets are ___.",
+    "icon": "Tree",
+    "codeTemplate": "Graphic matroid independent sets are ___.",
+    "blanks": [
+      ""
+    ]
+  },
+  {
+    "id": "adv-greedy-q4",
+    "title": "Level 3: Greedy & Beyond",
+    "type": "drag-drop",
+    "question": "Match concept to definition:",
+    "icon": "Math",
+    "items": [
+      {
+        "id": "M",
+        "text": "Matroid"
+      },
+      {
+        "id": "A",
+        "text": "Approximation"
+      }
+    ],
+    "correctOrder": [
+      "M→Exchange",
+      "A→ln n"
+    ]
+  },
+  {
+    "id": "adv-greedy-q5",
+    "title": "Level 3: Greedy & Beyond",
+    "type": "multiple-choice",
+    "question": "Greedy works on all matroids. True or false?",
+    "icon": "Check",
+    "options": [
+      {
+        "id": "a",
+        "text": "True"
+      },
+      {
+        "id": "b",
+        "text": "False"
+      }
+    ],
+    "correctAnswer": "a"
+  }
+]

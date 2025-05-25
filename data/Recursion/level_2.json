@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "title": "Level 2: Recursive Fibonacci",
+    "type": "multiple-choice",
+    "question": "What is the time complexity of the naive recursive Fibonacci algorithm?",
+    "options": [
+      { "id": "a", "text": "O(n)" },
+      { "id": "b", "text": "O(log n)" },
+      { "id": "c", "text": "O(n^2)" },
+      { "id": "d", "text": "O(2^n)" }
+    ],
+    "correctAnswer": "d",
+    "icon": "Activity"
+  },
+  {
+    "id": 2,
+    "title": "Level 2: Tail Recursion",
+    "type": "true-false",
+    "question": "Tail recursion can be optimized by some compilers to avoid stack overflow.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "ArrowDown"
+  },
+  {
+    "id": 3,
+    "title": "Level 2: Tree Traversal",
+    "type": "multiple-choice",
+    "question": "Which tree traversal method visits the root before the subtrees?",
+    "options": [
+      { "id": "a", "text": "In-order" },
+      { "id": "b", "text": "Post-order" },
+      { "id": "c", "text": "Pre-order" },
+      { "id": "d", "text": "Level-order" }
+    ],
+    "correctAnswer": "c",
+    "icon": "TreeDeciduous"
+  },
+  {
+    "id": 4,
+    "title": "Level 2: Binary Search",
+    "type": "fill-blanks",
+    "question": "Fill in the recursive condition:\nfunction binarySearch(arr, target, left, right) {\n  if (left > right) return -1;\n  const mid = Math.floor((left + right) / 2);\n  if (arr[mid] === target) return mid;\n  if (target < arr[mid]) return binarySearch(arr, target, left, ____);\n  return binarySearch(arr, target, mid + 1, right);\n}",
+    "options": [],
+    "correctAnswer": ["mid - 1"],
+    "icon": "Search"
+  },
+  {
+    "id": 5,
+    "title": "Level 2: Recursion Depth",
+    "type": "true-false",
+    "question": "Recursion depth is limited by system memory and stack size.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "HardDrive"
+  },
+  {
+    "id": 6,
+    "title": "Level 2: Recursive Sorting",
+    "type": "multiple-choice",
+    "question": "Which of the following is commonly implemented recursively?",
+    "options": [
+      { "id": "a", "text": "Bubble Sort" },
+      { "id": "b", "text": "Selection Sort" },
+      { "id": "c", "text": "Merge Sort" },
+      { "id": "d", "text": "Counting Sort" }
+    ],
+    "correctAnswer": "c",
+    "icon": "SortAscending"
+  },
+  {
+    "id": 7,
+    "title": "Level 2: Tower of Hanoi",
+    "type": "multiple-choice",
+    "question": "What is the minimum number of moves required to solve Tower of Hanoi with 3 disks?",
+    "options": [
+      { "id": "a", "text": "3" },
+      { "id": "b", "text": "5" },
+      { "id": "c", "text": "7" },
+      { "id": "d", "text": "9" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Disc"
+  },
+  {
+    "id": 8,
+    "title": "Level 2: Recursion Logic",
+    "type": "true-false",
+    "question": "Recursion always results in cleaner code than iteration.",
+    "options": [],
+    "correctAnswer": false,
+    "icon": "Code"
+  },
+  {
+    "id": 9,
+    "title": "Level 2: Memory Usage",
+    "type": "true-false",
+    "question": "Tail recursion uses more memory than standard recursion.",
+    "options": [],
+    "correctAnswer": false,
+    "icon": "Chip"
+  },
+  {
+    "id": 10,
+    "title": "Level 2: Merge Sort Recursive Step",
+    "type": "fill-blanks",
+    "question": "What is the recursive part of merge sort?\n\nfunction mergeSort(arr) {\n  if (arr.length <= 1) return arr;\n  const mid = Math.floor(arr.length / 2);\n  const left = mergeSort(arr.slice(0, mid));\n  const right = ________;\n  return merge(left, right);\n}",
+    "options": [],
+    "correctAnswer": ["mergeSort(arr.slice(mid))"],
+    "icon": "Divide"
+  },
+  {
+    "id": 11,
+    "title": "Level 2: Infinite Stack",
+    "type": "multiple-choice",
+    "question": "What happens when recursion exceeds stack size?",
+    "options": [
+      { "id": "a", "text": "Program slows down" },
+      { "id": "b", "text": "Code compiles slower" },
+      { "id": "c", "text": "Stack overflow error" },
+      { "id": "d", "text": "Recursion stops silently" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Zap"
+  },
+  {
+    "id": 12,
+    "title": "Level 2: Number of Calls",
+    "type": "multiple-choice",
+    "question": "How many calls does fib(5) make in the naive recursive Fibonacci?",
+    "options": [
+      { "id": "a", "text": "5" },
+      { "id": "b", "text": "8" },
+      { "id": "c", "text": "15" },
+      { "id": "d", "text": "31" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Hash"
+  },
+  {
+    "id": 13,
+    "title": "Level 2: Optimizing Recursion",
+    "type": "true-false",
+    "question": "Memoization can help optimize recursive functions.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Bookmark"
+  },
+  {
+    "id": 14,
+    "title": "Level 2: Recursion Expression",
+    "type": "fill-blanks",
+    "question": "Fill in the recursive return for Fibonacci:\nfunction fib(n) {\n if (n <= 1) return n;\n return _____ + _____;\n}",
+    "options": [],
+    "correctAnswer": ["fib(n - 1)", "fib(n - 2)"],
+    "icon": "Calculator"
+  },
+  {
+    "id": 15,
+    "title": "Level 2: Divide and Conquer",
+    "type": "true-false",
+    "question": "Recursion is commonly used in divide and conquer algorithms.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Scissors"
+  },
+  {
+    "id": 16,
+    "title": "Level 2: Stack Trace",
+    "type": "multiple-choice",
+    "question": "Which error message usually indicates excessive recursion?",
+    "options": [
+      { "id": "a", "text": "Maximum call stack size exceeded" },
+      { "id": "b", "text": "Type error" },
+      { "id": "c", "text": "Syntax error" },
+      { "id": "d", "text": "Memory leak" }
+    ],
+    "correctAnswer": "a",
+    "icon": "AlertTriangle"
+  },
+  {
+    "id": 17,
+    "title": "Level 2: Balanced Recursion",
+    "type": "true-false",
+    "question": "Recursion is more balanced when the problem size reduces symmetrically.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Balance"
+  },
+  {
+    "id": 18,
+    "title": "Level 2: Overhead",
+    "type": "multiple-choice",
+    "question": "Which is a downside of recursion?",
+    "options": [
+      { "id": "a", "text": "Improved readability" },
+      { "id": "b", "text": "Low memory usage" },
+      { "id": "c", "text": "Call stack overhead" },
+      { "id": "d", "text": "Optimized performance" }
+    ],
+    "correctAnswer": "c",
+    "icon": "TrendingDown"
+  },
+  {
+    "id": 19,
+    "title": "Level 2: Mutual Recursion",
+    "type": "true-false",
+    "question": "Mutual recursion occurs when two functions call each other.",
+    "options": [],
+    "correctAnswer": true,
+    "icon": "Link"
+  },
+  {
+    "id": 20,
+    "title": "Level 2: Memoization Use",
+    "type": "multiple-choice",
+    "question": "What data structure is commonly used for memoization?",
+    "options": [
+      { "id": "a", "text": "Array" },
+      { "id": "b", "text": "Queue" },
+      { "id": "c", "text": "Map/Object" },
+      { "id": "d", "text": "Stack" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Package"
+  }
+]

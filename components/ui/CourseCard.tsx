@@ -15,8 +15,8 @@ function CourseCard({
   color: string;
 }) {
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow-md">
-      <div className={`absolute top-0 left-0 h-1 w-full ${color}`} />
+    <div className="group relative overflow-hidden rounded-lg border bg-gradient-to-b from-white to-slate-100 p-6 shadow-sm transition-all hover:shadow-lg">
+      <div className={`absolute top-0 left-0 h-2 w-full ${color}`} />
       <h3 className="text-xl font-bold">{title}</h3>
       <p className="mt-2 text-muted-foreground">{description}</p>
       <div className="mt-4 flex items-center justify-between">
