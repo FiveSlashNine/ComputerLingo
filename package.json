@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "docker-compose down -v && docker-compose -f .\\docker-compose.yaml up -d --build && next dev --turbo",
+    "dev": "docker-compose down -v && docker-compose -f .\\docker-compose.yaml up -d --build && npx @better-auth/cli migrate --y && next dev ",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

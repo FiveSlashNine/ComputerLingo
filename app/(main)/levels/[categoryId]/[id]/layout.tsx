@@ -32,12 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={nunito.className}>
-        <div className="flex min-h-screen flex-col bg-gradient-to-b from-green-50 to-white dark:from-green-950/20 dark:to-background">
-          <NavBar /> <Protected>{children}</Protected> <Footer />
-        </div>
-      </body>
-    </html>
+    <div>
+      <Protected>{children}</Protected>
+    </div>
   );
 }
