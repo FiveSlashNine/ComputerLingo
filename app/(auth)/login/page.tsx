@@ -98,6 +98,10 @@ export default function Login() {
                 {}
               );
 
+              if (data) {
+                localStorage.setItem("userId", data.user.id);
+              }
+
               if (error) {
                 setErrorMessage(
                   error.message || "Sign in failed. Please try again."

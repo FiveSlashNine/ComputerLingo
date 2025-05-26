@@ -15,6 +15,7 @@ export default function NavBar() {
     await signOut({
       fetchOptions: {
         onSuccess: () => {
+          localStorage.removeItem("userId");
           router.push("/login");
         },
       },

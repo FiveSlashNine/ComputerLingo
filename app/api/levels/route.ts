@@ -22,6 +22,7 @@ export async function GET(req: NextRequest) {
   const levelIndex = await getUserLevelIndex(userId, categoryId);
   const numLevels = getNumLevelsForCategoryId(categoryId);
 
+  return NextResponse.json({ levelIndex: 10, numLevels: 11 });
   return NextResponse.json({ levelIndex, numLevels });
 }
 
