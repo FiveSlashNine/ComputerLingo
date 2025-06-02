@@ -113,6 +113,7 @@ export default function Home() {
               level="Beginner"
               lessons={45}
               color="bg-green-500"
+              id={1}
             />
             <CourseCard
               title="Web Development"
@@ -120,6 +121,7 @@ export default function Home() {
               level="Intermediate"
               lessons={60}
               color="bg-blue-500"
+              id={2}
             />
             <CourseCard
               title="Data Structures"
@@ -127,6 +129,7 @@ export default function Home() {
               level="Intermediate"
               lessons={38}
               color="bg-purple-500"
+              id={3}
             />
             <CourseCard
               title="Machine Learning"
@@ -134,6 +137,7 @@ export default function Home() {
               level="Advanced"
               lessons={52}
               color="bg-yellow-500"
+              id={4}
             />
             <CourseCard
               title="Mobile Development"
@@ -141,6 +145,7 @@ export default function Home() {
               level="Intermediate"
               lessons={48}
               color="bg-red-500"
+              id={5}
             />
             <CourseCard
               title="Database Design"
@@ -148,6 +153,7 @@ export default function Home() {
               level="Intermediate"
               lessons={32}
               color="bg-teal-500"
+              id={6}
             />
           </div>
         </div>

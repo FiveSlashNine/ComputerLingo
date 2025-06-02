@@ -256,7 +256,7 @@ export default function LevelPage() {
       {/* Fixed navigation header */}
       <div className="bg-background z-10 border-b">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/">
+          <Link href={"/levels/" + categoryId}>
             <Button variant="ghost" size="sm">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Levels

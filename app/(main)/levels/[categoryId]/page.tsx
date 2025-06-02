@@ -8,7 +8,7 @@ export default function HomePage() {
   const currentCategory = 1;
 
   return (
-    <div className="flex min-h-screen bg-[#f7f7f7]">
+    <div className="flex min-h-screen py-8 px-4 bg-[#f7f7f7]">
       <Sidebar />
       <main className="flex-1 p-4 md:p-6 lg:p-8 pt-[72px] overflow-auto">
         <div className="flex items-center h-14 md:hidden mb-4">

@@ -46,28 +46,16 @@ export default function NavBar() {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-4">
           <Link
-            href="#courses"
+            href="/#courses"
             className="text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-blue-100/30"
           >
             Courses
           </Link>
           <Link
-            href="#features"
+            href="/#features"
             className="text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-blue-100/30"
           >
             Features
-          </Link>
-          <Link
-            href="#testimonials"
-            className="text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-blue-100/30"
-          >
-            Reviews
-          </Link>
-          <Link
-            href="#contact"
-            className="text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-blue-100/30"
-          >
-            Contact
           </Link>
         </nav>
 
@@ -119,32 +107,18 @@ export default function NavBar() {
         <div className="md:hidden bg-white/95 dark:bg-gray-900/95 py-4 px-4 border-t dark:border-gray-800 backdrop-blur-md rounded-b-xl">
           <nav className="flex flex-col gap-3">
             <Link
-              href="#courses"
+              href="/#courses"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-500 py-2 px-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-md"
               onClick={() => setMobileMenuOpen(false)}
             >
               Courses
             </Link>
             <Link
-              href="#features"
+              href="/#features"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-500 py-2 px-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-md"
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-500 py-2 px-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-md"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Reviews
-            </Link>
-            <Link
-              href="#contact"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-500 py-2 px-3 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-md"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
             </Link>
 
             <div className="pt-2 border-t dark:border-gray-800 mt-2">
