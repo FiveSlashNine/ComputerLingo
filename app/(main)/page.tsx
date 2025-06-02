@@ -8,10 +8,24 @@ import FeatureCard from "@/components/ui/FeatureCard";
 import CourseCard from "@/components/ui/CourseCard";
 import { useEffect, useState } from "react";
 import { useSession } from "@/lib/auth-client";
+import axios from "axios";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const { data: session } = useSession();
+  const [categories, setCategories] = useState<Categories[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const cardColors = [
+    "bg-green-500",
+    "bg-blue-500",
+    "bg-red-500",
+    "bg-yellow-500",
+    "bg-purple-500",
+    "bg-pink-500",
+    "bg-orange-500",
+    "bg-teal-500",
+  ];
 
   // Add scroll event listener
   useEffect(() => {
@@ -28,6 +42,22 @@ export default function Home() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get("/api/categories");
+        setCategories(response.data);
+      } catch (error) {
+        console.error("Failed to fetch categories", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCategories();
   }, []);
 
   return (
@@ -106,56 +136,31 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <CourseCard
-              title="Python Fundamentals"
-              description="Learn Python from scratch with interactive lessons and challenges."
-              level="Beginner"
-              lessons={45}
-              color="bg-green-500"
-              id={1}
-            />
-            <CourseCard
-              title="Web Development"
-              description="Master HTML, CSS, and JavaScript to build modern websites."
-              level="Intermediate"
-              lessons={60}
-              color="bg-blue-500"
-              id={2}
-            />
-            <CourseCard
-              title="Data Structures"
-              description="Understand arrays, linked lists, trees, and algorithms."
-              level="Intermediate"
-              lessons={38}
-              color="bg-purple-500"
-              id={3}
-            />
-            <CourseCard
-              title="Machine Learning"
-              description="Build AI models and understand the math behind them."
-              level="Advanced"
-              lessons={52}
-              color="bg-yellow-500"
-              id={4}
-            />
-            <CourseCard
-              title="Mobile Development"
-              description="Create apps for iOS and Android using React Native."
-              level="Intermediate"
-              lessons={48}
-              color="bg-red-500"
-              id={5}
-            />
-            <CourseCard
-              title="Database Design"
-              description="Learn SQL, NoSQL, and database architecture principles."
-              level="Intermediate"
-              lessons={32}
-              color="bg-teal-500"
-              id={6}
-            />
-          </div>
+
+          {loading ? (
+            <div className="flex justify-center items-center h-64">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-500" />
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              {categories.map((category) => {
+                const randomColor =
+                  cardColors[Math.floor(Math.random() * cardColors.length)];
+
+                return (
+                  <CourseCard
+                    key={category.id}
+                    title={category.name}
+                    description={category.description}
+                    level={category.difficulty_level}
+                    lessons={category.levels}
+                    color={randomColor}
+                    id={category.id}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 import { Kysely, PostgresDialect } from "kysely";
 import { Pool } from "pg";
-import { readdirSync, statSync } from "fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "fs";
 import { join } from "path";
 import postgres from "postgres";
 
@@ -17,12 +17,6 @@ const db = new Kysely<Database>({
     }),
   }),
 });
-
-interface Categories {
-  id: number;
-  name: string;
-  levels: number;
-}
 
 interface User {
   id: string;
@@ -126,10 +120,8 @@ export async function getNumLevelsForCategoryId(
   return result?.levels ?? 0;
 }
 
-export async function getAllCategories(): Promise<
-  { id: number; name: string }[]
-> {
-  return await db.selectFrom("Categories").select(["id", "name"]).execute();
+export async function getAllCategories(): Promise<Categories[]> {
+  return await db.selectFrom("Categories").selectAll().execute();
 }
 
 export async function getCategoryNameById(
@@ -157,28 +149,63 @@ export async function ensureCategoriesTableExists() {
       CREATE TABLE "Categories" (
         id SERIAL PRIMARY KEY,
         name VARCHAR(255) NOT NULL UNIQUE,
+        description TEXT NOT NULL,
+        difficulty_level TEXT NOT NULL,
         levels INT DEFAULT 0
       );
     `;
   }
 
   const dataDir = join(process.cwd(), "data");
-
-  if (!statSync(dataDir).isDirectory()) return;
+  if (!existsSync(dataDir) || !statSync(dataDir).isDirectory()) return;
 
   const categories = readdirSync(dataDir).filter((name) =>
     statSync(join(dataDir, name)).isDirectory()
   );
 
   for (const name of categories) {
-    const levels = readdirSync(join(dataDir, name)).filter(
+    const categoryPath = join(dataDir, name);
+    const metaPath = join(categoryPath, "meta.json");
+
+    if (!existsSync(metaPath)) {
+      console.warn(`Skipping category "${name}" — missing meta.json.`);
+      continue;
+    }
+
+    let description: string | null = null;
+    let difficulty_level: string | null = null;
+
+    try {
+      const meta = JSON.parse(readFileSync(metaPath, "utf-8"));
+      description =
+        typeof meta.description === "string" ? meta.description : null;
+      difficulty_level =
+        typeof meta.difficulty_level === "string"
+          ? meta.difficulty_level
+          : null;
+    } catch (e) {
+      console.warn(`Skipping category "${name}" — invalid meta.json.`, e);
+      continue;
+    }
+
+    if (!description || !difficulty_level) {
+      console.warn(
+        `Skipping category "${name}" — missing required fields in meta.json.`
+      );
+      continue;
+    }
+
+    const levels = readdirSync(categoryPath).filter(
       (f) => f.startsWith("level_") && f.endsWith(".json")
     ).length;
 
     await sql`
-      INSERT INTO "Categories" (name, levels)
-      VALUES (${name}, ${levels})
-      ON CONFLICT (name) DO NOTHING;
+      INSERT INTO "Categories" (name, description, difficulty_level, levels)
+      VALUES (${name}, ${description}, ${difficulty_level}, ${levels})
+      ON CONFLICT (name) DO UPDATE
+      SET description = EXCLUDED.description,
+          difficulty_level = EXCLUDED.difficulty_level,
+          levels = EXCLUDED.levels;
     `;
   }
 }
