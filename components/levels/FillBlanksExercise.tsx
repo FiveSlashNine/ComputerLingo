@@ -13,18 +13,18 @@ interface FillBlanksExerciseProps {
 
 export function FillBlanksExercise({
   codeTemplate,
-  blanks,
+  blanks = [], // default to empty array to prevent undefined
   isSubmitted,
   isCorrect,
   onAnswerChange,
 }: FillBlanksExerciseProps) {
   const [answers, setAnswers] = useState<string[]>(
-    Array(blanks.length).fill("")
+    Array(blanks?.length || 0).fill("")
   );
 
   useEffect(() => {
-    setAnswers(Array(blanks.length).fill(""));
-  }, [blanks.length]);
+    setAnswers(Array(blanks?.length || 0).fill(""));
+  }, [blanks?.length]);
 
   const handleChange = (index: number, value: string) => {
     const newAnswers = [...answers];
@@ -32,6 +32,10 @@ export function FillBlanksExercise({
     setAnswers(newAnswers);
     onAnswerChange(newAnswers);
   };
+
+  if (!blanks || blanks.length === 0) {
+    return <div>Loading blanks...</div>;
+  }
 
   return (
     <div className="space-y-4">
@@ -42,13 +46,13 @@ export function FillBlanksExercise({
             {index < array.length - 1 && (
               <Input
                 className="inline-block w-24 mx-1 font-mono"
-                value={answers[index]}
+                value={answers[index] || ""}
                 onChange={(e) => handleChange(index, e.target.value)}
                 disabled={isSubmitted}
                 style={{
                   backgroundColor: isSubmitted
-                    ? answers[index].toLowerCase().trim() ===
-                      blanks[index].toLowerCase().trim()
+                    ? answers[index]?.toLowerCase().trim() ===
+                      blanks[index]?.toLowerCase().trim()
                       ? "rgba(0, 255, 0, 0.1)"
                       : "rgba(255, 0, 0, 0.1)"
                     : undefined,

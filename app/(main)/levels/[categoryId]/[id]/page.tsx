@@ -86,7 +86,7 @@ export default function LevelPage() {
 
   useEffect(() => {
     if (!level) return;
-    if (level.type === "fill-blanks") {
+    if (level.type === "fill-blanks" && Array.isArray(level.blanks)) {
       setBlanks(Array(level.blanks.length).fill(""));
     } else {
       setBlanks([]);

@@ -86,9 +86,9 @@ export function CategoryLevels({
             id: i,
             name: `Level ${i}`,
             description: levelDescriptions[i - 1] || "Description coming soon",
-            completed: i < levelIndex, // all levels before current are completed
-            current: i === levelIndex, // current level is the user's current progress
-            locked: i > levelIndex, // levels after current are locked
+            completed: levelIndex > 0 ? i < levelIndex : false,
+            current: levelIndex === 0 ? i === 1 : i === levelIndex,
+            locked: levelIndex === 0 ? i > 1 : i > levelIndex,
             stars: i < levelIndex ? 3 : 0, // example: completed levels have 3 stars
           });
         }
