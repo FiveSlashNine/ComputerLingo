@@ -1,608 +1,217 @@
 [
   {
-    "id": "int-sort-q1",
-    "title": "Level 2: Sorting",
-    "type": "multiple-choice",
-    "question": "What is the average-case time complexity of Quick Sort?",
-    "icon": "TrendingUp",
-    "options": [
-      {
-        "id": "a",
-        "text": "O(n)"
-      },
-      {
-        "id": "b",
-        "text": "O(n log n)"
-      },
-      {
-        "id": "c",
-        "text": "O(n²)"
-      },
-      {
-        "id": "d",
-        "text": "O(log n)"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "int-sort-q2",
-    "title": "Level 2: Sorting",
-    "type": "true-false",
-    "question": "Merge Sort requires O(n) extra space in its typical implementation.",
-    "icon": "Layers",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-sort-q3",
-    "title": "Level 2: Sorting",
-    "type": "fill-blanks",
-    "question": "Quick Sort’s worst-case occurs when the pivot is consistently the ____ element.",
-    "icon": "AlertCircle",
-    "codeTemplate": "Quick Sort’s worst-case occurs when the pivot is consistently the ____ element.",
-    "blanks": [
-      ""
-    ]
-  },
-  {
-    "id": "int-sort-q4",
-    "title": "Level 2: Sorting",
+    "id": 1,
+    "title": "Level 2: Intermediate Algorithm Process",
     "type": "drag-drop",
-    "question": "Match each algorithm to its characteristic:",
-    "icon": "Shuffle",
+    "question": "Order the steps of the insertion sort algorithm:",
     "items": [
-      {
-        "id": "A",
-        "text": "Merge Sort"
-      },
-      {
-        "id": "B",
-        "text": "Quick Sort"
-      }
+      { "id": "1", "text": "Compare with elements in sorted part" },
+      { "id": "2", "text": "Pick the next element" },
+      { "id": "3", "text": "Insert the element at the correct position" },
+      { "id": "4", "text": "Shift sorted elements right if larger" }
     ],
-    "correctOrder": [
-      "A→Stable, uses extra space",
-      "B→In-place, average O(n log n)"
-    ]
+    "correctOrder": ["2", "1", "4", "3"],
+    "icon": "ListChecks"
   },
   {
-    "id": "int-sort-q5",
-    "title": "Level 2: Sorting",
-    "type": "multiple-choice",
-    "question": "Which pivot selection avoids Quick Sort’s worst-case on sorted input?",
-    "icon": "Search",
-    "options": [
-      {
-        "id": "a",
-        "text": "First element"
-      },
-      {
-        "id": "b",
-        "text": "Last element"
-      },
-      {
-        "id": "c",
-        "text": "Random element"
-      },
-      {
-        "id": "d",
-        "text": "Median-of-three"
-      }
-    ],
-    "correctAnswer": "d"
-  },
-  {
-    "id": "int-sort-q6",
-    "title": "Level 2: Sorting",
-    "type": "true-false",
-    "question": "Quick Sort is not a stable sort.",
-    "icon": "X",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-sort-q7",
-    "title": "Level 2: Sorting",
-    "type": "multiple-choice",
-    "question": "Introsort switches to Heap Sort if recursion depth exceeds a multiple of log n. True or false?",
-    "icon": "Code",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-search-q1",
-    "title": "Level 2: Searching",
-    "type": "multiple-choice",
-    "question": "Which data structure gives average O(1) lookup time?",
-    "icon": "Hash",
-    "options": [
-      {
-        "id": "a",
-        "text": "Array"
-      },
-      {
-        "id": "b",
-        "text": "Hash table"
-      },
-      {
-        "id": "c",
-        "text": "BST"
-      },
-      {
-        "id": "d",
-        "text": "Linked list"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "int-search-q2",
-    "title": "Level 2: Searching",
-    "type": "true-false",
-    "question": "Binary Search can be applied recursively.",
-    "icon": "Repeat",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-search-q3",
-    "title": "Level 2: Searching",
+    "id": 2,
+    "title": "Level 2: Intermediate Pseudocode",
     "type": "fill-blanks",
-    "question": "In a hash table with chaining, worst-case lookup is O(___).",
-    "icon": "Layers",
-    "codeTemplate": "In a hash table with chaining, worst-case lookup is O(___).",
-    "blanks": [
-      ""
-    ]
+    "question": "Complete the pseudocode to find the factorial of a number:",
+    "codeTemplate": "function factorial(n) {\n  if (n == 0) return 1;\n  else return n ____ factorial(n - 1);\n}",
+    "blanks": ["*"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-search-q4",
-    "title": "Level 2: Searching",
-    "type": "drag-drop",
-    "question": "Match each search to its data requirement:",
-    "icon": "SortAscending",
-    "items": [
-      {
-        "id": "X",
-        "text": "Binary Search"
-      },
-      {
-        "id": "Y",
-        "text": "Hash Lookup"
-      }
-    ],
-    "correctOrder": [
-      "X→Sorted array",
-      "Y→Hashable keys"
-    ]
-  },
-  {
-    "id": "int-search-q5",
-    "title": "Level 2: Searching",
+    "id": 3,
+    "title": "Level 2: Intermediate Algorithm Concepts",
     "type": "multiple-choice",
-    "question": "Binary Search average complexity is O(log n). True or false?",
-    "icon": "TrendingUp",
+    "question": "Which of the following best describes the purpose of Big-O notation?",
     "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
+      { "id": "a", "text": "It describes the memory address of an algorithm." },
+      { "id": "b", "text": "It measures the average performance in seconds." },
+      { "id": "c", "text": "It estimates the time complexity based on input size." },
+      { "id": "d", "text": "It counts the number of outputs from an algorithm." }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "int-search-q6",
-    "title": "Level 2: Searching",
+    "id": 4,
+    "title": "Level 2: Recursive Functions",
     "type": "true-false",
-    "question": "Hash Lookup worst-case is O(n).",
-    "icon": "AlertCircle",
-    "correctAnswer": true
+    "question": "A recursive algorithm must have a base case to avoid infinite recursion.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-search-q7",
-    "title": "Level 2: Searching",
-    "type": "multiple-choice",
-    "question": "Interpolation Search average complexity is O(log log n).",
-    "icon": "Code",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-recur-q1",
-    "title": "Level 2: Recursion",
-    "type": "multiple-choice",
-    "question": "What technique stores previous results to speed up recursion?",
-    "icon": "Layers",
-    "options": [
-      {
-        "id": "a",
-        "text": "Backtracking"
-      },
-      {
-        "id": "b",
-        "text": "Memoization"
-      },
-      {
-        "id": "c",
-        "text": "Iteration"
-      },
-      {
-        "id": "d",
-        "text": "Greedy"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "int-recur-q2",
-    "title": "Level 2: Recursion",
-    "type": "true-false",
-    "question": "A tail-recursive function can be optimized into an iterative loop.",
-    "icon": "Shuffle",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-recur-q3",
-    "title": "Level 2: Recursion",
+    "id": 5,
+    "title": "Level 2: Loop Optimization",
     "type": "fill-blanks",
-    "question": "Naive Fibonacci recursion runs in O(___).",
-    "icon": "Function",
-    "codeTemplate": "Naive Fibonacci recursion runs in O(___).",
-    "blanks": [
-      ""
-    ]
+    "question": "Complete the loop to skip even numbers using continue:",
+    "codeTemplate": "for (let i = 0; i < 10; i++) {\n  if (i % 2 == 0) ____;\n  console.log(i);\n}",
+    "blanks": ["continue"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-recur-q4",
-    "title": "Level 2: Recursion",
-    "type": "drag-drop",
-    "question": "Order steps for top-down DP:",
-    "icon": "ArrowsClockwise",
-    "items": [
-      {
-        "id": "1",
-        "text": "Define recursion"
-      },
-      {
-        "id": "2",
-        "text": "Check memo"
-      },
-      {
-        "id": "3",
-        "text": "Compute and store"
-      },
-      {
-        "id": "4",
-        "text": "Return"
-      }
-    ],
-    "correctOrder": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ]
-  },
-  {
-    "id": "int-recur-q5",
-    "title": "Level 2: Recursion",
+    "id": 6,
+    "title": "Level 2: Algorithm Comparison",
     "type": "multiple-choice",
-    "question": "Continuation-passing style uses which argument?",
-    "icon": "Code",
+    "question": "Which of the following is more efficient for searching in a sorted array?",
     "options": [
-      {
-        "id": "a",
-        "text": "state"
-      },
-      {
-        "id": "b",
-        "text": "callback"
-      },
-      {
-        "id": "c",
-        "text": "pointer"
-      },
-      {
-        "id": "d",
-        "text": "stack"
-      }
+      { "id": "a", "text": "Linear Search" },
+      { "id": "b", "text": "Bubble Sort" },
+      { "id": "c", "text": "Binary Search" },
+      { "id": "d", "text": "Selection Sort" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "int-recur-q6",
-    "title": "Level 2: Recursion",
+    "id": 7,
+    "title": "Level 2: Sorting Concepts",
     "type": "true-false",
-    "question": "A trampoline function avoids deep recursion by looping.",
-    "icon": "Repeat",
-    "correctAnswer": true
+    "question": "Merge sort is a divide-and-conquer algorithm.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-dnc-q1",
-    "title": "Level 2: Divide and Conquer",
-    "type": "multiple-choice",
-    "question": "Karatsuba’s complexity is O(n^___).",
-    "icon": "Calculator",
-    "options": [
-      {
-        "id": "a",
-        "text": "1.5"
-      },
-      {
-        "id": "b",
-        "text": "1.585"
-      },
-      {
-        "id": "c",
-        "text": "2"
-      },
-      {
-        "id": "d",
-        "text": "log n"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "int-dnc-q2",
-    "title": "Level 2: Divide and Conquer",
-    "type": "true-false",
-    "question": "Strassen’s runs in O(n^2.81).",
-    "icon": "Check",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-dnc-q3",
-    "title": "Level 2: Divide and Conquer",
+    "id": 8,
+    "title": "Level 2: Algorithm Analysis",
     "type": "fill-blanks",
-    "question": "Divide and conquer often follows: divide, recurse, then ___.",
-    "icon": "Merge",
-    "codeTemplate": "Divide and conquer often follows: divide, recurse, then ___.",
-    "blanks": [
-      ""
-    ]
+    "question": "Complete the time complexity expression: O(____)",
+    "codeTemplate": "Binary search average time: O(____)",
+    "blanks": ["log n"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-dnc-q4",
-    "title": "Level 2: Divide and Conquer",
+    "id": 9,
+    "title": "Level 2: Merge Sort",
     "type": "drag-drop",
-    "question": "Match algorithms to domain:",
-    "icon": "Hash",
+    "question": "Order the main steps in merge sort:",
     "items": [
-      {
-        "id": "K",
-        "text": "Karatsuba"
-      },
-      {
-        "id": "S",
-        "text": "Strassen"
-      }
+      { "id": "1", "text": "Split the array into halves" },
+      { "id": "2", "text": "Recursively sort each half" },
+      { "id": "3", "text": "Merge sorted halves" },
+      { "id": "4", "text": "Check if the array has more than one element" }
     ],
-    "correctOrder": [
-      "K→Integer multiplication",
-      "S→Matrix multiplication"
-    ]
+    "correctOrder": ["4", "1", "2", "3"],
+    "icon": "ListChecks"
   },
   {
-    "id": "int-dnc-q5",
-    "title": "Level 2: Divide and Conquer",
+    "id": 10,
+    "title": "Level 2: Loop Efficiency",
     "type": "multiple-choice",
-    "question": "FFT-based multiplication is O(n log n). True or false?",
-    "icon": "TrendingUp",
+    "question": "Which loop is best when the number of iterations is known?",
     "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
+      { "id": "a", "text": "while" },
+      { "id": "b", "text": "do-while" },
+      { "id": "c", "text": "for" },
+      { "id": "d", "text": "if-else" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "int-dnc-q6",
-    "title": "Level 2: Divide and Conquer",
-    "type": "true-false",
-    "question": "Coppersmith–Winograd is practical for small n.",
-    "icon": "AlertCircle",
-    "correctAnswer": false
-  },
-  {
-    "id": "int-graph-q1",
-    "title": "Level 2: Graph Traversal",
-    "type": "multiple-choice",
-    "question": "Which uses a priority queue?",
-    "icon": "Queue",
-    "options": [
-      {
-        "id": "a",
-        "text": "BFS"
-      },
-      {
-        "id": "b",
-        "text": "DFS"
-      },
-      {
-        "id": "c",
-        "text": "Dijkstra"
-      },
-      {
-        "id": "d",
-        "text": "Bellman-Ford"
-      }
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "id": "int-graph-q2",
-    "title": "Level 2: Graph Traversal",
-    "type": "true-false",
-    "question": "Bellman-Ford handles negative weights.",
-    "icon": "Check",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-graph-q3",
-    "title": "Level 2: Graph Traversal",
+    "id": 11,
+    "title": "Level 2: Recursion Base Case",
     "type": "fill-blanks",
-    "question": "A* uses a ____ function.",
-    "icon": "Search",
-    "codeTemplate": "A* uses a ____ function.",
-    "blanks": [
-      ""
-    ]
+    "question": "Complete the condition to stop recursion when n equals 0:",
+    "codeTemplate": "if (n ____ 0) return 1;",
+    "blanks": ["=="],
+    "icon": "Terminal"
   },
   {
-    "id": "int-graph-q4",
-    "title": "Level 2: Graph Traversal",
+    "id": 12,
+    "title": "Level 2: Searching Algorithm",
     "type": "drag-drop",
-    "question": "Match:",
-    "icon": "Map",
+    "question": "Order the steps in binary search:",
     "items": [
-      {
-        "id": "1",
-        "text": "BFS"
-      },
-      {
-        "id": "2",
-        "text": "A*"
-      }
+      { "id": "1", "text": "Define low and high bounds" },
+      { "id": "2", "text": "Adjust bounds based on comparison" },
+      { "id": "3", "text": "Check middle element" },
+      { "id": "4", "text": "Repeat until element found or range is empty" }
     ],
-    "correctOrder": [
-      "1→Unweighted shortest",
-      "2→Heuristic search"
-    ]
+    "correctOrder": ["1", "3", "2", "4"],
+    "icon": "ListChecks"
   },
   {
-    "id": "int-graph-q5",
-    "title": "Level 2: Graph Traversal",
-    "type": "multiple-choice",
-    "question": "Johnson’s uses Bellman-Ford then Dijkstra. True or false?",
-    "icon": "Code",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-graph-q6",
-    "title": "Level 2: Graph Traversal",
+    "id": 13,
+    "title": "Level 2: Recursive Thinking",
     "type": "true-false",
-    "question": "Dinic’s builds level graphs.",
-    "icon": "Layers",
-    "correctAnswer": true
+    "question": "Every problem that can be solved with recursion can also be solved with iteration.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-greedy-q1",
-    "title": "Level 2: Greedy Algorithms",
-    "type": "multiple-choice",
-    "question": "Huffman is optimal based on ____ frequencies.",
-    "icon": "Code",
-    "options": [
-      {
-        "id": "a",
-        "text": "highest"
-      },
-      {
-        "id": "b",
-        "text": "lowest"
-      },
-      {
-        "id": "c",
-        "text": "average"
-      },
-      {
-        "id": "d",
-        "text": "random"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "int-greedy-q2",
-    "title": "Level 2: Greedy Algorithms",
-    "type": "true-false",
-    "question": "Prim and Kruskal are both greedy MST.",
-    "icon": "Check",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-greedy-q3",
-    "title": "Level 2: Greedy Algorithms",
+    "id": 14,
+    "title": "Level 2: Loop Conversion",
     "type": "fill-blanks",
-    "question": "Kruskal processes edges by increasing ___.",
-    "icon": "Layers",
-    "codeTemplate": "Kruskal processes edges by increasing ___.",
-    "blanks": [
-      ""
-    ]
+    "question": "Complete the equivalent while loop for the given for loop.",
+    "codeTemplate": "// For loop:\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n\n// While loop:\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i____;\n}",
+    "blanks": ["++"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-greedy-q4",
-    "title": "Level 2: Greedy Algorithms",
-    "type": "drag-drop",
-    "question": "Match outputs:",
-    "icon": "Tree",
-    "items": [
-      {
-        "id": "H",
-        "text": "Huffman"
-      },
-      {
-        "id": "P",
-        "text": "Prim"
-      }
-    ],
-    "correctOrder": [
-      "H→Prefix tree",
-      "P→MST"
-    ]
+    "id": 15,
+    "title": "Level 2: Loop Control",
+    "type": "fill-blanks",
+    "question": "Complete the code to break a loop when i equals 5:",
+    "codeTemplate": "for (let i = 0; i < 10; i++) {\n  if (i == 5) ____;\n}",
+    "blanks": ["break"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-greedy-q5",
-    "title": "Level 2: Greedy Algorithms",
+    "id": 16,
+    "title": "Level 2: Sorting Performance",
+    "type": "true-false",
+    "question": "Bubble sort has a better average time complexity than quick sort.",
+    "correctAnswer": false,
+    "icon": "SlidersHorizontal"
+  },
+  {
+    "id": 17,
+    "title": "Level 2: Algorithm Strategy",
     "type": "multiple-choice",
-    "question": "Greedy always finds optimal?",
-    "icon": "AlertCircle",
+    "question": "What type of strategy does quick sort use?",
     "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
+      { "id": "a", "text": "Brute force" },
+      { "id": "b", "text": "Divide and conquer" },
+      { "id": "c", "text": "Backtracking" },
+      { "id": "d", "text": "Greedy" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "b",
+    "icon": "Code2"
+  },
+  {
+    "id": 18,
+    "title": "Level 2: Algorithm Design",
+    "type": "drag-drop",
+    "question": "Arrange steps in greedy algorithm design:",
+    "items": [
+      { "id": "2", "text": "Check if the choice is safe" },
+      { "id": "3", "text": "Make the greedy choice" },
+      { "id": "1", "text": "Identify optimal substructure" },
+      { "id": "4", "text": "Repeat until solution is complete" }
+    ],
+    "correctOrder": ["1", "2", "3", "4"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 19,
+    "title": "Level 2: Logical Thinking",
+    "type": "fill-blanks",
+    "question": "Complete the condition to check for odd numbers:",
+    "codeTemplate": "if (num % 2 ____ 1) return true;",
+    "blanks": ["=="],
+    "icon": "Terminal"
+  },
+  {
+    "id": 20,
+    "title": "Level 2: Algorithm Properties",
+    "type": "true-false",
+    "question": "A stable sorting algorithm maintains the relative order of equal elements.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   }
 ]

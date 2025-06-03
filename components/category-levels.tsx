@@ -60,12 +60,6 @@ export function CategoryLevels({
             next: { revalidate: 60 },
           }
         );
-        console.log(
-          "Fetching levels for user:",
-          userId,
-          "category:",
-          categoryId
-        );
 
         if (!res.ok) throw new Error("Failed to fetch levels");
         const data = await res.json();
@@ -75,8 +69,6 @@ export function CategoryLevels({
 
         const levelIndex = data.levelIndex; // current user level index (e.g. 3 means user completed level 3)
         const numLevels = data.numLevels;
-        console.log("User level index:", levelIndex);
-        console.log("env url:", process.env.BETTER_AUTH_URL);
 
         // Build levels dynamically
         const newLevels: Level[] = [];
@@ -86,10 +78,10 @@ export function CategoryLevels({
             id: i,
             name: `Level ${i}`,
             description: levelDescriptions[i - 1] || "Description coming soon",
-            completed: levelIndex > 0 ? i < levelIndex : false,
-            current: levelIndex === 0 ? i === 1 : i === levelIndex,
-            locked: levelIndex === 0 ? i > 1 : i > levelIndex,
-            stars: i < levelIndex ? 3 : 0, // example: completed levels have 3 stars
+            completed: i <= levelIndex,
+            current: i === levelIndex + 1,
+            locked: i > levelIndex + 1,
+            stars: i <= levelIndex ? 3 : 0,
           });
         }
 
@@ -102,7 +94,6 @@ export function CategoryLevels({
     }
 
     fetchUserLevels();
-    console.log("Levels fetched:", levels);
   }, [userId, categoryId]);
 
   if (loading) return <div>Loading levels...</div>;

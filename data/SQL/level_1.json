@@ -40,7 +40,7 @@
     "title": "Level 1: SQL Basics",
     "type": "fill-blanks",
     "question": "Complete the query to select all columns from the 'users' table:",
-    "codeTemplate": "SELECT * FROM _______;",
+    "codeTemplate": "SELECT * FROM ____;",
     "blanks": ["users"],
     "icon": "Terminal"
   },
@@ -65,11 +65,11 @@
     "question": "Arrange the SQL query parts in the correct order:",
     "items": [
       { "id": "1", "text": "SELECT" },
-      { "id": "2", "text": "FROM" },
-      { "id": "3", "text": "WHERE" },
+      { "id": "2", "text": "WHERE" },
+      { "id": "3", "text": "FROM" },
       { "id": "4", "text": "ORDER BY" }
     ],
-    "correctOrder": ["1", "2", "3", "4"],
+    "correctOrder": ["1", "3", "2", "4"],
     "icon": "ListChecks"
   },
   {
@@ -109,13 +109,13 @@
     "icon": "Edit"
   },
   {
-    "id": 10,
-    "title": "Level 1: SQL Basics",
-    "type": "fill-blanks",
-    "question": "Fill in the blanks to insert a record into a table:",
-    "codeTemplate": "INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');",
-    "blanks": ["users", "name", "email", "'Alice'", "'alice@example.com'"],
-    "icon": "Terminal"
+  "id": 10,
+  "title": "Level 1: SQL Basics",
+  "type": "fill-blanks",
+  "question": "Fill in the blanks to insert a new user with a name and email into the `users` table. The table has columns: `name`, `email`.",
+  "codeTemplate": "INSERT INTO ____ (____, ____) VALUES ('Alice', 'alice@example.com');",
+  "blanks": ["users", "name", "email"],
+  "icon": "Terminal"
   },
   {
     "id": 11,
@@ -157,8 +157,8 @@
     "id": 14,
     "title": "Level 1: SQL Basics",
     "type": "fill-blanks",
-    "question": "Write the SQL to delete all records from a table called `orders`:",
-    "codeTemplate": "DELETE FROM orders;",
+    "question": "Write the SQL (use caps) to delete all records from a table called `orders`:",
+    "codeTemplate": "____ ____ ____;",
     "blanks": ["DELETE", "FROM", "orders"],
     "icon": "Trash"
   },
@@ -170,10 +170,10 @@
     "items": [
       { "id": "1", "text": "INSERT INTO table_name" },
       { "id": "2", "text": "(column1, column2)" },
-      { "id": "3", "text": "VALUES" },
-      { "id": "4", "text": "('value1', 'value2')" }
+      { "id": "3", "text": "('value1', 'value2')" },
+      { "id": "4", "text": "VALUES" }
     ],
-    "correctOrder": ["1", "2", "3", "4"],
+    "correctOrder": ["1", "2", "4", "3"],
     "icon": "ListOrdered"
   },
   {
@@ -217,8 +217,8 @@
     "title": "Level 1: SQL Basics",
     "type": "fill-blanks",
     "question": "Write an SQL query to select 'name' and 'email' from 'users':",
-    "codeTemplate": "SELECT name, email FROM users;",
-    "blanks": ["SELECT", "name", "email", "FROM", "users"],
+    "codeTemplate": "SELECT ____, email ____ ____;",
+    "blanks": ["name", "FROM", "users"],
     "icon": "Terminal"
   },
   {

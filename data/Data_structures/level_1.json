@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "title": "Level 1: Data Structures Basics",
+    "type": "multiple-choice",
+    "question": "Which data structure uses First In First Out (FIFO) order?",
+    "options": [
+      { "id": "a", "text": "Stack" },
+      { "id": "b", "text": "Queue" },
+      { "id": "c", "text": "Array" },
+      { "id": "d", "text": "Graph" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Code2"
+  },
+  {
+    "id": 2,
+    "title": "Level 1: Linked List Basics",
+    "type": "true-false",
+    "question": "A linked list stores elements in contiguous memory locations.",
+    "correctAnswer": false,
+    "icon": "SlidersHorizontal"
+  },
+  {
+    "id": 3,
+    "title": "Level 1: Fill the blank",
+    "type": "fill-blanks",
+    "question": "An array stores elements of the same ____.",
+    "codeTemplate": "An array stores elements of the same ____.",
+    "blanks": ["type"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 4,
+    "title": "Level 1: Stack Operations",
+    "type": "drag-drop",
+    "question": "Arrange these operations in the order they occur when popping an element from a stack:",
+    "items": [
+      { "id": "1", "text": "Check if stack is empty" },
+      { "id": "2", "text": "Return the top element" },
+      { "id": "3", "text": "Decrement top pointer" },
+      { "id": "4", "text": "Access top element" }
+    ],
+    "correctOrder": ["1", "4", "2", "3"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 5,
+    "title": "Level 1: Multiple Choice",
+    "type": "multiple-choice",
+    "question": "Which data structure is best to represent hierarchical data?",
+    "options": [
+      { "id": "a", "text": "Array" },
+      { "id": "b", "text": "Tree" },
+      { "id": "c", "text": "Queue" },
+      { "id": "d", "text": "Stack" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Code2"
+  },
+  {
+    "id": 6,
+    "title": "Level 1: True or False",
+    "type": "true-false",
+    "question": "In a stack, elements are added and removed from the same end.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
+  },
+  {
+    "id": 7,
+    "title": "Level 1: Fill the blank",
+    "type": "fill-blanks",
+    "question": "A queue removes elements from the ____ end.",
+    "codeTemplate": "A queue removes elements from the ____ end.",
+    "blanks": ["front"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 8,
+    "title": "Level 1: Linked List Steps",
+    "type": "drag-drop",
+    "question": "Put these steps of traversing a linked list in order:",
+    "items": [
+      { "id": "1", "text": "Move to next node" },
+      { "id": "2", "text": "Start at head node" },
+      { "id": "3", "text": "Check current node" },
+      { "id": "4", "text": "Repeat until end" }
+    ],
+    "correctOrder": ["2", "3", "1", "4"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 9,
+    "title": "Level 1: Multiple Choice",
+    "type": "multiple-choice",
+    "question": "Which of these data structures is linear?",
+    "options": [
+      { "id": "a", "text": "Tree" },
+      { "id": "b", "text": "Graph" },
+      { "id": "c", "text": "Linked List" },
+      { "id": "d", "text": "Heap" }
+    ],
+    "correctAnswer": "c",
+    "icon": "Code2"
+  },
+  {
+    "id": 10,
+    "title": "Level 1: True or False",
+    "type": "true-false",
+    "question": "Arrays have fixed size once declared.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
+  },
+  {
+    "id": 11,
+    "title": "Level 1: Fill the blank",
+    "type": "fill-blanks",
+    "question": "In a stack, the last element added is the ____ to be removed.",
+    "codeTemplate": "The last element added is the ____ to be removed.",
+    "blanks": ["first"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 12,
+    "title": "Level 1: Queue Operations",
+    "type": "drag-drop",
+    "question": "Order these steps when adding an element to a queue:",
+    "items": [
+      { "id": "1", "text": "Increment rear pointer" },
+      { "id": "2", "text": "Add element at rear" },
+      { "id": "3", "text": "Check if queue is full" },
+      { "id": "4", "text": "Return success" }
+    ],
+    "correctOrder": ["3", "2", "1", "4"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 13,
+    "title": "Level 1: Multiple Choice",
+    "type": "multiple-choice",
+    "question": "Which data structure is best for undo operations in applications?",
+    "options": [
+      { "id": "a", "text": "Queue" },
+      { "id": "b", "text": "Stack" },
+      { "id": "c", "text": "Tree" },
+      { "id": "d", "text": "Graph" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Code2"
+  },
+  {
+    "id": 14,
+    "title": "Level 1: True or False",
+    "type": "true-false",
+    "question": "A tree can have cycles.",
+    "correctAnswer": false,
+    "icon": "SlidersHorizontal"
+  },
+  {
+    "id": 15,
+    "title": "Level 1: Fill the blank",
+    "type": "fill-blanks",
+    "question": "The head of a linked list points to the ____ node.",
+    "codeTemplate": "The head of a linked list points to the ____ node.",
+    "blanks": ["first"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 16,
+    "title": "Level 1: Linked List Insertion",
+    "type": "drag-drop",
+    "question": "Arrange steps to insert a node at the end of a singly linked list:",
+    "items": [
+      { "id": "1", "text": "Traverse to the last node" },
+      { "id": "2", "text": "Allocate new node" },
+      { "id": "3", "text": "Set last node's next to new node" },
+      { "id": "4", "text": "Assign data to new node" }
+    ],
+    "correctOrder": ["2", "4", "1", "3"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 17,
+    "title": "Level 1: Multiple Choice",
+    "type": "multiple-choice",
+    "question": "Which data structure allows quick access by index?",
+    "options": [
+      { "id": "a", "text": "Linked List" },
+      { "id": "b", "text": "Array" },
+      { "id": "c", "text": "Stack" },
+      { "id": "d", "text": "Queue" }
+    ],
+    "correctAnswer": "b",
+    "icon": "Code2"
+  },
+  {
+    "id": 18,
+    "title": "Level 1: True or False",
+    "type": "true-false",
+    "question": "A graph consists of nodes connected by edges.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
+  },
+  {
+    "id": 19,
+    "title": "Level 1: Fill the blank",
+    "type": "fill-blanks",
+    "question": "In an array, elements are accessed by their ____.",
+    "codeTemplate": "Elements are accessed by their ____.",
+    "blanks": ["index"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 20,
+    "title": "Level 1: Tree Traversal",
+    "type": "drag-drop",
+    "question": "Arrange the steps of a pre-order tree traversal:",
+    "items": [
+      { "id": "1", "text": "Traverse left subtree" },
+      { "id": "2", "text": "Visit root node" },
+      { "id": "3", "text": "Traverse right subtree" },
+      { "id": "4", "text": "Return from node" }
+    ],
+    "correctOrder": ["2", "1", "3", "4"],
+    "icon": "ListChecks"
+  }
+]

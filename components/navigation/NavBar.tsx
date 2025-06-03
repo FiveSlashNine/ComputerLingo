@@ -57,6 +57,12 @@ export default function NavBar() {
           >
             Features
           </Link>
+          <Link
+            href="/leaderboard"
+            className="text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-blue-100/30"
+          >
+            Leaderboard
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -119,6 +125,12 @@ export default function NavBar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Features
+            </Link>
+            <Link
+              href="/leaderboard"
+              className="text-sm font-medium px-3 py-1.5 rounded-full transition-all duration-300 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-blue-100/30"
+            >
+              Leaderboard
             </Link>
 
             <div className="pt-2 border-t dark:border-gray-800 mt-2">

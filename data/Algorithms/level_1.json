@@ -1,590 +1,227 @@
 [
   {
-    "id": "beg-sort-q1",
-    "title": "Level 1: Sorting",
+    "id": 1,
+    "title": "Level 1: Algorithm Basics",
     "type": "multiple-choice",
-    "question": "What does Bubble Sort compare on each pass?",
-    "icon": "ListChecks",
+    "question": "What is the main purpose of an algorithm?",
     "options": [
-      {
-        "id": "a",
-        "text": "First and last elements"
-      },
-      {
-        "id": "b",
-        "text": "Adjacent elements"
-      },
-      {
-        "id": "c",
-        "text": "Pivot and element"
-      },
-      {
-        "id": "d",
-        "text": "Median elements"
-      }
+      { "id": "a", "text": "To store data" },
+      { "id": "b", "text": "To solve a problem step-by-step" },
+      { "id": "c", "text": "To design a webpage" },
+      { "id": "d", "text": "To display graphics" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "beg-sort-q2",
-    "title": "Level 1: Sorting",
+    "id": 2,
+    "title": "Level 1: Algorithm Basics",
     "type": "true-false",
-    "question": "Bubble Sort’s worst-case time complexity is O(n²).",
-    "icon": "Clock",
-    "correctAnswer": true
+    "question": "An algorithm must always produce the correct output for any valid input.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "beg-sort-q3",
-    "title": "Level 1: Sorting",
+    "id": 3,
+    "title": "Level 1: Algorithm Steps",
     "type": "fill-blanks",
-    "question": "After one full pass, the ____ element is in its final position.",
-    "icon": "CursorText",
-    "codeTemplate": "After one full pass, the ____ element is in its final position.",
-    "blanks": [
-      "largest"
-    ]
+    "question": "Complete the steps of a basic algorithm: 1) Input, 2) Process, 3) ____, 4) End",
+    "codeTemplate": "Step 3 is: ____",
+    "blanks": ["Output"],
+    "icon": "Terminal"
   },
   {
-    "id": "beg-sort-q4",
-    "title": "Level 1: Sorting",
-    "type": "multiple-choice",
-    "question": "What is the best-case time complexity of Bubble Sort (when already sorted)?",
-    "icon": "TrendingUp",
-    "options": [
-      {
-        "id": "a",
-        "text": "O(n)"
-      },
-      {
-        "id": "b",
-        "text": "O(n log n)"
-      },
-      {
-        "id": "c",
-        "text": "O(n²)"
-      },
-      {
-        "id": "d",
-        "text": "O(1)"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "beg-sort-q5",
-    "title": "Level 1: Sorting",
-    "type": "true-false",
-    "question": "Bubble Sort is a stable sorting algorithm.",
-    "icon": "Shuffle",
-    "correctAnswer": true
-  },
-  {
-    "id": "beg-sort-q6",
-    "title": "Level 1: Sorting",
+    "id": 4,
+    "title": "Level 1: Sorting Algorithm",
     "type": "drag-drop",
-    "question": "Order the steps of Bubble Sort:",
-    "icon": "ArrowsRightLeft",
+    "question": "Arrange the steps of the Bubble Sort algorithm in the correct order:",
     "items": [
-      {
-        "id": "1",
-        "text": "Compare adjacent"
-      },
-      {
-        "id": "2",
-        "text": "Swap if out of order"
-      },
-      {
-        "id": "3",
-        "text": "Repeat passes"
-      },
-      {
-        "id": "4",
-        "text": "Stop when no swaps"
-      }
+      { "id": "1", "text": "Compare adjacent elements" },
+      { "id": "2", "text": "Swap if elements are in wrong order" },
+      { "id": "3", "text": "Repeat until array is sorted" },
+      { "id": "4", "text": "Start with the first element" }
     ],
-    "correctOrder": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ]
+    "correctOrder": ["4", "1", "2", "3"],
+    "icon": "ListChecks"
   },
   {
-    "id": "beg-search-q1",
-    "title": "Level 1: Searching",
+    "id": 5,
+    "title": "Level 1: Algorithm Efficiency",
     "type": "multiple-choice",
-    "question": "What is Linear Search’s worst-case complexity?",
-    "icon": "Search",
+    "question": "Which of the following best describes time complexity?",
     "options": [
-      {
-        "id": "a",
-        "text": "O(1)"
-      },
-      {
-        "id": "b",
-        "text": "O(n)"
-      },
-      {
-        "id": "c",
-        "text": "O(log n)"
-      },
-      {
-        "id": "d",
-        "text": "O(n²)"
-      }
+      { "id": "a", "text": "Amount of memory used" },
+      { "id": "b", "text": "Number of steps to complete an algorithm" },
+      { "id": "c", "text": "The output size" },
+      { "id": "d", "text": "The programming language used" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "beg-search-q2",
-    "title": "Level 1: Searching",
+    "id": 6,
+    "title": "Level 1: Conditional Statements",
     "type": "true-false",
-    "question": "Linear Search requires a sorted list.",
-    "icon": "Sliders",
-    "correctAnswer": false
+    "question": "If statements in algorithms help to make decisions based on conditions.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "beg-search-q3",
-    "title": "Level 1: Searching",
+    "id": 7,
+    "title": "Level 1: Loop Basics",
     "type": "fill-blanks",
-    "question": "In the worst case, Linear Search examines ____ elements.",
-    "icon": "List",
-    "codeTemplate": "In the worst case, Linear Search examines ____ elements.",
-    "blanks": [
-      "all"
-    ]
+    "question": "Fill in the blank to loop 5 times:",
+    "codeTemplate": "for i = 1 to ____ do",
+    "blanks": ["5"],
+    "icon": "Terminal"
   },
   {
-    "id": "beg-search-q4",
-    "title": "Level 1: Searching",
-    "type": "multiple-choice",
-    "question": "Which search has O(1) average-case with good hashing?",
-    "icon": "Hash",
-    "options": [
-      {
-        "id": "a",
-        "text": "Linear Search"
-      },
-      {
-        "id": "b",
-        "text": "Binary Search"
-      },
-      {
-        "id": "c",
-        "text": "Hash Lookup"
-      },
-      {
-        "id": "d",
-        "text": "DFS"
-      }
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "id": "beg-search-q5",
-    "title": "Level 1: Searching",
+    "id": 8,
+    "title": "Level 1: Searching Algorithm",
     "type": "drag-drop",
-    "question": "Match search to complexity:",
-    "icon": "SortAscending",
+    "question": "Put the steps of linear search in the correct order:",
     "items": [
-      {
-        "id": "A",
-        "text": "Linear"
-      },
-      {
-        "id": "B",
-        "text": "Binary Search"
-      }
+      { "id": "1", "text": "Move to the next element" },
+      { "id": "2", "text": "Repeat until target is found or list ends" },
+      { "id": "3", "text": "Start at the first element" },
+      { "id": "4", "text": "Check if current element is the target" }
     ],
-    "correctOrder": [
-      "A→O(n)",
-      "B→O(log n)"
-    ]
+    "correctOrder": ["3", "4", "1", "2"],
+    "icon": "ListChecks"
   },
   {
-    "id": "beg-search-q6",
-    "title": "Level 1: Searching",
-    "type": "true-false",
-    "question": "Binary Search can be implemented both recursively and iteratively.",
-    "icon": "Repeat",
-    "correctAnswer": true
-  },
-  {
-    "id": "beg-recur-q1",
-    "title": "Level 1: Recursion",
+    "id": 9,
+    "title": "Level 1: Algorithm Design",
     "type": "multiple-choice",
-    "question": "What must recursion always have?",
-    "icon": "RepeatOnce",
+    "question": "Which of these is NOT a characteristic of a good algorithm?",
     "options": [
-      {
-        "id": "a",
-        "text": "Loop"
-      },
-      {
-        "id": "b",
-        "text": "Base case"
-      },
-      {
-        "id": "c",
-        "text": "Global"
-      },
-      {
-        "id": "d",
-        "text": "Stack"
-      }
+      { "id": "a", "text": "Finiteness" },
+      { "id": "b", "text": "Definiteness" },
+      { "id": "c", "text": "Randomness" },
+      { "id": "d", "text": "Input and Output" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "beg-recur-q2",
+    "id": 10,
     "title": "Level 1: Recursion",
     "type": "true-false",
-    "question": "Every recursive function uses extra stack space.",
-    "icon": "Layers",
-    "correctAnswer": true
+    "question": "Recursion is when a function calls itself.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "beg-recur-q3",
-    "title": "Level 1: Recursion",
+    "id": 11,
+    "title": "Level 1: Algorithm Basics",
     "type": "fill-blanks",
-    "question": "Each recursive call uses additional ____ on the call stack.",
-    "icon": "Layers",
-    "codeTemplate": "Each recursive call uses additional ____ on the call stack.",
-    "blanks": [
-      "space"
-    ]
+    "question": "Complete the pseudocode to add two numbers:",
+    "codeTemplate": "function add(a, b) {\n  return a ____ b;\n}",
+    "blanks": ["+"],
+    "icon": "Terminal"
   },
   {
-    "id": "beg-recur-q4",
-    "title": "Level 1: Recursion",
-    "type": "multiple-choice",
-    "question": "Naive recursive Fibonacci has time complexity:",
-    "icon": "Function",
-    "options": [
-      {
-        "id": "a",
-        "text": "O(n)"
-      },
-      {
-        "id": "b",
-        "text": "O(n²)"
-      },
-      {
-        "id": "c",
-        "text": "O(2ⁿ)"
-      },
-      {
-        "id": "d",
-        "text": "O(log n)"
-      }
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "id": "beg-recur-q5",
-    "title": "Level 1: Recursion",
+    "id": 12,
+    "title": "Level 1: Algorithm Steps",
     "type": "drag-drop",
-    "question": "Order these steps for recursion:",
-    "icon": "ArrowsClockwise",
+    "question": "Order the steps to solve a problem using an algorithm:",
     "items": [
-      {
-        "id": "1",
-        "text": "Check base"
-      },
-      {
-        "id": "2",
-        "text": "Make call"
-      },
-      {
-        "id": "3",
-        "text": "Return"
-      }
+      { "id": "1", "text": "Test the algorithm" },
+      { "id": "2", "text": "Understand the problem" },
+      { "id": "3", "text": "Design the algorithm" },
+      { "id": "4", "text": "Implement the algorithm" }
     ],
-    "correctOrder": [
-      "1",
-      "2",
-      "3"
-    ]
+    "correctOrder": ["2", "3", "4", "1"],
+    "icon": "ListChecks"
   },
   {
-    "id": "beg-recur-q6",
-    "title": "Level 1: Recursion",
-    "type": "true-false",
-    "question": "Recursion can always be rewritten as iteration.",
-    "icon": "Code",
-    "correctAnswer": true
-  },
-  {
-    "id": "beg-dnc-q1",
-    "title": "Level 1: Divide and Conquer",
+    "id": 13,
+    "title": "Level 1: Sorting Algorithm",
     "type": "multiple-choice",
-    "question": "Which is divide & conquer?",
-    "icon": "Divide",
+    "question": "Which sorting algorithm repeatedly swaps adjacent elements if they are in the wrong order?",
     "options": [
-      {
-        "id": "a",
-        "text": "Bubble Sort"
-      },
-      {
-        "id": "b",
-        "text": "Merge Sort"
-      },
-      {
-        "id": "c",
-        "text": "Linear Search"
-      },
-      {
-        "id": "d",
-        "text": "Stack"
-      }
+      { "id": "a", "text": "Quick Sort" },
+      { "id": "b", "text": "Merge Sort" },
+      { "id": "c", "text": "Bubble Sort" },
+      { "id": "d", "text": "Binary Search" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "beg-dnc-q2",
-    "title": "Level 1: Divide and Conquer",
+    "id": 14,
+    "title": "Level 1: Algorithm Concepts",
     "type": "true-false",
-    "question": "Divide & conquer always yields O(n log n).",
-    "icon": "Code",
-    "correctAnswer": false
+    "question": "An algorithm can have multiple inputs but only one output.",
+    "correctAnswer": false,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "beg-dnc-q3",
-    "title": "Level 1: Divide and Conquer",
+    "id": 15,
+    "title": "Level 1: Loop Basics",
     "type": "fill-blanks",
-    "question": "You ____ the problem into parts.",
-    "icon": "Split",
-    "codeTemplate": "You ____ the problem into parts.",
-    "blanks": [
-      "split"
-    ]
+    "question": "Complete the pseudocode to print numbers from 1 to 5:",
+    "codeTemplate": "\nfor i = 1 to 5 do\n  print(____)",
+    "blanks": ["i"],
+    "icon": "Terminal"
   },
   {
-    "id": "beg-dnc-q4",
-    "title": "Level 1: Divide and Conquer",
-    "type": "multiple-choice",
-    "question": "Merge Sort merges sorted halves in O(n). True or false?",
-    "icon": "Merge",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "beg-dnc-q5",
-    "title": "Level 1: Divide and Conquer",
+    "id": 16,
+    "title": "Level 1: Searching Algorithm",
     "type": "drag-drop",
-    "question": "Match phases:",
-    "icon": "Layers",
+    "question": "Order the steps of binary search in a sorted array:",
     "items": [
-      {
-        "id": "D",
-        "text": "Divide"
-      },
-      {
-        "id": "C",
-        "text": "Conquer"
-      },
-      {
-        "id": "M",
-        "text": "Merge"
-      }
+      { "id": "1", "text": "Decide which half to search next" },
+      { "id": "2", "text": "Compare middle element with target" },
+      { "id": "3", "text": "Find middle element" },
+      { "id": "4", "text": "Repeat until element is found or list is empty" }
     ],
-    "correctOrder": [
-      "D→Divide",
-      "C→Conquer",
-      "M→Merge"
-    ]
+    "correctOrder": ["3", "2", "1", "4"],
+    "icon": "ListChecks"
   },
   {
-    "id": "beg-dnc-q6",
-    "title": "Level 1: Divide and Conquer",
-    "type": "true-false",
-    "question": "Merge Sort is stable.",
-    "icon": "Shuffle",
-    "correctAnswer": true
-  },
-  {
-    "id": "beg-graph-q1",
-    "title": "Level 1: Graph Traversal",
+    "id": 17,
+    "title": "Level 1: Algorithm Efficiency",
     "type": "multiple-choice",
-    "question": "Which traversal uses a queue?",
-    "icon": "Queue",
+    "question": "Which of these is generally the fastest sorting algorithm on average?",
     "options": [
-      {
-        "id": "a",
-        "text": "DFS"
-      },
-      {
-        "id": "b",
-        "text": "BFS"
-      },
-      {
-        "id": "c",
-        "text": "Both"
-      },
-      {
-        "id": "d",
-        "text": "None"
-      }
+      { "id": "a", "text": "Bubble Sort" },
+      { "id": "b", "text": "Insertion Sort" },
+      { "id": "c", "text": "Quick Sort" },
+      { "id": "d", "text": "Selection Sort" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "beg-graph-q2",
-    "title": "Level 1: Graph Traversal",
+    "id": 18,
+    "title": "Level 1: Algorithm Fundamentals",
     "type": "true-false",
-    "question": "DFS can use recursion.",
-    "icon": "Stack",
-    "correctAnswer": true
+    "question": "An algorithm must terminate after a finite number of steps.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "beg-graph-q3",
-    "title": "Level 1: Graph Traversal",
+    "id": 19,
+    "title": "Level 1: Function Basics",
     "type": "fill-blanks",
-    "question": "BFS visits in ____ order.",
-    "icon": "Flowchart",
-    "codeTemplate": "BFS visits in ____ order.",
-    "blanks": [
-      "level"
-    ]
+    "question": "Complete the function to check if a number is even:",
+    "codeTemplate": "\nfunction isEven(num) {\n  return num % 2 ____ 0;\n}",
+    "blanks": ["=="],
+    "icon": "Terminal"
   },
   {
-    "id": "beg-graph-q4",
-    "title": "Level 1: Graph Traversal",
-    "type": "multiple-choice",
-    "question": "Dijkstra’s algorithm finds shortest paths. True or false?",
-    "icon": "LightningBolt",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "beg-graph-q5",
-    "title": "Level 1: Graph Traversal",
+    "id": 20,
+    "title": "Level 1: Algorithm Steps",
     "type": "drag-drop",
-    "question": "Match:",
-    "icon": "Swap",
+    "question": "Arrange the steps of the selection sort algorithm:",
     "items": [
-      {
-        "id": "1",
-        "text": "BFS"
-      },
-      {
-        "id": "2",
-        "text": "DFS"
-      }
+      { "id": "1", "text": "Find the minimum element" },
+      { "id": "2", "text": "Repeat until the array is sorted" },
+      { "id": "3", "text": "Move to the next element" },
+      { "id": "4", "text": "Swap it with the first unsorted element" }
     ],
-    "correctOrder": [
-      "1→Level",
-      "2→Depth"
-    ]
-  },
-  {
-    "id": "beg-graph-q6",
-    "title": "Level 1: Graph Traversal",
-    "type": "true-false",
-    "question": "Graph traversal must visit all nodes in disconnected graphs with multiple starts.",
-    "icon": "Layers",
-    "correctAnswer": false
-  },
-  {
-    "id": "beg-greedy-q1",
-    "title": "Level 1: Greedy Algorithms",
-    "type": "multiple-choice",
-    "question": "Greedy always picks a ____ choice.",
-    "icon": "Lightning",
-    "options": [
-      {
-        "id": "a",
-        "text": "Global"
-      },
-      {
-        "id": "b",
-        "text": "Local"
-      },
-      {
-        "id": "c",
-        "text": "Random"
-      },
-      {
-        "id": "d",
-        "text": "Historic"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "beg-greedy-q2",
-    "title": "Level 1: Greedy Algorithms",
-    "type": "true-false",
-    "question": "Greedy guarantees optimal solution.",
-    "icon": "AlertCircle",
-    "correctAnswer": false
-  },
-  {
-    "id": "beg-greedy-q3",
-    "title": "Level 1: Greedy Algorithms",
-    "type": "fill-blanks",
-    "question": "Coin change is greedy when coins are ____.",
-    "icon": "Coins",
-    "codeTemplate": "Coin change is greedy when coins are ____.",
-    "blanks": [
-      "canonical"
-    ]
-  },
-  {
-    "id": "beg-greedy-q4",
-    "title": "Level 1: Greedy Algorithms",
-    "type": "multiple-choice",
-    "question": "Activity Selection picks earliest finish. True or false?",
-    "icon": "Clock",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "beg-greedy-q5",
-    "title": "Level 1: Greedy Algorithms",
-    "type": "drag-drop",
-    "question": "Match:",
-    "icon": "TreeSelect",
-    "items": [
-      {
-        "id": "A",
-        "text": "Huffman"
-      },
-      {
-        "id": "B",
-        "text": "Prim"
-      }
-    ],
-    "correctOrder": [
-      "A→Min Prefix",
-      "B→MST"
-    ]
+    "correctOrder": ["1", "4", "3", "2"],
+    "icon": "ListChecks"
   }
 ]

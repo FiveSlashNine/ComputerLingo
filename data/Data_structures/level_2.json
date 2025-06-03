@@ -1,606 +1,227 @@
 [
   {
-    "id": "int-ds-dynarr-q1",
-    "title": "Level 2: Dynamic Arrays & Amortized Resizing",
+    "id": 1,
+    "title": "Level 2: Data Structures - Trees",
     "type": "multiple-choice",
-    "question": "Why is append O(1) amortized?",
-    "icon": "Infinity",
+    "question": "What is the maximum number of children a binary tree node can have?",
     "options": [
-      {
-        "id": "a",
-        "text": "No resizes"
-      },
-      {
-        "id": "b",
-        "text": "Each resize O(1)"
-      },
-      {
-        "id": "c",
-        "text": "Rare resizes"
-      },
-      {
-        "id": "d",
-        "text": "Infinite memory"
-      }
+      { "id": "a", "text": "1" },
+      { "id": "b", "text": "2" },
+      { "id": "c", "text": "3" },
+      { "id": "d", "text": "Unlimited" }
     ],
-    "correctAnswer": "c"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "int-ds-dynarr-q2",
-    "title": "Level 2: Dynamic Arrays & Amortized Resizing",
+    "id": 2,
+    "title": "Level 2: Linked List",
     "type": "true-false",
-    "question": "Doubling capacity keeps total copy cost proportional to number of appends.",
-    "icon": "Layers",
-    "correctAnswer": true
+    "question": "Doubly linked lists allow traversal in both forward and backward directions.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-ds-dynarr-q3",
-    "title": "Level 2: Dynamic Arrays & Amortized Resizing",
+    "id": 3,
+    "title": "Level 2: Fill the blank",
     "type": "fill-blanks",
-    "question": "k-th resize copies roughly 2^k ____.",
-    "icon": "Calculator",
-    "codeTemplate": "k-th resize copies roughly 2^k ____.",
-    "blanks": [
-      ""
-    ]
+    "question": "In a hash table, collisions occur when two keys hash to the same ____.",
+    "codeTemplate": "Collisions occur when two keys hash to the same ____.",
+    "blanks": ["index"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-ds-dynarr-q4",
-    "title": "Level 2: Dynamic Arrays & Amortized Resizing",
-    "type": "multiple-choice",
-    "question": "After resizing, capacity is usually:",
-    "icon": "Divide",
-    "options": [
-      {
-        "id": "a",
-        "text": "+1"
-      },
-      {
-        "id": "b",
-        "text": "*2"
-      },
-      {
-        "id": "c",
-        "text": "*n"
-      },
-      {
-        "id": "d",
-        "text": "/2"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "int-ds-dynarr-q5",
-    "title": "Level 2: Dynamic Arrays & Amortized Resizing",
-    "type": "true-false",
-    "question": "Shrink-on-remove is often omitted to avoid thrashing.",
-    "icon": "AlertCircle",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-ds-dynarr-q6",
-    "title": "Level 2: Dynamic Arrays & Amortized Resizing",
+    "id": 4,
+    "title": "Level 2: Stack Implementation",
     "type": "drag-drop",
-    "question": "Order append to full array:",
-    "icon": "ArrowsRightLeft",
+    "question": "Arrange the correct order for pushing an element onto a stack implemented with an array:",
     "items": [
-      {
-        "id": "1",
-        "text": "Check full"
-      },
-      {
-        "id": "2",
-        "text": "Allocate new"
-      },
-      {
-        "id": "3",
-        "text": "Copy"
-      },
-      {
-        "id": "4",
-        "text": "Insert"
-      }
+      { "id": "1", "text": "Increment top pointer" },
+      { "id": "2", "text": "Check if stack is full" },
+      { "id": "3", "text": "Place element at top" },
+      { "id": "4", "text": "Return success" }
     ],
-    "correctOrder": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ]
+    "correctOrder": ["2", "1", "3", "4"],
+    "icon": "ListChecks"
   },
   {
-    "id": "int-ds-dll-q1",
-    "title": "Level 2: Doubly Linked Lists",
+    "id": 5,
+    "title": "Level 2: Multiple Choice",
     "type": "multiple-choice",
-    "question": "Additional pointer compared to singly list?",
-    "icon": "ArrowLeft",
+    "question": "Which data structure provides average O(1) time complexity for search operations?",
     "options": [
-      {
-        "id": "a",
-        "text": "child"
-      },
-      {
-        "id": "b",
-        "text": "prev"
-      },
-      {
-        "id": "c",
-        "text": "parent"
-      },
-      {
-        "id": "d",
-        "text": "random"
-      }
+      { "id": "a", "text": "Linked List" },
+      { "id": "b", "text": "Hash Table" },
+      { "id": "c", "text": "Binary Search Tree" },
+      { "id": "d", "text": "Array" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "int-ds-dll-q2",
-    "title": "Level 2: Doubly Linked Lists",
+    "id": 6,
+    "title": "Level 2: True or False",
     "type": "true-false",
-    "question": "Removal of known node is O(1).",
-    "icon": "Trash",
-    "correctAnswer": true
+    "question": "In a binary search tree, the left child node always contains a value less than the parent node.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-ds-dll-q3",
-    "title": "Level 2: Doubly Linked Lists",
+    "id": 7,
+    "title": "Level 2: Fill the blank",
     "type": "fill-blanks",
-    "question": "Traverse backwards using ____ pointer.",
-    "icon": "ArrowDown",
-    "codeTemplate": "Traverse backwards using ____ pointer.",
-    "blanks": [
-      ""
-    ]
+    "question": "In a graph, an edge connecting a node to itself is called a ____ edge.",
+    "codeTemplate": "An edge connecting a node to itself is called a ____ edge.",
+    "blanks": ["self-loop"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-ds-dll-q4",
-    "title": "Level 2: Doubly Linked Lists",
-    "type": "multiple-choice",
-    "question": "Insert at tail without head pointer is:",
-    "icon": "Clock",
-    "options": [
-      {
-        "id": "a",
-        "text": "O(1)"
-      },
-      {
-        "id": "b",
-        "text": "O(log n)"
-      },
-      {
-        "id": "c",
-        "text": "O(n)"
-      },
-      {
-        "id": "d",
-        "text": "O(n²)"
-      }
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "id": "int-ds-dll-q5",
-    "title": "Level 2: Doubly Linked Lists",
-    "type": "true-false",
-    "question": "Doubly list uses more space per node.",
-    "icon": "Layers",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-ds-dll-q6",
-    "title": "Level 2: Doubly Linked Lists",
+    "id": 8,
+    "title": "Level 2: Queue Types",
     "type": "drag-drop",
-    "question": "Match operations to complexity:",
-    "icon": "SortNumeric",
+    "question": "Arrange these queue types from simplest to most complex:",
     "items": [
-      {
-        "id": "A",
-        "text": "Insert head"
-      },
-      {
-        "id": "B",
-        "text": "Delete tail"
-      },
-      {
-        "id": "C",
-        "text": "Search"
-      }
+      { "id": "1", "text": "Priority Queue" },
+      { "id": "2", "text": "Circular Queue" },
+      { "id": "3", "text": "Simple Queue" },
+      { "id": "4", "text": "Double-Ended Queue (Deque)" }
     ],
-    "correctOrder": [
-      "A→O(1)",
-      "B→O(1)",
-      "C→O(n)"
-    ]
+    "correctOrder": ["3", "2", "4", "1"],
+    "icon": "ListChecks"
   },
   {
-    "id": "int-ds-bst-q1",
-    "title": "Level 2: Binary Search Trees (BST)",
+    "id": 9,
+    "title": "Level 2: Multiple Choice",
     "type": "multiple-choice",
-    "question": "Average height of balanced BST?",
-    "icon": "Tree",
+    "question": "Which traversal method visits nodes in the order: left subtree, root, right subtree?",
     "options": [
-      {
-        "id": "a",
-        "text": "O(1)"
-      },
-      {
-        "id": "b",
-        "text": "O(log n)"
-      },
-      {
-        "id": "c",
-        "text": "O(n)"
-      },
-      {
-        "id": "d",
-        "text": "O(n log n)"
-      }
+      { "id": "a", "text": "Pre-order" },
+      { "id": "b", "text": "Post-order" },
+      { "id": "c", "text": "In-order" },
+      { "id": "d", "text": "Level-order" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "int-ds-bst-q2",
-    "title": "Level 2: Binary Search Trees (BST)",
+    "id": 10,
+    "title": "Level 2: True or False",
     "type": "true-false",
-    "question": "Inserting sorted data yields O(n) height.",
-    "icon": "AlertCircle",
-    "correctAnswer": true
+    "question": "A balanced binary tree ensures that the height difference between left and right subtrees is at most 1.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-ds-bst-q3",
-    "title": "Level 2: Binary Search Trees (BST)",
+    "id": 11,
+    "title": "Level 2: Fill the blank",
     "type": "fill-blanks",
-    "question": "Inorder traversal yields ____ order.",
-    "icon": "SortAscending",
-    "codeTemplate": "Inorder traversal yields ____ order.",
-    "blanks": [
-      ""
-    ]
+    "question": "A ____ is a collection of nodes connected by edges, which may be directed or undirected.",
+    "codeTemplate": "A ____ is a collection of nodes connected by edges.",
+    "blanks": ["graph"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-ds-bst-q4",
-    "title": "Level 2: Binary Search Trees (BST)",
-    "type": "multiple-choice",
-    "question": "Deleting node with two children uses:",
-    "icon": "Layers",
-    "options": [
-      {
-        "id": "a",
-        "text": "Leftmost in right subtree"
-      },
-      {
-        "id": "b",
-        "text": "Rightmost in left"
-      },
-      {
-        "id": "c",
-        "text": "Random"
-      },
-      {
-        "id": "d",
-        "text": "None"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-ds-bst-q5",
-    "title": "Level 2: Binary Search Trees (BST)",
-    "type": "true-false",
-    "question": "Search in BST is O(log n) average.",
-    "icon": "Search",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-ds-bst-q6",
-    "title": "Level 2: Binary Search Trees (BST)",
+    "id": 12,
+    "title": "Level 2: Linked List Insertion",
     "type": "drag-drop",
-    "question": "Match to average complexity:",
-    "icon": "SortNumeric",
+    "question": "Arrange the steps to insert a node at the beginning of a singly linked list:",
     "items": [
-      {
-        "id": "S",
-        "text": "Search"
-      },
-      {
-        "id": "I",
-        "text": "Insert"
-      },
-      {
-        "id": "D",
-        "text": "Delete"
-      }
+      { "id": "1", "text": "Set new node's next to current head" },
+      { "id": "2", "text": "Assign data to new node" },
+      { "id": "3", "text": "Update head pointer to new node" },
+      { "id": "4", "text": "Allocate new node" }
     ],
-    "correctOrder": [
-      "S→O(log n)",
-      "I→O(log n)",
-      "D→O(log n)"
-    ]
+    "correctOrder": ["4", "2", "1", "3"],
+    "icon": "ListChecks"
   },
   {
-    "id": "int-ds-heap-q1",
-    "title": "Level 2: Heaps (Binary Heaps)",
+    "id": 13,
+    "title": "Level 2: Multiple Choice",
     "type": "multiple-choice",
-    "question": "Parent of index i is at floor((i-1)/2). True or false?",
-    "icon": "Math",
+    "question": "Which data structure is the best choice to implement recursion internally?",
     "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
+      { "id": "a", "text": "Queue" },
+      { "id": "b", "text": "Stack" },
+      { "id": "c", "text": "Linked List" },
+      { "id": "d", "text": "Tree" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "int-ds-heap-q2",
-    "title": "Level 2: Heaps (Binary Heaps)",
+    "id": 14,
+    "title": "Level 2: True or False",
     "type": "true-false",
-    "question": "Insert in heap is O(log n).",
-    "icon": "Plus",
-    "correctAnswer": true
+    "question": "In an adjacency matrix representation of a graph, the matrix size is V x V where V is the number of vertices.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-ds-heap-q3",
-    "title": "Level 2: Heaps (Binary Heaps)",
+    "id": 15,
+    "title": "Level 2: Fill the blank",
     "type": "fill-blanks",
-    "question": "Children of i are at 2i+1 and ____.",
-    "icon": "Layers",
-    "codeTemplate": "Children of i are at 2i+1 and ____.",
-    "blanks": [
-      ""
-    ]
+    "question": "In a heap data structure, the parent node is always ____ than its children in a max-heap.",
+    "codeTemplate": "In a max-heap, the parent node is always ____ than its children.",
+    "blanks": ["greater"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-ds-heap-q4",
-    "title": "Level 2: Heaps (Binary Heaps)",
-    "type": "multiple-choice",
-    "question": "Extract-min replaces root with last then ____.",
-    "icon": "ArrowDown",
-    "options": [
-      {
-        "id": "a",
-        "text": "sift down"
-      },
-      {
-        "id": "b",
-        "text": "sift up"
-      },
-      {
-        "id": "c",
-        "text": "swap with mid"
-      },
-      {
-        "id": "d",
-        "text": "none"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-ds-heap-q5",
-    "title": "Level 2: Heaps (Binary Heaps)",
-    "type": "true-false",
-    "question": "Heap sort uses heap to sort in place.",
-    "icon": "SortAscending",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-ds-heap-q6",
-    "title": "Level 2: Heaps (Binary Heaps)",
+    "id": 16,
+    "title": "Level 2: Tree Rotations",
     "type": "drag-drop",
-    "question": "Match operations:",
-    "icon": "ArrowsRightLeft",
+    "question": "Put the steps of a right rotation on a binary search tree node in order:",
     "items": [
-      {
-        "id": "P",
-        "text": "Peek"
-      },
-      {
-        "id": "E",
-        "text": "Extract"
-      }
+      { "id": "1", "text": "Make left child's right subtree the left subtree of current node" },
+      { "id": "2", "text": "Set left child as new root" },
+      { "id": "3", "text": "Assign current node as right child of left child" },
+      { "id": "4", "text": "Update pointers accordingly" }
     ],
-    "correctOrder": [
-      "P→O(1)",
-      "E→O(log n)"
-    ]
+    "correctOrder": ["1", "3", "2", "4"],
+    "icon": "ListChecks"
   },
   {
-    "id": "int-ds-trie-q1",
-    "title": "Level 2: Tries (Prefix Trees)",
+    "id": 17,
+    "title": "Level 2: Multiple Choice",
     "type": "multiple-choice",
-    "question": "Each edge in trie represents:",
-    "icon": "Text",
+    "question": "Which data structure uses key-value pairs for storing data?",
     "options": [
-      {
-        "id": "a",
-        "text": "Character"
-      },
-      {
-        "id": "b",
-        "text": "String"
-      },
-      {
-        "id": "c",
-        "text": "Index"
-      },
-      {
-        "id": "d",
-        "text": "Hash"
-      }
+      { "id": "a", "text": "Queue" },
+      { "id": "b", "text": "Stack" },
+      { "id": "c", "text": "Hash Map" },
+      { "id": "d", "text": "Linked List" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "int-ds-trie-q2",
-    "title": "Level 2: Tries (Prefix Trees)",
+    "id": 18,
+    "title": "Level 2: True or False",
     "type": "true-false",
-    "question": "Trie uses more space than hash table.",
-    "icon": "Layers",
-    "correctAnswer": true
+    "question": "In a doubly linked list, each node contains two pointers.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "int-ds-trie-q3",
-    "title": "Level 2: Tries (Prefix Trees)",
+    "id": 19,
+    "title": "Level 2: Fill the blank",
     "type": "fill-blanks",
-    "question": "Search time is O(___).",
-    "icon": "Search",
-    "codeTemplate": "Search time is O(___).",
-    "blanks": [
-      ""
-    ]
+    "question": "In a circular linked list, the last node points to the ____ node.",
+    "codeTemplate": "In a circular linked list, the last node points to the ____ node.",
+    "blanks": ["head"],
+    "icon": "Terminal"
   },
   {
-    "id": "int-ds-trie-q4",
-    "title": "Level 2: Tries (Prefix Trees)",
-    "type": "multiple-choice",
-    "question": "Prefix check can be O(m). True or false?",
-    "icon": "Check",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-ds-trie-q5",
-    "title": "Level 2: Tries (Prefix Trees)",
+    "id": 20,
+    "title": "Level 2: Graph Traversal",
     "type": "drag-drop",
-    "question": "Match to use-case:",
-    "icon": "Layers",
+    "question": "Arrange the steps of breadth-first search (BFS) traversal:",
     "items": [
-      {
-        "id": "I",
-        "text": "Insert"
-      },
-      {
-        "id": "S",
-        "text": "Search"
-      }
+      { "id": "1", "text": "Visit the next node in the queue" },
+      { "id": "2", "text": "Add unvisited adjacent nodes to the queue" },
+      { "id": "3", "text": "Dequeue a node" },
+      { "id": "4", "text": "Start at the source node" }
     ],
-    "correctOrder": [
-      "I→Add word",
-      "S→Find word"
-    ]
-  },
-  {
-    "id": "int-ds-trie-q6",
-    "title": "Level 2: Tries (Prefix Trees)",
-    "type": "true-false",
-    "question": "Tries can auto-complete prefixes.",
-    "icon": "Edit3",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-ds-uf-q1",
-    "title": "Level 2: Disjoint Set Union (Union-Find)",
-    "type": "multiple-choice",
-    "question": "Path compression flattens the ____ tree.",
-    "icon": "Layers",
-    "options": [
-      {
-        "id": "a",
-        "text": "parent"
-      },
-      {
-        "id": "b",
-        "text": "rank"
-      },
-      {
-        "id": "c",
-        "text": "random"
-      },
-      {
-        "id": "d",
-        "text": "data"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-ds-uf-q2",
-    "title": "Level 2: Disjoint Set Union (Union-Find)",
-    "type": "true-false",
-    "question": "Union by rank attaches smaller tree under larger.",
-    "icon": "ArrowDown",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-ds-uf-q3",
-    "title": "Level 2: Disjoint Set Union (Union-Find)",
-    "type": "fill-blanks",
-    "question": "Find operation runs in O(___).",
-    "icon": "Function",
-    "codeTemplate": "Find operation runs in O(___).",
-    "blanks": [
-      ""
-    ]
-  },
-  {
-    "id": "int-ds-uf-q4",
-    "title": "Level 2: Disjoint Set Union (Union-Find)",
-    "type": "multiple-choice",
-    "question": "Union-Find useful for:",
-    "icon": "Tree",
-    "options": [
-      {
-        "id": "a",
-        "text": "MST"
-      },
-      {
-        "id": "b",
-        "text": "Shortest path"
-      },
-      {
-        "id": "c",
-        "text": "Sorting"
-      },
-      {
-        "id": "d",
-        "text": "Searching"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "int-ds-uf-q5",
-    "title": "Level 2: Disjoint Set Union (Union-Find)",
-    "type": "true-false",
-    "question": "Initialization of n elements is O(n).",
-    "icon": "PlusCircle",
-    "correctAnswer": true
-  },
-  {
-    "id": "int-ds-uf-q6",
-    "title": "Level 2: Disjoint Set Union (Union-Find)",
-    "type": "drag-drop",
-    "question": "Match operation:",
-    "icon": "ArrowsRightLeft",
-    "items": [
-      {
-        "id": "F",
-        "text": "Find"
-      },
-      {
-        "id": "U",
-        "text": "Union"
-      }
-    ],
-    "correctOrder": [
-      "F→Find set rep",
-      "U→Merge sets"
-    ]
+    "correctOrder": ["4", "3", "1", "2"],
+    "icon": "ListChecks"
   }
 ]

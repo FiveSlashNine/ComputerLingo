@@ -57,6 +57,7 @@ export default function LevelPage() {
   const [isCorrect, setIsCorrect] = useState(false);
   const [lives, setLives] = useState(3);
   const [showRestartAlert, setShowRestartAlert] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -70,7 +71,7 @@ export default function LevelPage() {
         const data = await res.json();
         if (data.questions && data.questions.length > 0) {
           setQuestions(data.questions);
-          setLevel({ ...data.questions });
+          setLevel({ ...data.questions[0] });
         } else {
           setError("Level not found");
         }
@@ -86,7 +87,7 @@ export default function LevelPage() {
 
   useEffect(() => {
     if (!level) return;
-    if (level.type === "fill-blanks" && Array.isArray(level.blanks)) {
+    if (level.type === "fill-blanks") {
       setBlanks(Array(level.blanks.length).fill(""));
     } else {
       setBlanks([]);
@@ -121,9 +122,11 @@ export default function LevelPage() {
     switch (level.type) {
       case "multiple-choice":
         correct = selectedAnswer === level.correctAnswer;
+        setSelectedAnswer("");
         break;
       case "true-false":
         correct = booleanAnswer === level.correctAnswer;
+        setBooleanAnswer(null);
         break;
       case "fill-blanks":
         correct = blanks.every(
@@ -131,6 +134,7 @@ export default function LevelPage() {
             answer.toLowerCase().trim() ===
             level.blanks[index].toLowerCase().trim()
         );
+        setBlanks(Array(level.blanks.length).fill(""));
         break;
       case "drag-drop":
         correct = dragItems.every(
@@ -176,14 +180,21 @@ export default function LevelPage() {
     if (currentQuestionIdx < questions.length - 1) {
       setCurrentQuestionIdx((idx) => idx + 1);
     } else {
-      try {
-        await fetch(`/api/levels?categoryId=${categoryId}&levelId=${levelId}`, {
-          method: "POST",
-        });
-      } catch (e) {}
-      const nextId = Number.parseInt(levelId) + 1;
-      router.push(`/levels/${categoryId}/${nextId}`);
+      setShowSuccessAlert(true);
     }
+  };
+
+  const increaseUserLevel = async () => {
+    try {
+      await fetch(`/api/levels?categoryId=${categoryId}&levelId=${levelId}`, {
+        method: "POST",
+      });
+    } catch (e) {}
+  };
+
+  const goBackToLevels = async () => {
+    await increaseUserLevel();
+    router.push(`/levels/${categoryId}`);
   };
 
   const handlePrev = () => {
@@ -296,6 +307,23 @@ export default function LevelPage() {
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white"
               >
                 Restart Level
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {showSuccessAlert && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+            <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full text-center">
+              <h2 className="text-xl font-bold mb-4 text-green-600">
+                Congratulations!
+              </h2>
+              <p className="mb-6">You completed all questions in this level.</p>
+              <Button
+                onClick={goBackToLevels}
+                className="w-full bg-gray-300 hover:bg-gray-400"
+              >
+                Back to Levels
               </Button>
             </div>
           </div>

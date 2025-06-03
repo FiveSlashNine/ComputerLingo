@@ -123,9 +123,9 @@
     "id": 11,
     "title": "Level 2: Custom Class Example",
     "type": "fill-blanks",
-    "question": "Complete the code:\n\nclass Animal {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nclass Dog ____ Animal {\n  constructor(name) {\n    ____ (name);\n  }\n}",
-    "options": [],
-    "correctAnswer": ["extends", "super"],
+    "question": "Complete the code:",
+    "codeTemplate": "class Animal {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nclass Dog ____ Animal {\n  constructor(name) {\n    ____ (name);\n  }\n}",
+    "blanks": ["extends", "super"],
     "icon": "Puzzle"
   },
   {

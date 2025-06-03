@@ -40,9 +40,9 @@
     "id": 4,
     "title": "Level 3: Memoization Pattern",
     "type": "fill-blanks",
-    "question": "Complete the function using memoization:\n\nfunction fib(n, memo = {}) {\n  if (n <= 1) return n;\n  if (memo[n]) return memo[n];\n  memo[n] = ____ + ____;\n  return memo[n];\n}",
-    "options": [],
-    "correctAnswer": ["fib(n - 1, memo)", "fib(n - 2, memo)"],
+    "question": "Complete the function using memoization:",
+    "codeTemplate": "function fib(n, memo = {}) {\n  if (n <= 1) return n;\n  if (memo[n]) return memo[n];\n  memo[n] = ____ + ____;\n  return memo[n];\n}",
+    "blanks": ["fib(n - 1, memo)", "fib(n - 2, memo)"],
     "icon": "Database"
   },
   {
@@ -150,9 +150,9 @@
     "id": 14,
     "title": "Level 3: Fill Memo Table",
     "type": "fill-blanks",
-    "question": "To optimize a recursive solution, you can store previously computed results in a _________.",
-    "options": [],
-    "correctAnswer": ["memoization table"],
+    "question": "To optimize a recursive solution, you can store previously computed results in a: ",
+    "codeTemplate": " ____ table.",
+    "blanks": ["memoization"],
     "icon": "Notebook"
   },
   {

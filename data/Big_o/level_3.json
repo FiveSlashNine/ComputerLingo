@@ -1,592 +1,230 @@
 [
   {
-    "id": "adv-o-mt-q1",
-    "title": "Level 3: Master Theorem",
+    "id": 1,
+    "title": "Level 3: Recursive Complexity",
     "type": "multiple-choice",
-    "question": "If d < log_b(a), T(n) = Θ(n^{log_b(a)}). True or false?",
-    "icon": "Check",
+    "question": "What is the time complexity of the recursive function: T(n) = 2T(n/2) + n?",
     "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
+      { "id": "a", "text": "O(n)" },
+      { "id": "b", "text": "O(n log n)" },
+      { "id": "c", "text": "O(log n)" },
+      { "id": "d", "text": "O(n^2)" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "adv-o-mt-q2",
-    "title": "Level 3: Master Theorem",
+    "id": 2,
+    "title": "Level 3: Big O Myths",
     "type": "true-false",
-    "question": "If d = log_b(a), T(n) = Θ(n^d log n).",
-    "icon": "TrendingUp",
-    "correctAnswer": true
+    "question": "If two algorithms have the same Big O complexity, they always perform the same in practice.",
+    "correctAnswer": false,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-o-mt-q3",
+    "id": 3,
+    "title": "Level 3: Recursion Tree",
+    "type": "fill-blanks",
+    "question": "Solving T(n) = T(n/2) + 1 leads to a time complexity of:",
+    "codeTemplate": "O(____).",
+    "blanks": ["log n"],
+    "icon": "Terminal"
+  },
+  {
+    "id": 4,
+    "title": "Level 3: Hard Big O Reordering Challenge",
+    "type": "drag-drop",
+    "question": "Reorder these algorithm complexities from best (lowest) to worst (highest):",
+    "items": [
+      { "id": "1", "text": "Amortized Push in Stack (Array) - O(1)" },
+      { "id": "2", "text": "Floyd-Warshall Algorithm - O(n^3)" },
+      { "id": "3", "text": "Linear Search in an Array - O(n)" },
+      { "id": "4", "text": "Topological Sort - O(V + E)" },
+      { "id": "5", "text": "Counting Sort - O(n + k)" },
+      { "id": "6", "text": "Insertion Sort (average) - O(n^2)" },
+      { "id": "7", "text": "Binary Heap Extract-Min - O(log n)" }
+    ],
+    "correctOrder": ["1", "7", "3", "5", "4", "6", "2"],
+    "icon": "ListChecks"
+  },
+  {
+    "id": 5,
+    "title": "Level 3: Algorithm Analysis",
+    "type": "multiple-choice",
+    "question": "Which of these complexities represents exponential time?",
+    "options": [
+      { "id": "a", "text": "O(n!)" },
+      { "id": "b", "text": "O(n^2)" },
+      { "id": "c", "text": "O(2^n)" },
+      { "id": "d", "text": "Both a and c" }
+    ],
+    "correctAnswer": "d",
+    "icon": "Code2"
+  },
+  {
+    "id": 6,
+    "title": "Level 3: Growth Speed",
+    "type": "true-false",
+    "question": "O(n!) grows faster than O(2^n) as n increases.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
+  },
+  {
+    "id": 7,
     "title": "Level 3: Master Theorem",
     "type": "fill-blanks",
-    "question": "Case 3 applies when d > log_b(a), giving T(n)=Θ(n^___).",
-    "icon": "Calculator",
-    "codeTemplate": "Case 3 applies when d > log_b(a), giving T(n)=Θ(n^___).",
-    "blanks": [
-      ""
-    ]
+    "question": "Using Master Theorem, T(n) = 4T(n/2) + n has time complexity O(____).",
+    "codeTemplate": "a = 4, b = 2, f(n) = n → ____",
+    "blanks": ["n^2"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-o-mt-q4",
-    "title": "Level 3: Master Theorem",
+    "id": 8,
+    "title": "Level 3: Complexity Ordering",
     "type": "drag-drop",
-    "question": "Match cases to conditions:",
-    "icon": "Layers",
+    "question": "Order these from best to worst in growth rate:",
     "items": [
-      {
-        "id": "1",
-        "text": "Case 1"
-      },
-      {
-        "id": "2",
-        "text": "Case 2"
-      },
-      {
-        "id": "3",
-        "text": "Case 3"
-      }
+      { "id": "1", "text": "O(n log n)" },
+      { "id": "2", "text": "O(2^n)" },
+      { "id": "3", "text": "O(n^2)" },
+      { "id": "4", "text": "O(n!)" }
     ],
-    "correctOrder": [
-      "1→d < log_b(a)",
-      "2→d = log_b(a)",
-      "3→d > log_b(a)"
-    ]
+    "correctOrder": ["1", "3", "2", "4"],
+    "icon": "ListChecks"
   },
   {
-    "id": "adv-o-mt-q5",
-    "title": "Level 3: Master Theorem",
+    "id": 9,
+    "title": "Level 3: Optimization",
     "type": "multiple-choice",
-    "question": "Master Theorem applies to divide-and-conquer recurrences of the form ...?",
-    "icon": "Function",
+    "question": "Which sorting algorithm is best suited for nearly sorted data?",
     "options": [
-      {
-        "id": "a",
-        "text": "T(n)=T(n-1)+n"
-      },
-      {
-        "id": "b",
-        "text": "T(n)=aT(n/b)+f(n)"
-      },
-      {
-        "id": "c",
-        "text": "T(n)=n^2"
-      },
-      {
-        "id": "d",
-        "text": "T(n)=log n"
-      }
+      { "id": "a", "text": "Bubble Sort" },
+      { "id": "b", "text": "Quick Sort" },
+      { "id": "c", "text": "Insertion Sort" },
+      { "id": "d", "text": "Merge Sort" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "adv-o-mt-q6",
-    "title": "Level 3: Master Theorem",
+    "id": 10,
+    "title": "Level 3: Big O Nuance",
     "type": "true-false",
-    "question": "Master Theorem can’t handle irregular divide sizes.",
-    "icon": "AlertCircle",
-    "correctAnswer": false
+    "question": "An algorithm with O(n log n) complexity may outperform an O(n) algorithm for small input sizes.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-o-omega-q1",
-    "title": "Level 3: Ω, Θ, o Notations",
-    "type": "multiple-choice",
-    "question": "If f(n)=2n and g(n)=n, f(n)=Ω(g(n)). True or false?",
-    "icon": "Check",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-o-o-q2",
-    "title": "Level 3: Ω, Θ, o Notations",
-    "type": "true-false",
-    "question": "n = o(n log n).",
-    "icon": "Layers",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-o-theta-q3",
-    "title": "Level 3: Ω, Θ, o Notations",
+    "id": 11,
+    "title": "Level 3: Advanced Recursion",
     "type": "fill-blanks",
-    "question": "If f(n)=3n^2+5n, f(n)=Θ(___).",
-    "icon": "Math",
-    "codeTemplate": "If f(n)=3n^2+5n, f(n)=Θ(___).",
-    "blanks": [
-      ""
-    ]
+    "question": "T(n) = T(n-1) + n results in a time complexity of:",
+    "codeTemplate": "O(____).",
+    "blanks": ["n^2"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-o-notations-q4",
-    "title": "Level 3: Ω, Θ, o Notations",
+    "id": 12,
+    "title": "Level 3: Classification",
     "type": "drag-drop",
-    "question": "Match notation to meaning:",
-    "icon": "ChartPie",
+    "question": "Order these algorithms by their typical-case time complexity from worst (slowest) to best (fastest):",
     "items": [
-      {
-        "id": "T",
-        "text": "Θ(f)"
-      },
-      {
-        "id": "O",
-        "text": "O(f)"
-      },
-      {
-        "id": "o",
-        "text": "o(f)"
-      }
+      { "id": "1", "text": "DFS - O(V + E)" },
+      { "id": "2", "text": "Fibonacci (recursive) - O(2^n)" },
+      { "id": "3", "text": "Binary Search - O(log n)" },
+      { "id": "4", "text": "Dijkstra's Algorithm (with heap) - O(E + V log V)" }
     ],
-    "correctOrder": [
-      "T→Tight bound",
-      "O→Upper bound",
-      "o→Strictly smaller"
-    ]
+    "correctOrder": ["2", "4", "1", "3"],
+    "icon": "ListChecks"
   },
   {
-    "id": "adv-o-o2-q5",
-    "title": "Level 3: Ω, Θ, o Notations",
+    "id": 13,
+    "title": "Level 3: Logarithmic Growth",
     "type": "multiple-choice",
-    "question": "O(f) includes functions that grow no faster than f. True or false?",
-    "icon": "Check",
+    "question": "Which problem type typically leads to logarithmic time complexity?",
     "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
+      { "id": "a", "text": "Linear Search" },
+      { "id": "b", "text": "Binary Search" },
+      { "id": "c", "text": "Breadth-First Search" },
+      { "id": "d", "text": "Merge Sort" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "adv-o-o2-q6",
-    "title": "Level 3: Ω, Θ, o Notations",
+    "id": 14,
+    "title": "Level 3: Complexity Theory",
     "type": "true-false",
-    "question": "o(f) allows equality f(n)=g(n).",
-    "icon": "X",
-    "correctAnswer": false
+    "question": "O(n^n) grows faster than O(n!).",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-o-polylog-q1",
-    "title": "Level 3: Polylogarithmic & Iterated Log",
-    "type": "multiple-choice",
-    "question": "Which grows fastest as n→∞?",
-    "icon": "ChartLine",
-    "options": [
-      {
-        "id": "a",
-        "text": "log* n"
-      },
-      {
-        "id": "b",
-        "text": "log n"
-      },
-      {
-        "id": "c",
-        "text": "(log n)^2"
-      },
-      {
-        "id": "d",
-        "text": "constant"
-      }
-    ],
-    "correctAnswer": "c"
-  },
-  {
-    "id": "adv-o-iterated-q2",
-    "title": "Level 3: Polylogarithmic & Iterated Log",
-    "type": "true-false",
-    "question": "log* n grows slower than log log n.",
-    "icon": "Layers",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-o-polylog-q3",
-    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "id": 15,
+    "title": "Level 3: Hidden Constants",
     "type": "fill-blanks",
-    "question": "Polylogarithmic form O((log n)^__).",
-    "icon": "Math",
-    "codeTemplate": "Polylogarithmic form O((log n)^__).",
-    "blanks": [
-      ""
-    ]
+    "question": "Big O notation hides ____ and lower order terms.",
+    "codeTemplate": "For example: O(3n^2 + 5n) → O(n^2); hidden: ____",
+    "blanks": ["constants"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-o-polylog-q4",
-    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "id": 16,
+    "title": "Level 3: Memory Complexity",
     "type": "drag-drop",
-    "question": "Order growth (slow→fast):",
-    "icon": "SortNumeric",
+    "question": "Order these algorithms by their space complexity from lowest to highest:",
     "items": [
-      {
-        "id": "1",
-        "text": "constant"
-      },
-      {
-        "id": "2",
-        "text": "log* n"
-      },
-      {
-        "id": "3",
-        "text": "log n"
-      },
-      {
-        "id": "4",
-        "text": "n^0.1"
-      }
+      { "id": "1", "text": "DFS (recursive) - O(h)" },
+      { "id": "2", "text": "Merge Sort - O(n)" },
+      { "id": "3", "text": "In-place Quicksort - O(log n)" },
+      { "id": "4", "text": "Bubble Sort - O(1)" }
     ],
-    "correctOrder": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ]
+    "correctOrder": ["4", "3", "1", "2"],
+    "icon": "ListChecks"
   },
   {
-    "id": "adv-o-polylog-q5",
-    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "id": 17,
+    "title": "Level 3: Exponential Analysis",
     "type": "multiple-choice",
-    "question": "log* n is used in which algorithm's complexity?",
-    "icon": "Tree",
+    "question": "Which problem below likely results in exponential time?",
     "options": [
-      {
-        "id": "a",
-        "text": "Union-Find"
-      },
-      {
-        "id": "b",
-        "text": "Quick Sort"
-      },
-      {
-        "id": "c",
-        "text": "Merge Sort"
-      },
-      {
-        "id": "d",
-        "text": "Binary Search"
-      }
+      { "id": "a", "text": "Graph traversal" },
+      { "id": "b", "text": "Knapsack (brute force)" },
+      { "id": "c", "text": "Binary search" },
+      { "id": "d", "text": "Bubble sort" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "adv-o-polylog-q6",
-    "title": "Level 3: Polylogarithmic & Iterated Log",
+    "id": 18,
+    "title": "Level 3: Growth Patterns",
     "type": "true-false",
-    "question": "Iterated log grows slower than any polylog.",
-    "icon": "Infinity",
-    "correctAnswer": true
+    "question": "An algorithm with O(n^3) will always be slower than one with O(n log n).",
+    "correctAnswer": false,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-o-cc-q1",
-    "title": "Level 3: Complexity Classes",
-    "type": "multiple-choice",
-    "question": "Which class is solvable in polynomial time?",
-    "icon": "O",
-    "options": [
-      {
-        "id": "a",
-        "text": "P"
-      },
-      {
-        "id": "b",
-        "text": "NP"
-      },
-      {
-        "id": "c",
-        "text": "NP-complete"
-      },
-      {
-        "id": "d",
-        "text": "EXP"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-o-cc-q2",
-    "title": "Level 3: Complexity Classes",
-    "type": "true-false",
-    "question": "If any NP-complete is in P, then P=NP.",
-    "icon": "Check",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-o-cc-q3",
-    "title": "Level 3: Complexity Classes",
+    "id": 19,
+    "title": "Level 3: Algorithm Strategy",
     "type": "fill-blanks",
-    "question": "Traveling Salesman decision is NP-__.",
-    "icon": "Map",
-    "codeTemplate": "Traveling Salesman decision is NP-__.",
-    "blanks": [
-      ""
-    ]
+    "question": "Divide and conquer algorithms often achieve O(____) complexity.",
+    "codeTemplate": "Examples: Merge Sort, Quick Sort → ____",
+    "blanks": ["n log n"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-o-cc-q4",
-    "title": "Level 3: Complexity Classes",
+    "id": 20,
+    "title": "Level 3: Complexity Sorting",
     "type": "drag-drop",
-    "question": "Match to definition:",
-    "icon": "Layers",
+    "question": "Arrange these by increasing time complexity:",
     "items": [
-      {
-        "id": "N",
-        "text": "NP"
-      },
-      {
-        "id": "H",
-        "text": "NP-hard"
-      },
-      {
-        "id": "C",
-        "text": "NP-complete"
-      }
+      { "id": "1", "text": "O(log n)" },
+      { "id": "2", "text": "O(n^2)" },
+      { "id": "3", "text": "O(n log n)" },
+      { "id": "4", "text": "O(n!)" }
     ],
-    "correctOrder": [
-      "N→Verifiable",
-      "H→At least as hard",
-      "C→Both"
-    ]
-  },
-  {
-    "id": "adv-o-cc-q5",
-    "title": "Level 3: Complexity Classes",
-    "type": "multiple-choice",
-    "question": "NP-hard problems need not be in NP. True or false?",
-    "icon": "X",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-o-cc-q6",
-    "title": "Level 3: Complexity Classes",
-    "type": "true-false",
-    "question": "All NP-complete are NP-hard.",
-    "icon": "Check",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-o-rand-q1",
-    "title": "Level 3: Randomized & Expected Complexity",
-    "type": "multiple-choice",
-    "question": "Las Vegas algorithms have:",
-    "icon": "Clock",
-    "options": [
-      {
-        "id": "a",
-        "text": "Worst-case time"
-      },
-      {
-        "id": "b",
-        "text": "Expected time"
-      },
-      {
-        "id": "c",
-        "text": "Error probability"
-      },
-      {
-        "id": "d",
-        "text": "No randomness"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "adv-o-rand-q2",
-    "title": "Level 3: Randomized & Expected Complexity",
-    "type": "true-false",
-    "question": "Monte Carlo may give wrong results.",
-    "icon": "AlertCircle",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-o-rand-q3",
-    "title": "Level 3: Randomized & Expected Complexity",
-    "type": "fill-blanks",
-    "question": "Randomized Quick Sort expected time O(___).",
-    "icon": "Shuffle",
-    "codeTemplate": "Randomized Quick Sort expected time O(___).",
-    "blanks": [
-      ""
-    ]
-  },
-  {
-    "id": "adv-o-rand-q4",
-    "title": "Level 3: Randomized & Expected Complexity",
-    "type": "drag-drop",
-    "question": "Match algorithm to property:",
-    "icon": "Repeat",
-    "items": [
-      {
-        "id": "L",
-        "text": "Las Vegas"
-      },
-      {
-        "id": "M",
-        "text": "Monte Carlo"
-      }
-    ],
-    "correctOrder": [
-      "L→Always correct",
-      "M→Bounded time"
-    ]
-  },
-  {
-    "id": "adv-o-rand-q5",
-    "title": "Level 3: Randomized & Expected Complexity",
-    "type": "multiple-choice",
-    "question": "Monte Carlo algorithms have a bound on:",
-    "icon": "Timer",
-    "options": [
-      {
-        "id": "a",
-        "text": "Time"
-      },
-      {
-        "id": "b",
-        "text": "Error probability"
-      },
-      {
-        "id": "c",
-        "text": "Memory"
-      },
-      {
-        "id": "d",
-        "text": "All"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-o-rand-q6",
-    "title": "Level 3: Randomized & Expected Complexity",
-    "type": "true-false",
-    "question": "Las Vegas always finishes within worst-case time.",
-    "icon": "X",
-    "correctAnswer": false
-  },
-  {
-    "id": "adv-o-smoothed-q1",
-    "title": "Level 3: Smoothed & Average-Case Analysis",
-    "type": "multiple-choice",
-    "question": "Smoothed analysis lies between worst and average. True or false?",
-    "icon": "Layers",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-o-smoothed-q2",
-    "title": "Level 3: Smoothed & Average-Case Analysis",
-    "type": "true-false",
-    "question": "Simplex algorithm has polynomial smoothed complexity.",
-    "icon": "Check",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-o-smoothed-q3",
-    "title": "Level 3: Smoothed & Average-Case Analysis",
-    "type": "fill-blanks",
-    "question": "Average-case requires a ____ over inputs.",
-    "icon": "ChartPie",
-    "codeTemplate": "Average-case requires a ____ over inputs.",
-    "blanks": [
-      ""
-    ]
-  },
-  {
-    "id": "adv-o-smoothed-q4",
-    "title": "Level 3: Smoothed & Average-Case Analysis",
-    "type": "drag-drop",
-    "question": "Match analysis to description:",
-    "icon": "Layers",
-    "items": [
-      {
-        "id": "W",
-        "text": "Worst-case"
-      },
-      {
-        "id": "A",
-        "text": "Average-case"
-      },
-      {
-        "id": "S",
-        "text": "Smoothed"
-      }
-    ],
-    "correctOrder": [
-      "W→Max input",
-      "A→Expected distribution",
-      "S→Expected perturbation"
-    ]
-  },
-  {
-    "id": "adv-o-smoothed-q5",
-    "title": "Level 3: Smoothed & Average-Case Analysis",
-    "type": "multiple-choice",
-    "question": "Average-case depends on input ____.",
-    "icon": "ChartBar",
-    "options": [
-      {
-        "id": "a",
-        "text": "Size"
-      },
-      {
-        "id": "b",
-        "text": "Distribution"
-      },
-      {
-        "id": "c",
-        "text": "Algorithm"
-      },
-      {
-        "id": "d",
-        "text": "Memory"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "adv-o-smoothed-q6",
-    "title": "Level 3: Smoothed & Average-Case Analysis",
-    "type": "true-false",
-    "question": "Smoothed analysis is more realistic than worst-case.",
-    "icon": "ThumbsUp",
-    "correctAnswer": true
+    "correctOrder": ["1", "3", "2", "4"],
+    "icon": "ListChecks"
   }
 ]

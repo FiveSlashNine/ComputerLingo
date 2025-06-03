@@ -39,7 +39,6 @@ const getRankBadge = (position: number) => {
 
 export default async function LeaderboardPage() {
   const leaderboardData = await getLeaderboardData();
-  console.log(leaderboardData);
 
   return (
     <div className="min-h-screen container mx-auto py-8 px-4">

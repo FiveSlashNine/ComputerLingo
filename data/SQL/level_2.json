@@ -40,8 +40,8 @@
     "title": "Level 2: SQL Intermediate",
     "type": "fill-blanks",
     "question": "Complete the JOIN clause to connect `orders` and `customers` by `customer_id`:",
-    "codeTemplate": "SELECT * FROM orders JOIN customers ON orders.customer_id = customers.id;",
-    "blanks": ["orders", "JOIN", "customers", "ON", "orders.customer_id", "=", "customers.id"],
+    "codeTemplate": "SELECT * FROM ____ ____ customers ON ____ = customers.id;",
+    "blanks": ["orders", "JOIN", "orders.customer_id"],
     "icon": "Terminal"
   },
   {
@@ -86,11 +86,11 @@
     "type": "drag-drop",
     "question": "Arrange the parts of an UPDATE query in the correct order:",
     "items": [
-      { "id": "1", "text": "UPDATE table_name" },
-      { "id": "2", "text": "SET column = value" },
+      { "id": "1", "text": "SET column = value" },
+      { "id": "2", "text": "UPDATE table_name" },
       { "id": "3", "text": "WHERE condition" }
     ],
-    "correctOrder": ["1", "2", "3"],
+    "correctOrder": ["2", "1", "3"],
     "icon": "ListChecks"
   },
   {
@@ -112,8 +112,8 @@
     "title": "Level 2: SQL Intermediate",
     "type": "fill-blanks",
     "question": "Complete the statement to count users by country:",
-    "codeTemplate": "SELECT country, COUNT(*) FROM users GROUP BY country;",
-    "blanks": ["SELECT", "country", "COUNT(*)", "FROM", "users", "GROUP BY", "country"],
+    "codeTemplate": "____ country, COUNT(*) ____ users ____ country;",
+    "blanks": ["SELECT", "FROM", "GROUP BY"],
     "icon": "Terminal"
   },
   {
@@ -157,8 +157,8 @@
     "title": "Level 2: SQL Intermediate",
     "type": "fill-blanks",
     "question": "Complete the syntax to define a PRIMARY KEY:",
-    "codeTemplate": "CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(100));",
-    "blanks": ["PRIMARY", "KEY"],
+    "codeTemplate": "CREATE TABLE users (id INT ____, name VARCHAR(100));",
+    "blanks": ["PRIMARY KEY"],
     "icon": "Key"
   },
   {
@@ -224,8 +224,8 @@
     "title": "Level 2: SQL Intermediate",
     "type": "fill-blanks",
     "question": "Complete the statement to get the average price per category:",
-    "codeTemplate": "SELECT category, AVG(price) FROM products GROUP BY category;",
-    "blanks": ["category", "AVG(price)", "GROUP BY", "category"],
+    "codeTemplate": "SELECT ____, AVG(____) FROM products ____ ____;",
+    "blanks": ["category", "price", "GROUP BY", "category"],
     "icon": "Terminal"
   }
 ]

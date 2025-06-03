@@ -63,9 +63,9 @@
     "id": 6,
     "title": "Level 1: Method Definition",
     "type": "fill-blanks",
-    "question": "Fill in the method definition:\n\nclass Dog {\n  bark() {\n    console.log(____);\n  }\n}",
-    "options": [],
-    "correctAnswer": ["\"Woof!\""],
+    "question": "Fill in the parameter name so the dog can bark a given sound.",
+    "codeTemplate": "class Dog {\n  bark(____) {\n    console.log(sound);\n  }\n}",
+    "blanks": ["sound"],
     "icon": "TextQuote"
   },
   {
@@ -141,9 +141,9 @@
     "id": 13,
     "title": "Level 1: Class Instantiation",
     "type": "fill-blanks",
-    "question": "Complete the code to create an object:\n\nclass Car {}\nlet myCar = ____ Car();",
-    "options": [],
-    "correctAnswer": ["new"],
+    "question": "Complete the code to create an object:",
+    "codeTemplate": "class Car {}\nlet myCar = ____ Car();",
+    "blanks": ["new"],
     "icon": "Plus"
   },
   {
@@ -212,10 +212,10 @@
     "type": "multiple-choice",
     "question": "What does typeof {} return?",
     "options": [
-      { "id": "a", "text": "\"object\"" },
-      { "id": "b", "text": "\"function\"" },
-      { "id": "c", "text": "\"class\"" },
-      { "id": "d", "text": "\"map\"" }
+      { "id": "a", "text": "object" },
+      { "id": "b", "text": "function" },
+      { "id": "c", "text": "class" },
+      { "id": "d", "text": "map" }
     ],
     "correctAnswer": "a",
     "icon": "Type"

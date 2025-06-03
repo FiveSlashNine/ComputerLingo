@@ -40,9 +40,9 @@
     "id": 4,
     "title": "Level 1: Factorial Function",
     "type": "fill-blanks",
-    "question": "Complete the factorial function:\n\nfunction factorial(n) {\n  if (n === 0) return 1;\n  return n * _____;\n}",
-    "options": [],
-    "correctAnswer": ["factorial(n - 1)"],
+    "question": "Complete the factorial function:",
+    "codeTemplate": "function factorial(n) {\n  if (n === 0) return 1;\n  return n * ____;\n}",
+    "blanks": ["factorial(n - 1)"],
     "icon": "Function"
   },
   {
@@ -72,9 +72,9 @@
     "id": 7,
     "title": "Level 1: Base Case Example",
     "type": "fill-blanks",
-    "question": "Fill in the base case:\n\nfunction countdown(n) {\n  if (______) return;\n  console.log(n);\n  countdown(n - 1);\n}",
-    "options": [],
-    "correctAnswer": ["n <= 0"],
+    "question": "Fill in the base case:",
+    "codeTemplate": "function countdown(n) {\n  if (____) return;\n  console.log(n);\n  countdown(n - 1);\n}",
+    "blanks": ["n <= 0"],
     "icon": "Clock"
   },
   {
@@ -150,9 +150,9 @@
     "id": 14,
     "title": "Level 1: Simple Recursion Flow",
     "type": "fill-blanks",
-    "question": "Complete the recursive function to sum numbers from 1 to n:\nfunction sum(n) {\n if (n === 1) return 1;\n return n + ________;\n}",
-    "options": [],
-    "correctAnswer": ["sum(n - 1)"],
+    "question": "Complete the recursive function to sum numbers from 1 to n:",
+    "codeTemplate": "function sum(n) {\n if (n === 1) return 1;\n return n + ____;\n}",
+    "blanks": ["sum(n - 1)"],
     "icon": "Plus"
   },
   {

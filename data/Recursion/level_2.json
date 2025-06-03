@@ -40,9 +40,9 @@
     "id": 4,
     "title": "Level 2: Binary Search",
     "type": "fill-blanks",
-    "question": "Fill in the recursive condition:\nfunction binarySearch(arr, target, left, right) {\n  if (left > right) return -1;\n  const mid = Math.floor((left + right) / 2);\n  if (arr[mid] === target) return mid;\n  if (target < arr[mid]) return binarySearch(arr, target, left, ____);\n  return binarySearch(arr, target, mid + 1, right);\n}",
-    "options": [],
-    "correctAnswer": ["mid - 1"],
+    "question": "Fill in the recursive condition:",
+    "codeTemplate": "function binarySearch(arr, target, left, right) {\n  if (left > right) return -1;\n  const mid = Math.floor((left + right) / 2);\n  if (arr[mid] === target) return mid;\n  if (target < arr[mid]) return binarySearch(arr, target, left, ____);\n  return binarySearch(arr, target, mid + 1, right);\n}",
+    "blanks": ["mid - 1"],
     "icon": "Search"
   },
   {
@@ -104,9 +104,9 @@
     "id": 10,
     "title": "Level 2: Merge Sort Recursive Step",
     "type": "fill-blanks",
-    "question": "What is the recursive part of merge sort?\n\nfunction mergeSort(arr) {\n  if (arr.length <= 1) return arr;\n  const mid = Math.floor(arr.length / 2);\n  const left = mergeSort(arr.slice(0, mid));\n  const right = ________;\n  return merge(left, right);\n}",
-    "options": [],
-    "correctAnswer": ["mergeSort(arr.slice(mid))"],
+    "question": "What is the recursive part of merge sort?",
+    "codeTemplate": "function mergeSort(arr) {\n  if (arr.length <= 1) return arr;\n  const mid = Math.floor(arr.length / 2);\n  const left = mergeSort(arr.slice(0, mid));\n  const right = ____;\n  return merge(left, right);\n}",
+    "blanks": ["mergeSort(arr.slice(mid))"],
     "icon": "Divide"
   },
   {
@@ -150,9 +150,9 @@
     "id": 14,
     "title": "Level 2: Recursion Expression",
     "type": "fill-blanks",
-    "question": "Fill in the recursive return for Fibonacci:\nfunction fib(n) {\n if (n <= 1) return n;\n return _____ + _____;\n}",
-    "options": [],
-    "correctAnswer": ["fib(n - 1)", "fib(n - 2)"],
+    "question": "Fill in the recursive return for Fibonacci:",
+    "codeTemplate": "function fib(n) {\n if (n <= 1) return n;\n return ____ + ____;\n}",
+    "blanks": ["fib(n - 1)", "fib(n - 2)"],
     "icon": "Calculator"
   },
   {

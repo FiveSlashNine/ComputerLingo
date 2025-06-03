@@ -1,572 +1,227 @@
 [
   {
-    "id": "adv-ds-sbt-q1",
-    "title": "Level 3: Self-Balancing Trees (AVL & Red-Black)",
+    "id": 1,
+    "title": "Level 4: Advanced Data Structures - Trees",
     "type": "multiple-choice",
-    "question": "AVL balance factor range is:",
-    "icon": "Layers",
+    "question": "In a balanced AVL tree, what is the maximum allowed difference in height between the left and right subtrees of any node?",
     "options": [
-      {
-        "id": "a",
-        "text": "-1 to 1"
-      },
-      {
-        "id": "b",
-        "text": "-2 to 2"
-      },
-      {
-        "id": "c",
-        "text": "0 to 2"
-      },
-      {
-        "id": "d",
-        "text": "-n to n"
-      }
+      { "id": "a", "text": "0" },
+      { "id": "b", "text": "1" },
+      { "id": "c", "text": "2" },
+      { "id": "d", "text": "Depends on the number of nodes" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "adv-ds-sbt-q2",
-    "title": "Level 3: Self-Balancing Trees (AVL & Red-Black)",
+    "id": 2,
+    "title": "Level 3: Linked List Characteristics",
     "type": "true-false",
-    "question": "Red-Black trees ensure no path is twice another in black nodes.",
-    "icon": "Check",
-    "correctAnswer": true
+    "question": "In a doubly linked list, each node has pointers to both the previous and next nodes.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-ds-sbt-q3",
-    "title": "Level 3: Self-Balancing Trees (AVL & Red-Black)",
+    "id": 3,
+    "title": "Level 3: Fill the blank",
     "type": "fill-blanks",
-    "question": "AVL rotates when balance factor is ___.",
-    "icon": "RotateCcw",
-    "codeTemplate": "AVL rotates when balance factor is ___.",
-    "blanks": [
-      ""
-    ]
+    "question": "The time complexity to search an element in a balanced binary search tree is O(____).",
+    "codeTemplate": "O(____)",
+    "blanks": ["log n"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-ds-sbt-q4",
-    "title": "Level 3: Self-Balancing Trees (AVL & Red-Black)",
-    "type": "multiple-choice",
-    "question": "Red-Black insert fix may require:",
-    "icon": "Edit3",
-    "options": [
-      {
-        "id": "a",
-        "text": "1 rotation"
-      },
-      {
-        "id": "b",
-        "text": "2 rotations"
-      },
-      {
-        "id": "c",
-        "text": "Recoloring"
-      },
-      {
-        "id": "d",
-        "text": "All"
-      }
-    ],
-    "correctAnswer": "d"
-  },
-  {
-    "id": "adv-ds-sbt-q5",
-    "title": "Level 3: Self-Balancing Trees (AVL & Red-Black)",
-    "type": "true-false",
-    "question": "AVL is more rigidly balanced than Red-Black.",
-    "icon": "XCircle",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-ds-sbt-q6",
-    "title": "Level 3: Self-Balancing Trees (AVL & Red-Black)",
+    "id": 4,
+    "title": "Level 3: Stack Operations",
     "type": "drag-drop",
-    "question": "Match rotation to case:",
-    "icon": "ArrowsRightLeft",
+    "question": "Arrange the following stack operations in the order they occur in a push operation:",
     "items": [
-      {
-        "id": "LL",
-        "text": "Left-Left"
-      },
-      {
-        "id": "LR",
-        "text": "Left-Right"
-      },
-      {
-        "id": "RR",
-        "text": "Right-Right"
-      },
-      {
-        "id": "RL",
-        "text": "Right-Left"
-      }
+      { "id": "1", "text": "Increment top pointer" },
+      { "id": "2", "text": "Add element at top" },
+      { "id": "3", "text": "Check if stack is full" },
+      { "id": "4", "text": "Return success" }
     ],
-    "correctOrder": [
-      "LL→Single right",
-      "RR→Single left",
-      "LR→Left-right",
-      "RL→Right-left"
-    ]
+    "correctOrder": ["3", "1", "2", "4"],
+    "icon": "ListChecks"
   },
   {
-    "id": "adv-ds-btree-q1",
-    "title": "Level 3: B-Trees",
+    "id": 5,
+    "title": "Level 3: Hash Tables",
     "type": "multiple-choice",
-    "question": "Max keys in B-Tree of order m is:",
-    "icon": "Layers",
+    "question": "What collision resolution method involves placing collided elements in a linked list at the same bucket?",
     "options": [
-      {
-        "id": "a",
-        "text": "m-1"
-      },
-      {
-        "id": "b",
-        "text": "m"
-      },
-      {
-        "id": "c",
-        "text": "2m-1"
-      },
-      {
-        "id": "d",
-        "text": "2m"
-      }
+      { "id": "a", "text": "Open addressing" },
+      { "id": "b", "text": "Separate chaining" },
+      { "id": "c", "text": "Double hashing" },
+      { "id": "d", "text": "Linear probing" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "adv-ds-btree-q2",
-    "title": "Level 3: B-Trees",
+    "id": 6,
+    "title": "Level 3: True or False",
     "type": "true-false",
-    "question": "All leaves in B-Tree are at same depth.",
-    "icon": "Check",
-    "correctAnswer": true
+    "question": "A queue follows the Last In First Out (LIFO) principle.",
+    "correctAnswer": false,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-ds-btree-q3",
-    "title": "Level 3: B-Trees",
+    "id": 7,
+    "title": "Level 3: Fill the blank",
     "type": "fill-blanks",
-    "question": "On overflow, middle key is ___ to parent.",
-    "icon": "Upload",
-    "codeTemplate": "On overflow, middle key is ___ to parent.",
-    "blanks": [
-      ""
-    ]
+    "question": "In a min-heap, the root node is always the ____ value.",
+    "codeTemplate": "The root node is the ____ value.",
+    "blanks": ["minimum"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-ds-btree-q4",
-    "title": "Level 3: B-Trees",
-    "type": "multiple-choice",
-    "question": "Minimum children per node is:",
-    "icon": "Divide",
-    "options": [
-      {
-        "id": "a",
-        "text": "⌈m/2⌉"
-      },
-      {
-        "id": "b",
-        "text": "m/2"
-      },
-      {
-        "id": "c",
-        "text": "m-1"
-      },
-      {
-        "id": "d",
-        "text": "2"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-ds-btree-q5",
-    "title": "Level 3: B-Trees",
+    "id": 8,
+    "title": "Level 3: Linked List Insertion",
     "type": "drag-drop",
-    "question": "Match property:",
-    "icon": "Database",
+    "question": "Order the steps to insert a node at the beginning of a singly linked list:",
     "items": [
-      {
-        "id": "High",
-        "text": "High fan-out"
-      },
-      {
-        "id": "Disk",
-        "text": "Disk optimized"
-      }
+      { "id": "1", "text": "Set new node's next to current head" },
+      { "id": "2", "text": "Make new node the head" },
+      { "id": "3", "text": "Allocate memory for new node" },
+      { "id": "4", "text": "Assign data to new node" }
     ],
-    "correctOrder": [
-      "High→Many children",
-      "Disk→Fewer levels"
-    ]
+    "correctOrder": ["3", "4", "1", "2"],
+    "icon": "ListChecks"
   },
   {
-    "id": "adv-ds-btree-q6",
-    "title": "Level 3: B-Trees",
-    "type": "true-false",
-    "question": "Splits may propagate to root causing height increase.",
-    "icon": "ArrowUp",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-ds-skiplist-q1",
-    "title": "Level 3: Skip Lists",
+    "id": 9,
+    "title": "Level 3: Multiple Choice",
     "type": "multiple-choice",
-    "question": "Expected levels for p=1/2 is:",
-    "icon": "Layers",
+    "question": "Which data structure uses a 'front' and 'rear' pointer for operations?",
     "options": [
-      {
-        "id": "a",
-        "text": "log₂ n"
-      },
-      {
-        "id": "b",
-        "text": "n"
-      },
-      {
-        "id": "c",
-        "text": "√n"
-      },
-      {
-        "id": "d",
-        "text": "2n"
-      }
+      { "id": "a", "text": "Stack" },
+      { "id": "b", "text": "Queue" },
+      { "id": "c", "text": "Binary tree" },
+      { "id": "d", "text": "Graph" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "adv-ds-skiplist-q2",
-    "title": "Level 3: Skip Lists",
+    "id": 10,
+    "title": "Level 3: True or False",
     "type": "true-false",
-    "question": "Skip Lists guarantee worst-case O(n).",
-    "icon": "X",
-    "correctAnswer": true
+    "question": "In a balanced binary search tree, the height difference between left and right subtrees of any node is at most 1.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-ds-skiplist-q3",
-    "title": "Level 3: Skip Lists",
+    "id": 11,
+    "title": "Level 3: Fill the blank",
     "type": "fill-blanks",
-    "question": "Each node appears in level i with probability ___.",
-    "icon": "Layers",
-    "codeTemplate": "Each node appears in level i with probability ___.",
-    "blanks": [
-      ""
-    ]
+    "question": "The average case time complexity to access an element in a hash table is O(____).",
+    "codeTemplate": "O(____)",
+    "blanks": ["1"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-ds-skiplist-q4",
-    "title": "Level 3: Skip Lists",
-    "type": "multiple-choice",
-    "question": "Skip List search average time is O(log n). True or false?",
-    "icon": "Search",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-ds-skiplist-q5",
-    "title": "Level 3: Skip Lists",
+    "id": 12,
+    "title": "Level 4: Data Structure Memory Usage Ordering",
     "type": "drag-drop",
-    "question": "Match part to function:",
-    "icon": "Layers",
+    "question": "Reorder the data structures based on their typical memory usage per element, from highest to lowest:",
     "items": [
-      {
-        "id": "Top",
-        "text": "Top list"
-      },
-      {
-        "id": "Base",
-        "text": "Base list"
-      }
+      { "id": "1", "text": "Array" },
+      { "id": "2", "text": "Hash Table (with chaining)" },
+      { "id": "3", "text": "Binary Search Tree (balanced)" },
+      { "id": "4", "text": "Doubly Linked List" }
     ],
-    "correctOrder": [
-      "Top→Express lane",
-      "Base→Full list"
-    ]
+    "correctOrder": ["4", "2", "3", "1"],
+    "icon": "ListChecks"
   },
   {
-    "id": "adv-ds-skiplist-q6",
-    "title": "Level 3: Skip Lists",
-    "type": "true-false",
-    "question": "Insertion updates pointers at each level.",
-    "icon": "Edit3",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-ds-segtree-q1",
-    "title": "Level 3: Segment Trees",
+    "id": 13,
+    "title": "Level 3: Multiple Choice",
     "type": "multiple-choice",
-    "question": "Segment tree size ≈:",
-    "icon": "Layers",
+    "question": "Which traversal method of a binary tree visits nodes in the order: left, root, right?",
     "options": [
-      {
-        "id": "a",
-        "text": "2n"
-      },
-      {
-        "id": "b",
-        "text": "4n"
-      },
-      {
-        "id": "c",
-        "text": "n"
-      },
-      {
-        "id": "d",
-        "text": "log n"
-      }
+      { "id": "a", "text": "Pre-order" },
+      { "id": "b", "text": "Post-order" },
+      { "id": "c", "text": "In-order" },
+      { "id": "d", "text": "Level-order" }
     ],
-    "correctAnswer": "b"
+    "correctAnswer": "c",
+    "icon": "Code2"
   },
   {
-    "id": "adv-ds-segtree-q2",
-    "title": "Level 3: Segment Trees",
+    "id": 14,
+    "title": "Level 3: True or False",
     "type": "true-false",
-    "question": "Point update runs in O(log n).",
-    "icon": "Edit3",
-    "correctAnswer": true
+    "question": "A circular queue requires extra space to differentiate between full and empty states.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-ds-segtree-q3",
-    "title": "Level 3: Segment Trees",
+    "id": 15,
+    "title": "Level 3: Fill the blank",
     "type": "fill-blanks",
-    "question": "Internal nodes store ___ of segment.",
-    "icon": "Calculator",
-    "codeTemplate": "Internal nodes store ___ of segment.",
-    "blanks": [
-      ""
-    ]
+    "question": "The worst-case time complexity for searching an element in a singly linked list is O(____).",
+    "codeTemplate": "O(____)",
+    "blanks": ["n"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-ds-segtree-q4",
-    "title": "Level 3: Segment Trees",
-    "type": "multiple-choice",
-    "question": "Range query visits O(log n) nodes. True or false?",
-    "icon": "Search",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-ds-segtree-q5",
-    "title": "Level 3: Segment Trees",
+    "id": 16,
+    "title": "Level 3: Data Structure Ordering",
     "type": "drag-drop",
-    "question": "Match ops:",
-    "icon": "ArrowsRightLeft",
+    "question": "Order these data structures by their average search efficiency from fastest to slowest:",
     "items": [
-      {
-        "id": "Q",
-        "text": "Query"
-      },
-      {
-        "id": "U",
-        "text": "Update"
-      }
+      { "id": "1", "text": "Hash Table" },
+      { "id": "2", "text": "Array (unsorted)" },
+      { "id": "3", "text": "Binary Search Tree (balanced)" },
+      { "id": "4", "text": "Linked List" }
     ],
-    "correctOrder": [
-      "Q→Traverse segments",
-      "U→Update leaf & parents"
-    ]
+    "correctOrder": ["1", "3", "2", "4"],
+    "icon": "ListChecks"
   },
   {
-    "id": "adv-ds-segtree-q6",
-    "title": "Level 3: Segment Trees",
-    "type": "true-false",
-    "question": "Segment tree can handle non-power-of-two size by padding.",
-    "icon": "Layers",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-ds-bit-q1",
-    "title": "Level 3: Fenwick Trees (BIT)",
+    "id": 17,
+    "title": "Level 3: Multiple Choice",
     "type": "multiple-choice",
-    "question": "Parent index computed via clearing least significant ___ bit.",
-    "icon": "Layers",
+    "question": "Which data structure is ideal for implementing recursion or undo functionality?",
     "options": [
-      {
-        "id": "a",
-        "text": "1"
-      },
-      {
-        "id": "b",
-        "text": "0"
-      },
-      {
-        "id": "c",
-        "text": "all"
-      },
-      {
-        "id": "d",
-        "text": "leftmost"
-      }
+      { "id": "a", "text": "Queue" },
+      { "id": "b", "text": "Stack" },
+      { "id": "c", "text": "Graph" },
+      { "id": "d", "text": "Hash Table" }
     ],
-    "correctAnswer": "a"
+    "correctAnswer": "b",
+    "icon": "Code2"
   },
   {
-    "id": "adv-ds-bit-q2",
-    "title": "Level 3: Fenwick Trees (BIT)",
+    "id": 18,
+    "title": "Level 3: True or False",
     "type": "true-false",
-    "question": "Query prefix sum is O(log n).",
-    "icon": "Search",
-    "correctAnswer": true
+    "question": "In a binary max heap, each parent node is greater than or equal to its children.",
+    "correctAnswer": true,
+    "icon": "SlidersHorizontal"
   },
   {
-    "id": "adv-ds-bit-q3",
-    "title": "Level 3: Fenwick Trees (BIT)",
+    "id": 19,
+    "title": "Level 3: Fill the blank",
     "type": "fill-blanks",
-    "question": "Update at i uses i += i & ___.",
-    "icon": "Math",
-    "codeTemplate": "Update at i uses i += i & ___.",
-    "blanks": [
-      ""
-    ]
+    "question": "The space complexity of a linked list with n nodes is O(____).",
+    "codeTemplate": "O(____)",
+    "blanks": ["n"],
+    "icon": "Terminal"
   },
   {
-    "id": "adv-ds-bit-q4",
-    "title": "Level 3: Fenwick Trees (BIT)",
-    "type": "multiple-choice",
-    "question": "Fenwick Tree space is O(n). True or false?",
-    "icon": "Layers",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "a"
-  },
-  {
-    "id": "adv-ds-bit-q5",
-    "title": "Level 3: Fenwick Trees (BIT)",
+    "id": 20,
+    "title": "Level 3: Data Structure Reordering",
     "type": "drag-drop",
-    "question": "Match method:",
-    "icon": "ArrowsRightLeft",
+    "question": "Reorder the data structures based on their typical usage progression from simple to specialized:",
     "items": [
-      {
-        "id": "Q",
-        "text": "Query"
-      },
-      {
-        "id": "U",
-        "text": "Update"
-      }
+      { "id": "1", "text": "Queue - Task scheduling" },
+      { "id": "2", "text": "Stack - Function call management" },
+      { "id": "3", "text": "Trie - Efficient prefix search" },
+      { "id": "4", "text": "Graph - Network modeling" }
     ],
-    "correctOrder": [
-      "Q→i-=i&-i",
-      "U→i+=i&-i"
-    ]
-  },
-  {
-    "id": "adv-ds-bit-q6",
-    "title": "Level 3: Fenwick Trees (BIT)",
-    "type": "true-false",
-    "question": "Fenwick can support range updates.",
-    "icon": "X",
-    "correctAnswer": false
-  },
-  {
-    "id": "adv-ds-bloom-q1",
-    "title": "Level 3: Bloom Filters",
-    "type": "multiple-choice",
-    "question": "Bloom Filter false ____, no false ____.",
-    "icon": "Layers",
-    "options": [
-      {
-        "id": "a",
-        "text": "positives/negatives"
-      },
-      {
-        "id": "b",
-        "text": "negatives/positives"
-      },
-      {
-        "id": "c",
-        "text": "positives/positives"
-      },
-      {
-        "id": "d",
-        "text": "negatives/negatives"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "adv-ds-bloom-q2",
-    "title": "Level 3: Bloom Filters",
-    "type": "true-false",
-    "question": "Adding element sets k bits.",
-    "icon": "Edit3",
-    "correctAnswer": true
-  },
-  {
-    "id": "adv-ds-bloom-q3",
-    "title": "Level 3: Bloom Filters",
-    "type": "fill-blanks",
-    "question": "False positive probability depends on bit array size and number of ___ functions.",
-    "icon": "Hash",
-    "codeTemplate": "False positive probability depends on bit array size and number of ___ functions.",
-    "blanks": [
-      ""
-    ]
-  },
-  {
-    "id": "adv-ds-bloom-q4",
-    "title": "Level 3: Bloom Filters",
-    "type": "multiple-choice",
-    "question": "Bloom Filters support deletion. True or false?",
-    "icon": "Trash",
-    "options": [
-      {
-        "id": "a",
-        "text": "True"
-      },
-      {
-        "id": "b",
-        "text": "False"
-      }
-    ],
-    "correctAnswer": "b"
-  },
-  {
-    "id": "adv-ds-bloom-q5",
-    "title": "Level 3: Bloom Filters",
-    "type": "drag-drop",
-    "question": "Match action:",
-    "icon": "Layers",
-    "items": [
-      {
-        "id": "I",
-        "text": "Insert"
-      },
-      {
-        "id": "Q",
-        "text": "Query"
-      }
-    ],
-    "correctOrder": [
-      "I→Hash&set bits",
-      "Q→Check bits"
-    ]
+    "correctOrder": ["1", "2", "3", "4"],
+    "icon": "ListChecks"
   }
 ]

@@ -40,8 +40,8 @@
     "title": "Level 3: SQL Advanced",
     "type": "fill-blanks",
     "question": "Complete the subquery to find products with a price above average:",
-    "codeTemplate": "SELECT name FROM products WHERE price > (SELECT AVG(price) FROM products);",
-    "blanks": ["SELECT", "AVG(price)", "FROM", "products"],
+    "codeTemplate": "____ name ____ products WHERE price > (SELECT ____price____ FROM ____);",
+    "blanks": ["SELECT", "FROM", "AVG(", ")", "products"],
     "icon": "Terminal"
   },
   {
@@ -85,8 +85,8 @@
     "title": "Level 3: SQL Advanced",
     "type": "fill-blanks",
     "question": "Complete the syntax to start and end a transaction:",
-    "codeTemplate": "BEGIN TRANSACTION; -- some queries -- COMMIT;",
-    "blanks": ["BEGIN TRANSACTION", "COMMIT"],
+    "codeTemplate": "____ TRANSACTION; -- some queries -- COMMIT;",
+    "blanks": ["BEGIN"],
     "icon": "Terminal"
   },
   {
@@ -95,11 +95,11 @@
     "type": "drag-drop",
     "question": "Arrange the transaction steps in the correct order:",
     "items": [
-      { "id": "1", "text": "BEGIN TRANSACTION" },
+      { "id": "1", "text": "COMMIT or ROLLBACK" },
       { "id": "2", "text": "Execute SQL operations" },
-      { "id": "3", "text": "COMMIT or ROLLBACK" }
+      { "id": "3", "text": "BEGIN TRANSACTION" }
     ],
-    "correctOrder": ["1", "2", "3"],
+    "correctOrder": ["3", "2", "1"],
     "icon": "ListChecks"
   },
   {
@@ -171,8 +171,8 @@
     "title": "Level 3: SQL Advanced",
     "type": "fill-blanks",
     "question": "Fill in the blanks to revoke SELECT privilege from a user:",
-    "codeTemplate": "REVOKE SELECT ON database.table FROM 'username';",
-    "blanks": ["REVOKE", "SELECT", "ON", "FROM"],
+    "codeTemplate": "____ SELECT ____ database.table ____ 'username';",
+    "blanks": ["REVOKE", "ON", "FROM"],
     "icon": "Terminal"
   },
   {
@@ -181,11 +181,11 @@
     "type": "drag-drop",
     "question": "Arrange the following to form a correct CTE structure:",
     "items": [
-      { "id": "1", "text": "WITH recent_sales AS" },
-      { "id": "2", "text": "(SELECT * FROM sales WHERE sale_date > '2023-01-01')" },
+      { "id": "1", "text": "(SELECT * FROM sales WHERE sale_date > '2023-01-01')" },
+      { "id": "2", "text": "WITH recent_sales AS" },
       { "id": "3", "text": "SELECT * FROM recent_sales;" }
     ],
-    "correctOrder": ["1", "2", "3"],
+    "correctOrder": ["2", "1", "3"],
     "icon": "ListChecks"
   },
   {
@@ -229,8 +229,8 @@
     "title": "Level 3: SQL Advanced",
     "type": "fill-blanks",
     "question": "Complete the SQL to create a view:",
-    "codeTemplate": "CREATE VIEW view_name AS SELECT column1, column2 FROM table_name;",
-    "blanks": ["CREATE VIEW", "AS SELECT", "FROM"],
+    "codeTemplate": "CREATE ____ view_name ____ SELECT column1, column2 ____ table_name;",
+    "blanks": ["VIEW", "AS", "FROM"],
     "icon": "Terminal"
   }
   
