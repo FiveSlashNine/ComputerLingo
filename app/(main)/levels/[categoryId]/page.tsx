@@ -1,11 +1,14 @@
+"use client";
 import { Sidebar } from "@/components/sidebar";
 import { MobileSidebar } from "@/components/mobile-sidebar";
 import { CategoryLevels } from "@/components/category-levels";
 import { CategoryProgress } from "@/components/category-progress";
+import { useParams } from "next/navigation";
 
 export default function HomePage() {
   // In a real app, this would come from the route or state
-  const currentCategory = 1;
+  const params = useParams();
+  const currentCategory = Number(params.categoryId);
 
   return (
     <div className="flex min-h-screen py-8 px-4 bg-[#f7f7f7]">
