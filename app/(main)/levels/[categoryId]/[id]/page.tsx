@@ -146,7 +146,12 @@ export default function LevelPage() {
     setIsCorrect(correct);
     setIsSubmitted(true);
 
-    if (!correct) {
+    playSound("/sounds/submit.mp3");
+
+    if (correct) {
+      playSound("/sounds/correct.mp3");
+    } else {
+      playSound("/sounds/wrong.mp3");
       setLives((prev) => {
         if (prev <= 1) {
           setShowRestartAlert(true);
@@ -157,7 +162,15 @@ export default function LevelPage() {
     }
   };
 
+  const playSound = (src: string) => {
+    const audio = new Audio(src);
+    audio.play().catch((e) => {
+      console.error("Failed to play sound:", e);
+    });
+  };
+
   const handleRestartLevel = () => {
+    playSound("/sounds/submit.mp3");
     setLives(3);
     setCurrentQuestionIdx(0);
     setLevel(questions[0] ? { ...questions[0] } : null);
@@ -193,11 +206,13 @@ export default function LevelPage() {
   };
 
   const goBackToLevels = async () => {
+    playSound("/sounds/submit.mp3");
     await increaseUserLevel();
     router.push(`/levels/${categoryId}`);
   };
 
   const handlePrev = () => {
+    playSound("/sounds/prev.mp3");
     if (currentQuestionIdx > 0) {
       setCurrentQuestionIdx((idx) => idx - 1);
     }
