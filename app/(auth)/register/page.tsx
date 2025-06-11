@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -23,7 +25,7 @@ export default function Register() {
     const password = formData.get("password") as string;
 
     try {
-      await axios.post("/api/auth/register", {
+      await axios.post(`/api/auth/register`, {
         email,
         username,
         password,

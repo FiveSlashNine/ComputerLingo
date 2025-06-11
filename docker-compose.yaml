@@ -10,14 +10,20 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U username -d computerlingo"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
   pgadmin:
     image: dpage/pgadmin4
     container_name: computerlingo_pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: admin
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: 'False'
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
     ports:
       - "5050:80"
     depends_on:
@@ -25,6 +31,24 @@ services:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
       - ./servers.json:/pgadmin4/servers.json
+
+  web:
+    build:
+      context: .
+    container_name: computerlingo_nextjs
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      POSTGRES_URL: postgres://username:password@postgres:5432/computerlingo
+      BETTER_AUTH_SECRET: 2ccb8ac3b0e675cf7c6b20bf5be93cd485c3919c6d5fbfd0c95ebee118c955df
+      BETTER_AUTH_URL: http://web:3000
+      RUN_MIGRATION: "true"
+    volumes:
+      - .:/app
+    restart: unless-stopped
 
 volumes:
   pgdata:

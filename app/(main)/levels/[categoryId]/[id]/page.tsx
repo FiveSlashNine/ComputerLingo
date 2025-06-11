@@ -391,8 +391,8 @@ export default function LevelPage() {
                       ? "Correct! Next Question"
                       : "Correct! Continue"
                     : currentQuestionIdx < questions.length - 1
-                    ? "Next Question"
-                    : "Continue"
+                      ? "Next Question"
+                      : "Continue"
                   : "Check Answer"}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>

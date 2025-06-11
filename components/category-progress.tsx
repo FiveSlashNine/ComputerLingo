@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
 import { Trophy, Star, Zap } from "lucide-react";
@@ -174,8 +176,8 @@ function ProgressCard({ title, progress, highlight }: ProgressCardProps) {
         progress === 100
           ? "bg-green-50 border-green-200"
           : highlight
-          ? "bg-yellow-50 border-yellow-200"
-          : "bg-white"
+            ? "bg-yellow-50 border-yellow-200"
+            : "bg-white"
       )}
     >
       <div className="flex justify-between items-center mb-2">

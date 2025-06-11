@@ -37,17 +37,16 @@ export function CategoryLevels({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // You can customize descriptions for levels however you want:
-  const levelDescriptions = [
-    "Introduction",
-    "Basic Vocabulary",
-    "Simple Sentences",
-    "Questions & Answers",
-    "Conversation Practice",
-    "Advanced Topics",
-  ];
-
   useEffect(() => {
+    const levelDescriptions = [
+      "Introduction",
+      "Basic Vocabulary",
+      "Simple Sentences",
+      "Questions & Answers",
+      "Conversation Practice",
+      "Advanced Topics",
+    ];
+
     async function fetchUserLevels() {
       try {
         setLoading(true);
@@ -170,8 +169,8 @@ const LevelCard = ({ level }: LevelCardProps) => {
             level.completed
               ? "bg-green-50"
               : level.current
-              ? "bg-yellow-50"
-              : "bg-gray-50"
+                ? "bg-yellow-50"
+                : "bg-gray-50"
           )}
         >
           {level.locked ? (
@@ -209,16 +208,16 @@ const LevelCard = ({ level }: LevelCardProps) => {
             level.completed
               ? "bg-green-500 hover:bg-green-600"
               : level.current
-              ? "bg-yellow-500 hover:bg-yellow-600"
-              : "bg-blue-500 hover:bg-blue-600"
+                ? "bg-yellow-500 hover:bg-yellow-600"
+                : "bg-blue-500 hover:bg-blue-600"
           )}
           disabled={level.locked}
         >
           {level.completed
             ? "Practice Again"
             : level.current
-            ? "Continue"
-            : "Start"}
+              ? "Continue"
+              : "Start"}
           <Play className="h-4 w-4 ml-2" />
         </Button>
       </CardFooter>
